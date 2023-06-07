@@ -44,4 +44,9 @@ func SetUpRouter(c *fiber.App) {
 	unit := auth.Group("/unit")
 	unit.Get("", controllers.UnitController)
 	unit.Post("", controllers.UnitPostController)
+
+	// Glref
+	glref := auth.Group("/glref")
+	glref.Get("", controllers.GlrefController)
+	glref.Post("", controllers.GlrefPostController)
 }

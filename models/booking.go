@@ -6,9 +6,12 @@ import (
 )
 
 type Booking struct {
-	FCSKID string `gorm:"primaryKey;column:FCSKID;type:char;size:8;not null;index;" json:"fcskid"`
-	FCCODE string `json:"fccode,omitempty"`
-	FCNAME string `json:"fcname,omitempty"`
+	FCSKID    string   `gorm:"primaryKey;column:FCSKID;type:char;size:8;not null;index;" json:"fcskid"`
+	FCCODE    string   `json:"fccode,omitempty"`
+	FCNAME    string   `json:"fcname,omitempty"`
+	FCREFTYPE string   `json:"fcreftype,omitempty"`
+	FCPREFIX  string   `json:"fcprefix,omitempty"`
+	REFTYPE   *Reftype `gorm:"foreignKey:FCREFTYPE;references:FCSKID;" json:"ref_type"`
 }
 
 func (Booking) TableName() string {

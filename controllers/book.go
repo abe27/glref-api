@@ -13,8 +13,15 @@ func BookController(c *fiber.Ctx) error {
 	var r models.Response
 	db := configs.StoreFormula
 	var book []models.Booking
+
+	bookType := c.Query("type")
+	if bookType == "" {
+		r.Message = "Required fields type!"
+		return c.Status(fiber.StatusBadRequest).JSON(r)
+	}
+
 	if c.Query("name") != "" {
-		if err := db.Scopes(services.Paginate(c)).Where("FCCODE like ?", "%"+strings.ToUpper(c.Query("name"))+"%").Find(&book).Error; err != nil {
+		if err := db.Scopes(services.Paginate(c)).Where("FCREFTYPE", bookType).Where("FCCODE like ?", "%"+strings.ToUpper(c.Query("name"))+"%").Find(&book).Error; err != nil {
 			r.Message = err.Error()
 			return c.Status(fiber.StatusInternalServerError).JSON(&book)
 		}
@@ -24,7 +31,7 @@ func BookController(c *fiber.Ctx) error {
 		return c.Status(fiber.StatusOK).JSON(&r)
 	}
 
-	if err := db.Scopes(services.Paginate(c)).Order("FCCODE").Find(&book).Error; err != nil {
+	if err := db.Scopes(services.Paginate(c)).Order("FCCODE").Where("FCREFTYPE", bookType).Find(&book).Error; err != nil {
 		r.Message = err.Error()
 		return c.Status(fiber.StatusInternalServerError).JSON(&book)
 	}
