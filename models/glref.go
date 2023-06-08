@@ -66,6 +66,12 @@ func (obj *Glref) BeforeCreate(tx *gorm.DB) (err error) {
 	return
 }
 
+func (obj *Glref) BeforeUpdate(tx *gorm.DB) (err error) {
+	obj.FTLASTEDIT = time.Now()
+	obj.FTLASTUPD = time.Now()
+	return
+}
+
 type GlrefForm struct {
 	Prefix     string        `json:"prefix"`
 	Type       string        `json:"type"`

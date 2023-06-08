@@ -75,7 +75,7 @@ func GlrefPostController(c *fiber.Ctx) error {
 	glref.FDDATE = frm.RecDate
 	glref.FCBRANCH = frm.Branch
 	glref.FNAMT = fcamt
-	glref.FCPROJ = "H2ZFfQ02"
+	glref.FCPROJ = frm.Proj
 	glref.FCJOB = frm.Job
 	glref.FCCOOR = frm.Coor
 	glref.FCCORP = frm.Corp
@@ -85,6 +85,12 @@ func GlrefPostController(c *fiber.Ctx) error {
 	glref.FCCORRECTB = fmt.Sprintf("%s", uid)
 	glref.FMMEMDATA = strings.ToUpper(frm.InvoiceNo)
 	glref.FCTOWHOUSE = frm.Whs
+
+	if err := tx.Create(&glref).Error; err != nil {
+		tx.Rollback()
+		r.Message = err.Error()
+		return c.Status(fiber.StatusInternalServerError).JSON(&r)
+	}
 
 	var seq int64 = 1
 	for _, i := range frm.Items {
@@ -111,26 +117,54 @@ func GlrefPostController(c *fiber.Ctx) error {
 		refProd.FCDEPT = sect.FCDEPT
 		refProd.FCPROD = i.Product
 		refProd.FCPRODTYPE = prod.FCPRTYPE
-		refProd.FNUMQTY = float64(i.PACK)
+		refProd.FNUMQTY = 1
 		refProd.FNQTY = i.Qty
-		// refProd.FCUM = v.FCUM
-		// refProd.FCUMSTD = v.FCUM
-		// refProd.FCSTUM = v.FCUM
-		// refProd.FCSTUMSTD = v.FCUM
-		refProd.FCUM = i.UMID
-		refProd.FCUMSTD = i.UMID
-		refProd.FCSTUM = i.UMID
-		refProd.FCSTUMSTD = i.UMID
-		refProd.FNSTUMQTY = float64(i.PACK)
+		refProd.FCUM = i.Unit
+		refProd.FCUMSTD = i.Unit
+		refProd.FCSTUM = i.Unit
+		refProd.FCSTUMSTD = i.Unit
+		refProd.FNSTUMQTY = 1
 		refProd.FTDATETIME = time.Now()
 		refProd.FTLASTEDIT = time.Now()
 		refProd.FTLASTUPD = time.Now()
+
+		if err := tx.Create(&refProd).Error; err != nil {
+			tx.Rollback()
+			r.Message = err.Error()
+			return c.Status(fiber.StatusInternalServerError).JSON(&r)
+		}
+
+		var stock models.Stock
+		tx.First(&stock, &models.Stock{FCPROD: prod.FCSKID, FCWHOUSE: frm.Whs})
+		stock.FCCORP = frm.Corp
+		stock.FCBRANCH = frm.Branch
+		stock.FCWHOUSE = frm.Whs
+		stock.FCPROD = prod.FCSKID
+		stock.FDDATE = glref.FDDATE
+		switch frm.Step {
+		case "I":
+			stock.FNQTY = stock.FNQTY + i.Qty
+		default:
+			if stock.FNQTY > 0 {
+				stock.FNQTY = stock.FNQTY - i.Qty
+			}
+		}
+
+		if stock.FCSKID == "" {
+			stock.FTDATETIME = time.Now()
+		}
+		stock.FTLASTUPD = time.Now()
+		stock.FTLASTEDIT = time.Now()
+		if err := tx.Save(&stock).Error; err != nil {
+			tx.Rollback()
+			r.Message = fmt.Sprintf("Failed transection on Stock: %v", err.Error())
+			return c.Status(fiber.StatusInternalServerError).JSON(&r)
+		}
 		seq++
 	}
 
 	tx.Commit()
 	// End
-	frm.InvoiceNo = strings.ToUpper(frm.InvoiceNo)
 	r.Message = fmt.Sprintf("%s <> %s", fccode, uid)
 	r.Data = &glref
 	return c.Status(fiber.StatusCreated).JSON(&r)
