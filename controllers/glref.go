@@ -14,6 +14,24 @@ import (
 
 func GlrefController(c *fiber.Ctx) error {
 	var r models.Response
+	var gl []models.Glref
+	if err := configs.StoreFormula.
+		Preload("BOOK").
+		Preload("BRANCH").
+		Preload("COOR").
+		Preload("CORP").
+		Preload("CORRECTB").
+		Preload("DEPT").
+		Preload("JOB").
+		Preload("PROJ").
+		Preload("TOWHOUSE").
+		Preload("FROMWHOUSE").
+		Where("FCSKID", c.Query("fcskid")).Find(&gl).Error; err != nil {
+		r.Message = err.Error()
+		return c.Status(fiber.StatusNotFound).JSON(&r)
+	}
+
+	r.Data = &gl
 	return c.Status(fiber.StatusOK).JSON(&r)
 }
 
@@ -119,6 +137,7 @@ func GlrefPostController(c *fiber.Ctx) error {
 		refProd.FCPRODTYPE = prod.FCPRTYPE
 		refProd.FNUMQTY = 1
 		refProd.FNQTY = i.Qty
+		refProd.FNPRICE = i.Price
 		refProd.FCUM = i.Unit
 		refProd.FCUMSTD = i.Unit
 		refProd.FCSTUM = i.Unit
@@ -164,8 +183,330 @@ func GlrefPostController(c *fiber.Ctx) error {
 	}
 
 	tx.Commit()
+	// Glref History
+	var glrefHistory models.GlrefHistory
+	glrefHistory.FCSKID = glref.FCSKID
+	glrefHistory.FCCODE = glref.FCCODE
+	glrefHistory.FCREFNO = glref.FCREFNO
+	glrefHistory.FCDATE = glref.FDDATE
+	glrefHistory.FCINVOICE = strings.ToUpper(frm.InvoiceNo)
+	if err := configs.Store.Create(&glrefHistory).Error; err != nil {
+		r.Message = fmt.Sprintf("Failed create glref history: %v", err.Error())
+		return c.Status(fiber.StatusInternalServerError).JSON(&r)
+	}
 	// End
 	r.Message = fmt.Sprintf("%s <> %s", fccode, uid)
 	r.Data = &glref
 	return c.Status(fiber.StatusCreated).JSON(&r)
+}
+
+func GlrefTransferController(c *fiber.Ctx) error {
+	db := configs.StoreFormula
+	var r models.Response
+	r.Message = "Patch"
+
+	// Get EmpID
+	s := c.Get("Authorization")
+	token := strings.TrimPrefix(s, "Bearer ")
+	uid, err := services.ValidateToken(token)
+	if err != nil {
+		r.Message = "Token is Expired"
+		return c.Status(fiber.StatusUnauthorized).JSON(&r)
+	}
+
+	if c.Query("fcskid") == "" {
+		r.Message = "GLREF FCSKID Required!"
+		return c.Status(fiber.StatusInternalServerError).JSON(&r)
+	}
+
+	if c.Query("pono") == "" {
+		r.Message = "PONO Required!"
+		return c.Status(fiber.StatusInternalServerError).JSON(&r)
+	}
+
+	tx := db.Begin()
+	store := configs.Store.Begin()
+	var glRef models.Glref
+	if err := tx.First(&glRef, &models.Glref{FCSKID: c.Query("fcskid")}).Error; err != nil {
+		r.Message = err.Error()
+		return c.Status(fiber.StatusNotFound).JSON(&r)
+	}
+
+	// Update History
+	var glHistory models.GlrefHistory
+	if err := store.First(&glHistory, &models.GlrefHistory{FCSKID: glRef.FCSKID}).Error; err != nil {
+		tx.Rollback()
+		r.Message = err.Error()
+		return c.Status(fiber.StatusNotFound).JSON(&r)
+	}
+
+	var orderH models.Orderh
+	if err := tx.First(&orderH, &models.Orderh{FCREFNO: c.Query("pono")}).Error; err != nil {
+		r.Message = "ไม่พบข้อมูลเลขที่ PO นี้"
+		glHistory.FCREMARK = fmt.Sprintf("ไม่พบข้อมูลเลขที่ %s นี้", c.Query("pono"))
+		glHistory.FCSTATUS = 2
+		if err := store.Save(&glHistory).Error; err != nil {
+			tx.Rollback()
+			store.Rollback()
+			r.Message = err.Error()
+			return c.Status(fiber.StatusInternalServerError).JSON(&r)
+		}
+		store.Commit()
+		return c.Status(fiber.StatusNotFound).JSON(&r)
+	}
+
+	var refProd []models.Refprod
+	if err := tx.
+		Preload("Corp").
+		Preload("Branch").
+		Preload("Dept").
+		Preload("Sect").
+		Preload("Job").
+		Preload("Glhead").
+		Preload("Glref").
+		Preload("Prod").
+		Preload("Unit").
+		Preload("UnitSTD").
+		Preload("Stum").
+		Preload("StumStd").
+		Preload("WHouse").
+		Preload("Proj").
+		Preload("Gl").
+		Find(&refProd, &models.Refprod{FCGLREF: c.Query("fcskid")}).Error; err != nil {
+		r.Message = err.Error()
+		return c.Status(fiber.StatusNotFound).JSON(&r)
+	}
+
+	// Check Part from orderi
+	var listOrderI []models.OrderiView
+	for _, p := range refProd {
+		var prodOrderI models.OrderiView
+		if err := tx.Where("FCSTEP", "P").First(&prodOrderI, &models.OrderiView{FCORDERH: orderH.FCSKID, FCPROD: p.FCPROD}).Error; err != nil {
+			r.Message = "พบสินค้าไม่ตรงกับเอกสาร"
+			glHistory.FCREMARK = "พบสินค้าไม่ตรงกับเอกสาร"
+			glHistory.FCSTATUS = 2
+			if err := store.Save(&glHistory).Error; err != nil {
+				tx.Rollback()
+				store.Rollback()
+				r.Message = err.Error()
+				return c.Status(fiber.StatusInternalServerError).JSON(&r)
+			}
+			store.Commit()
+			return c.Status(fiber.StatusNotFound).JSON(&r)
+		}
+
+		if p.FNQTY > prodOrderI.FNQTY {
+			r.Message = "ระบุจำนวนเกินกับเอกสาร"
+			glHistory.FCREMARK = "ระบุจำนวนเกินกับเอกสาร"
+			glHistory.FCSTATUS = 2
+			if err := store.Save(&glHistory).Error; err != nil {
+				tx.Rollback()
+				store.Rollback()
+				r.Message = err.Error()
+				return c.Status(fiber.StatusInternalServerError).JSON(&r)
+			}
+			store.Commit()
+			return c.Status(fiber.StatusInternalServerError).JSON(&r)
+		}
+
+		prodOrderI.FNRECEIVEQTY = p.FNQTY
+		listOrderI = append(listOrderI, prodOrderI)
+	}
+
+	// CREATE GLHEAD
+	var glhead models.Glhead
+	glhead.FCCORP = glRef.FCCORP
+	glhead.FCBRANCH = glRef.FCBRANCH
+	glhead.FDDATE = glRef.FDDATE
+	var accBook models.Accbook
+	if err := tx.First(&accBook, &models.Accbook{FCCODE: "PD"}).Error; err != nil {
+		r.Message = "ไม่พบข้อมูล ACCBOOK!"
+		return c.Status(fiber.StatusInternalServerError).JSON(&r)
+	}
+	glhead.FCACCBOOK = accBook.FCSKID
+
+	onYear, _ := strconv.Atoi(time.Now().Format("2006"))
+	thYear := fmt.Sprintf("%d", (onYear + 543))
+	var rnn int64
+	if err := tx.Select("FCCODE").Where("FCCODE LIKE ?", (thYear + ((time.Now().Format("20060102"))[4:6]))[2:6]+"%").Model(&models.Glhead{}).Count(&rnn).Error; err != nil {
+		panic(err)
+	}
+
+	glhead.FCCODE = fmt.Sprintf("%s%04d", (thYear + ((time.Now().Format("20060102"))[4:6]))[2:6], (rnn + 1))
+	glhead.FCCORRECTB = fmt.Sprintf("%s", uid)
+	if err := tx.Create(&glhead).Error; err != nil {
+		tx.Rollback()
+		r.Message = err.Error()
+		return c.Status(fiber.StatusInternalServerError).JSON(&r)
+	}
+
+	// fmt.Println("GLHEAD: %s", glhead.FCSKID)
+	// UPDATE GLREF
+	glRef.FCGLHEAD = glhead.FCSKID
+	glRef.FCRFTYPE = "B"
+	glRef.FCREFTYPE = "BI"
+	glRef.FCSTEP = "P"
+	glRef.FTLASTEDIT = time.Now()
+	glRef.FTLASTUPD = time.Now()
+	if err := tx.Save(&glRef).Error; err != nil {
+		tx.Rollback()
+		r.Message = err.Error()
+		return c.Status(fiber.StatusInternalServerError).JSON(&r)
+	}
+
+	// var sumRefProd float64 = 0
+	// var sumCtn float64 = 0
+	for _, i := range listOrderI {
+		// fmt.Println("GLREF: %s PROD: %s ORDERH: %s ORDERI: %s", glRef.FCSKID, i.FCPROD, i.FCORDERH, i.FCSKID)
+		var refProd models.Refprod
+		if err := tx.Select("FCSKID,FNQTY,FCSEQ").First(&refProd, &models.Refprod{FCGLREF: glRef.FCSKID, FCPROD: i.FCPROD}).Error; err != nil {
+			tx.Rollback()
+			r.Message = err.Error()
+			return c.Status(fiber.StatusInternalServerError).JSON(&r)
+		}
+
+		// UPDATE REFPROD
+		// sumRefProd += refProd.FNQTY
+		if err := tx.Model(&refProd).Updates(&models.Refprod{
+			FCGLHEAD:   glhead.FCSKID,
+			FCRFTYPE:   "B",
+			FCREFTYPE:  "BI",
+			FTLASTEDIT: time.Now(),
+			FTLASTUPD:  time.Now(),
+		}).Error; err != nil {
+			tx.Rollback()
+			r.Message = err.Error()
+			return c.Status(fiber.StatusInternalServerError).JSON(&r)
+		}
+
+		orderIStatus := "1"
+		if i.FNQTY > (i.FNBACKQTY + i.FNRECEIVEQTY) {
+			orderIStatus = "P"
+		}
+
+		// UPDATE ORDERI
+		if err := tx.Model(&models.Orderi{FCSKID: i.FCSKID}).Updates(&models.Orderi{
+			FCSTEP:     orderIStatus,
+			FNBACKQTY:  i.FNBACKQTY + i.FNRECEIVEQTY,
+			FTLASTEDIT: time.Now(),
+			FTLASTUPD:  time.Now(),
+		}).Error; err != nil {
+			tx.Rollback()
+			r.Message = err.Error()
+			return c.Status(fiber.StatusInternalServerError).JSON(&r)
+		}
+		// fmt.Println("orderIStatus: ", orderIStatus)
+		// sumCtn += orderIQty
+
+		// UPDATE GLREF HISTORY
+		var orderH models.Orderh
+		if err := tx.Select("FCREFNO").First(&orderH, &models.Orderh{FCSKID: listOrderI[0].FCORDERH}).Error; err != nil {
+			tx.Rollback()
+			r.Message = err.Error()
+			return c.Status(fiber.StatusNotFound).JSON(&r)
+		}
+
+		// CREATE GL 1031
+		var gl models.Gl
+		var accChart models.Acchart
+		if err := tx.First(&accChart, &models.Acchart{FCCODE: "1031"}).Error; err != nil {
+			tx.Rollback()
+			r.Message = err.Error()
+			return c.Status(fiber.StatusNotFound).JSON(&r)
+		}
+
+		// var seqGl int64
+		// if err := tx.Find(&models.Gl{}, &models.Gl{FCGLHEAD: glRef.FCGLHEAD}).Count(&seqGl).Error; err != nil {
+		// 	r.Message = err.Error()
+		// 	return c.Status(fiber.StatusInternalServerError).JSON(&r)
+		// }
+
+		gl.FCACCHART = accChart.FCSKID
+		gl.FCBRANCH = glRef.FCBRANCH
+		gl.FCCORP = glRef.FCCORP
+		gl.FCSECT = glRef.FCSECT
+		gl.FCDEPT = glRef.FCDEPT
+		gl.FCGLHEAD = glRef.FCGLHEAD
+		gl.FCSEQ = refProd.FCSEQ
+		gl.FDDATE = glRef.FDDATE
+		gl.FNAMT = i.FNRECEIVEQTY
+		if err := tx.Create(&gl).Error; err != nil {
+			tx.Rollback()
+			r.Message = err.Error()
+			return c.Status(fiber.StatusInternalServerError).JSON(&r)
+		}
+
+		// CREATE NOTCUT
+		var noteCut models.Notecut
+		noteCut.FCBRANCH = glRef.FCBRANCH
+		noteCut.FCCHILDH = listOrderI[0].FCORDERH
+		noteCut.FCCHILDI = i.FCSKID
+		noteCut.FCCORP = glRef.FCCORP
+		noteCut.FCMASTERH = glRef.FCSKID
+		noteCut.FCMASTERI = refProd.FCSKID
+		noteCut.FNQTY = i.FNRECEIVEQTY
+		if err := tx.Create(&noteCut).Error; err != nil {
+			tx.Rollback()
+			r.Message = err.Error()
+			return c.Status(fiber.StatusInternalServerError).JSON(&r)
+		}
+	}
+
+	var sumCtn int64
+	if err := tx.Raw(fmt.Sprintf("select count(FCSKID) from ORDERI where FCORDERH='%s' and FNQTY > FNBACKQTY", listOrderI[0].FCORDERH)).Scan(&sumCtn).Error; err != nil {
+		tx.Rollback()
+		store.Rollback()
+		r.Message = err.Error()
+		return c.Status(fiber.StatusInternalServerError).JSON(&r)
+	}
+	// UPDATE ORDERH
+	orderStatus := "1"
+	if sumCtn > 0 {
+		orderStatus = "P"
+	}
+	// fmt.Println("ORDERID: ", listOrderI[0].FCORDERH, " SUM: ", sumCtn, "STATUS: ", orderStatus)
+	if err := tx.Model(&models.Orderh{FCSKID: listOrderI[0].FCORDERH}).Updates(&models.Orderh{
+		FCSTEP:     orderStatus,
+		FTLASTEDIT: time.Now(),
+		FTLASTUPD:  time.Now(),
+	}).Error; err != nil {
+		tx.Rollback()
+		store.Rollback()
+		r.Message = err.Error()
+		return c.Status(fiber.StatusInternalServerError).JSON(&r)
+	}
+
+	// Update History
+	glHistory.FCPONO = c.Query("pono")
+	glHistory.FCSTATUS = 1
+
+	if err := store.Save(&glHistory).Error; err != nil {
+		tx.Rollback()
+		store.Rollback()
+		r.Message = err.Error()
+		return c.Status(fiber.StatusInternalServerError).JSON(&r)
+	}
+
+	tx.Commit()
+	store.Commit()
+	r.Data = nil
+	return c.Status(fiber.StatusOK).JSON(&r)
+}
+
+func GlrefHistoryController(c *fiber.Ctx) error {
+	var r models.Response
+	var gl []models.GlrefHistory
+	if c.Query("fcskid") != "" {
+		if err := configs.Store.Where("fcsk_id", c.Query("fcskid")).Find(&gl).Error; err != nil {
+			r.Message = err.Error()
+			return c.Status(fiber.StatusNotFound).JSON(&gl)
+		}
+	}
+
+	if err := configs.Store.Find(&gl).Error; err != nil {
+		r.Message = err.Error()
+		return c.Status(fiber.StatusNotFound).JSON(&gl)
+	}
+	r.Data = &gl
+	return c.Status(fiber.StatusOK).JSON(&r)
 }

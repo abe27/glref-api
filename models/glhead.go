@@ -135,5 +135,8 @@ func (obj *Glhead) BeforeCreate(tx *gorm.DB) (err error) {
 	obj.FCEAFTERR = "E"
 	obj.FCATSTEP = "I"
 	obj.FNLOCKED = 0
+	obj.FTDATETIME = time.Now()
+	obj.FTLASTEDIT = time.Now()
+	obj.FTLASTUPD = time.Now()
 	return
 }

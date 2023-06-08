@@ -1,10 +1,12 @@
 package configs
 
 import (
+	"github.com/abe27/vcst/api.v1/models"
 	"gorm.io/gorm"
 )
 
 var (
+	Store           *gorm.DB
 	StoreVCST       *gorm.DB
 	StoreFormula    *gorm.DB
 	StoreITC        *gorm.DB
@@ -16,9 +18,9 @@ var (
 )
 
 func SetDB() {
-	// if !StoreFormula.Migrator().HasTable(&models.Employee{}) {
-	// 	StoreFormula.AutoMigrate(&models.Employee{})
-	// }
+	if !Store.Migrator().HasTable(&models.GlrefHistory{}) {
+		Store.AutoMigrate(&models.GlrefHistory{})
+	}
 
 	// if !StoreFormula.Migrator().HasTable(&models.Product{}) {
 	// 	StoreFormula.AutoMigrate(&models.Product{})
