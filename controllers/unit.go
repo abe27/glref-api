@@ -14,7 +14,7 @@ func UnitController(c *fiber.Ctx) error {
 	db := configs.StoreFormula
 	var Unit []models.Unit
 	if c.Query("name") != "" {
-		if err := db.Scopes(services.Paginate(c)).Where("FCCODE like ?", "%"+strings.ToUpper(c.Query("name"))+"%").Find(&Unit).Error; err != nil {
+		if err := db.Scopes(services.Paginate(c)).Where("FCNAME like ?", "%"+strings.ToUpper(c.Query("name"))+"%").Find(&Unit).Error; err != nil {
 			r.Message = err.Error()
 			return c.Status(fiber.StatusInternalServerError).JSON(&Unit)
 		}
@@ -24,7 +24,7 @@ func UnitController(c *fiber.Ctx) error {
 		return c.Status(fiber.StatusOK).JSON(&r)
 	}
 
-	if err := db.Scopes(services.Paginate(c)).Order("FCCODE").Find(&Unit).Error; err != nil {
+	if err := db.Order("FCCODE").Find(&Unit).Error; err != nil {
 		r.Message = err.Error()
 		return c.Status(fiber.StatusInternalServerError).JSON(&Unit)
 	}

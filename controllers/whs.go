@@ -23,6 +23,18 @@ func WhsController(c *fiber.Ctx) error {
 		r.Data = &Whs
 	}
 
+	if c.Query("type") != "" {
+		arr := strings.Split(c.Query("type"), ",")
+		if err := db.Scopes(services.Paginate(c)).Order("FCCODE").Where("FCCODE IN ?", arr).Find(&Whs).Error; err != nil {
+			r.Message = err.Error()
+			return c.Status(fiber.StatusInternalServerError).JSON(&Whs)
+		}
+
+		r.Success = true
+		r.Data = &Whs
+		return c.Status(fiber.StatusOK).JSON(&r)
+	}
+
 	if err := db.Scopes(services.Paginate(c)).Order("FCCODE").Find(&Whs).Error; err != nil {
 		r.Message = err.Error()
 		return c.Status(fiber.StatusInternalServerError).JSON(&Whs)

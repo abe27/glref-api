@@ -14,7 +14,7 @@ func ProductController(c *fiber.Ctx) error {
 	db := configs.StoreFormula
 	var Product []models.Product
 	if c.Query("name") != "" {
-		if err := db.Scopes(services.Paginate(c)).Where("FCCODE like ?", "%"+strings.ToUpper(c.Query("name"))+"%").Find(&Product).Error; err != nil {
+		if err := db.Scopes(services.Paginate(c)).Preload("UM").Where("FCCODE like ?", "%"+strings.ToUpper(c.Query("name"))+"%").Find(&Product).Error; err != nil {
 			r.Message = err.Error()
 			return c.Status(fiber.StatusInternalServerError).JSON(&Product)
 		}
@@ -25,7 +25,7 @@ func ProductController(c *fiber.Ctx) error {
 	}
 
 	arr := strings.Split(c.Query("type"), ",")
-	if err := db.Scopes(services.Paginate(c)).Order("FCCODE").Where("FCTYPE IN ?", arr).Find(&Product).Error; err != nil {
+	if err := db.Scopes(services.Paginate(c)).Order("FCCODE").Preload("UM").Where("FCTYPE IN ?", arr).Find(&Product).Error; err != nil {
 		r.Message = err.Error()
 		return c.Status(fiber.StatusInternalServerError).JSON(&Product)
 	}

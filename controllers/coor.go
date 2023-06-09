@@ -23,7 +23,7 @@ func CoorController(c *fiber.Ctx) error {
 		r.Data = &coor
 	}
 
-	if err := db.Scopes(services.Paginate(c)).Order("FCCODE").Find(&coor).Error; err != nil {
+	if err := db.Order("FCCODE").Find(&coor).Error; err != nil {
 		r.Message = err.Error()
 		return c.Status(fiber.StatusInternalServerError).JSON(&coor)
 	}

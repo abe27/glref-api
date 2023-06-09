@@ -206,6 +206,7 @@ type Product struct {
 	FTLASTEDIT time.Time `gorm:"column:FTLASTEDIT;" json:"ftlastedit"  form:"ftlastedit" `
 	FTLASTUPD  time.Time `gorm:"column:FTLASTUPD;" json:"ftlastupd"  form:"ftlastupd" default:"now"`
 	FTSRCUPD   time.Time `gorm:"column:FTSRCUPD;" json:"ftsrcupd"  form:"ftsrcupd" default:"now"`
+	UM         *Unit     `gorm:"foreignKey:FCUM;references:FCSKID;" json:"unit"`
 }
 
 func (Product) TableName() string {
