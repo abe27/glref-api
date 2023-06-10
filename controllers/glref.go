@@ -182,7 +182,6 @@ func GlrefPostController(c *fiber.Ctx) error {
 		seq++
 	}
 
-	tx.Commit()
 	// Glref History
 	var glrefHistory models.GlrefHistory
 	glrefHistory.FCSKID = glref.FCSKID
@@ -191,9 +190,11 @@ func GlrefPostController(c *fiber.Ctx) error {
 	glrefHistory.FCDATE = glref.FDDATE
 	glrefHistory.FCINVOICE = strings.ToUpper(frm.InvoiceNo)
 	if err := configs.Store.Create(&glrefHistory).Error; err != nil {
+        tx.Rollback()
 		r.Message = fmt.Sprintf("Failed create glref history: %v", err.Error())
 		return c.Status(fiber.StatusInternalServerError).JSON(&r)
 	}
+    tx.Commit()
 	// End
 	r.Message = fmt.Sprintf("%s <> %s", fccode, uid)
 	r.Data = &glref
