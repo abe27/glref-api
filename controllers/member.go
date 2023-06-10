@@ -30,3 +30,19 @@ func LoginController(c *fiber.Ctx) error {
 	r.Data = &auth
 	return c.Status(fiber.StatusOK).JSON(&r)
 }
+
+func VerifyTokenController(c *fiber.Ctx) error {
+	var r models.Response
+	s := c.Get("Authorization")
+	token := strings.TrimPrefix(s, "Bearer ")
+	if token == "" {
+		r.Message = "Unauthorized"
+		return c.Status(fiber.StatusUnauthorized).JSON(&r)
+	}
+	_, er := services.ValidateToken(token)
+	if er != nil {
+		r.Message = "Token is expired"
+		return c.Status(fiber.StatusInternalServerError).JSON(&r)
+	}
+	return c.Status(fiber.StatusOK).JSON(&r)
+}

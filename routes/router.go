@@ -14,6 +14,7 @@ func SetUpRouter(c *fiber.App) {
 
 	// Auth
 	api.Post("/login", controllers.LoginController)
+	api.Get("/verify", controllers.VerifyTokenController)
 
 	auth := api.Use(services.AuthorizationRequired)
 	// Book
