@@ -190,11 +190,11 @@ func GlrefPostController(c *fiber.Ctx) error {
 	glrefHistory.FCDATE = glref.FDDATE
 	glrefHistory.FCINVOICE = strings.ToUpper(frm.InvoiceNo)
 	if err := configs.Store.Create(&glrefHistory).Error; err != nil {
-        tx.Rollback()
+		tx.Rollback()
 		r.Message = fmt.Sprintf("Failed create glref history: %v", err.Error())
 		return c.Status(fiber.StatusInternalServerError).JSON(&r)
 	}
-    tx.Commit()
+	tx.Commit()
 	// End
 	r.Message = fmt.Sprintf("%s <> %s", fccode, uid)
 	r.Data = &glref
@@ -389,6 +389,7 @@ func GlrefTransferController(c *fiber.Ctx) error {
 		if err := tx.Model(&models.Orderi{FCSKID: i.FCSKID}).Updates(&models.Orderi{
 			FCSTEP:     orderIStatus,
 			FNBACKQTY:  i.FNBACKQTY + i.FNRECEIVEQTY,
+			FNPRICE:    refProd.FNPRICE,
 			FTLASTEDIT: time.Now(),
 			FTLASTUPD:  time.Now(),
 		}).Error; err != nil {
@@ -467,7 +468,7 @@ func GlrefTransferController(c *fiber.Ctx) error {
 			if runn == 0 {
 				gl.FNAMT = vatSum
 			} else {
-				gl.FNAMT = vatSum + refProd.FNPRICE
+				gl.FNAMT = 0 - (vatSum + refProd.FNPRICE)
 			}
 
 			if err := tx.Create(&gl).Error; err != nil {
