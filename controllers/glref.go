@@ -295,7 +295,7 @@ func GlrefTransferController(c *fiber.Ctx) error {
 	var listOrderI []models.OrderiView
 	for _, p := range refProd {
 		var prodOrderI models.OrderiView
-		if err := tx.Where("FCSTEP", "P").First(&prodOrderI, &models.OrderiView{FCORDERH: orderH.FCSKID, FCPROD: p.FCPROD}).Error; err != nil {
+		if err := tx.Where("FCSTEP", "1").First(&prodOrderI, &models.OrderiView{FCORDERH: orderH.FCSKID, FCPROD: p.FCPROD}).Error; err != nil {
 			r.Message = "พบสินค้าไม่ตรงกับเอกสาร"
 			glHistory.FCREMARK = "พบสินค้าไม่ตรงกับเอกสาร"
 			glHistory.FCSTATUS = 2
@@ -393,15 +393,16 @@ func GlrefTransferController(c *fiber.Ctx) error {
 			return c.Status(fiber.StatusInternalServerError).JSON(&r)
 		}
 
-		orderIStatus := "1"
-		if i.FNQTY > (i.FNBACKQTY + i.FNRECEIVEQTY) {
-			orderIStatus = "P"
+		backQty := i.FNBACKQTY - i.FNRECEIVEQTY
+		orderIStatus := "P"
+		if backQty == 0 {
+			orderIStatus = "1"
 		}
 
 		// UPDATE ORDERI
 		if err := tx.Model(&models.Orderi{FCSKID: i.FCSKID}).Updates(&models.Orderi{
 			FCSTEP:     orderIStatus,
-			FNBACKQTY:  i.FNBACKQTY + i.FNRECEIVEQTY,
+			FNBACKQTY:  backQty,
 			FNPRICE:    refProd.FNPRICE,
 			FTLASTEDIT: time.Now(),
 			FTLASTUPD:  time.Now(),
