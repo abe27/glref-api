@@ -15,6 +15,7 @@ var (
 	API_TRIGGER_URL string
 	APP_NAME        string
 	APP_DESCRIPTION string
+	APP_LINE_TOKEN  string
 )
 
 func SetDB() {

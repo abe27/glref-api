@@ -62,6 +62,7 @@ func init() {
 	configs.API_TRIGGER_URL = os.Getenv("API_TRIGGER_URL")
 	configs.APP_NAME = os.Getenv("APP_NAME")
 	configs.APP_DESCRIPTION = os.Getenv("APP_DESCRIPTION")
+	configs.APP_LINE_TOKEN = os.Getenv("LINE_NOTFICATION")
 
 	// Auto Migration DB
 	configs.SetDB()

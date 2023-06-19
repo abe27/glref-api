@@ -207,6 +207,9 @@ func GlrefPostController(c *fiber.Ctx) error {
 	// 	}
 	// }
 
+	msg := fmt.Sprintf("\nบันทึก%s\nเลขที่: %s \nสินค้า: %d รายการ\nจำนวน: %d\nเรียบร้อยแล้ว\n%s", book.FCNAME, glref.FCREFNO, len(frm.Items), int(fcamt), time.Now().Format("2006-01-02 15:04:05"))
+	go services.LineNotify(configs.APP_LINE_TOKEN, msg)
+
 	r.Data = &glref
 	return c.Status(fiber.StatusCreated).JSON(&r)
 }
