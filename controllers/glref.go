@@ -394,9 +394,9 @@ func GlrefTransferController(c *fiber.Ctx) error {
 		}
 
 		backQty := i.FNBACKQTY - i.FNRECEIVEQTY
-		orderIStatus := "P"
+		orderIStatus := "1"
 		if backQty == 0 {
-			orderIStatus = "1"
+			orderIStatus = "P"
 		}
 
 		// UPDATE ORDERI
@@ -509,16 +509,16 @@ func GlrefTransferController(c *fiber.Ctx) error {
 	}
 
 	var sumCtn int64
-	if err := tx.Raw(fmt.Sprintf("select count(FCSKID) from ORDERI where FCORDERH='%s' and FNQTY > FNBACKQTY", listOrderI[0].FCORDERH)).Scan(&sumCtn).Error; err != nil {
+	if err := tx.Raw(fmt.Sprintf("select count(FCSKID) from ORDERI where FCORDERH='%s' and FCSTEP='1'", listOrderI[0].FCORDERH)).Scan(&sumCtn).Error; err != nil {
 		tx.Rollback()
 		store.Rollback()
 		r.Message = err.Error()
 		return c.Status(fiber.StatusInternalServerError).JSON(&r)
 	}
 	// UPDATE ORDERH
-	orderStatus := "1"
+	orderStatus := "P"
 	if sumCtn > 0 {
-		orderStatus = "P"
+		orderStatus = "1"
 	}
 	// fmt.Println("ORDERID: ", listOrderI[0].FCORDERH, " SUM: ", sumCtn, "STATUS: ", orderStatus)
 	if err := tx.Model(&models.Orderh{FCSKID: listOrderI[0].FCORDERH}).Updates(&models.Orderh{
@@ -559,7 +559,7 @@ func GlrefHistoryController(c *fiber.Ctx) error {
 		}
 	}
 
-	if err := configs.Store.Find(&gl).Error; err != nil {
+	if err := configs.Store.Order("FCDATE").Find(&gl).Error; err != nil {
 		r.Message = err.Error()
 		return c.Status(fiber.StatusNotFound).JSON(&gl)
 	}
