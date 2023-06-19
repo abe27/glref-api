@@ -559,7 +559,7 @@ func GlrefHistoryController(c *fiber.Ctx) error {
 		}
 	}
 
-	if err := configs.Store.Order("FCDATE").Find(&gl).Error; err != nil {
+	if err := configs.Store.Limit(150).Order("FCDATE").Find(&gl).Error; err != nil {
 		r.Message = err.Error()
 		return c.Status(fiber.StatusNotFound).JSON(&gl)
 	}
