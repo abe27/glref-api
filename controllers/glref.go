@@ -356,6 +356,14 @@ func GlrefTransferController(c *fiber.Ctx) error {
 
 	// fmt.Println("GLHEAD: %s", glhead.FCSKID)
 	// UPDATE GLREF
+	var book models.Booking
+	if err := tx.First(&book, &models.Booking{FCCODE: "003", FCREFTYPE: "BI"}).Error; err != nil {
+		tx.Rollback()
+		r.Message = err.Error()
+		return c.Status(fiber.StatusInternalServerError).JSON(&r)
+	}
+
+	glRef.FCBOOK = book.FCSKID
 	glRef.FCGLHEAD = glhead.FCSKID
 	glRef.FCRFTYPE = "B"
 	glRef.FCREFTYPE = "BI"

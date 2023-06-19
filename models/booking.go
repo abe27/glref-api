@@ -7,9 +7,9 @@ import (
 
 type Booking struct {
 	FCSKID    string   `gorm:"primaryKey;column:FCSKID;type:char;size:8;not null;index;" json:"fcskid"`
-	FCCODE    string   `json:"fccode,omitempty"`
+	FCCODE    string   `gorm:"column:FCCODE" json:"fccode,omitempty"`
 	FCNAME    string   `json:"fcname,omitempty"`
-	FCREFTYPE string   `json:"fcreftype,omitempty"`
+	FCREFTYPE string   `gorm:"column:FCREFTYPE" json:"fcreftype,omitempty"`
 	FCPREFIX  string   `json:"fcprefix,omitempty"`
 	REFTYPE   *Reftype `gorm:"foreignKey:FCREFTYPE;references:FCSKID;" json:"ref_type"`
 }
