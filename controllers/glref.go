@@ -83,6 +83,7 @@ func GlrefPostController(c *fiber.Ctx) error {
 		fcamt += i.Qty
 	}
 
+	empID := fmt.Sprintf("%s", uid)
 	fccode := fmt.Sprintf("%s%04d", (thYear + ((time.Now().Format("20060102"))[4:6]))[2:6], (rnn + 1))
 	var glref models.Glref
 	glref.FCCODE = fccode
@@ -100,7 +101,7 @@ func GlrefPostController(c *fiber.Ctx) error {
 	glref.FCDEPT = frm.Department
 	glref.FCSECT = sect.FCSKID
 	glref.FCBOOK = book.FCSKID
-	glref.FCCORRECTB = fmt.Sprintf("%s", uid)
+	glref.FCCORRECTB = empID
 	glref.FMMEMDATA = strings.ToUpper(frm.InvoiceNo)
 	glref.FCTOWHOUSE = frm.Whs
 
