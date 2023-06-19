@@ -13,8 +13,8 @@ func SetUpRouter(c *fiber.App) {
 	api.Get("", controllers.HelloController)
 
 	// Auth
-	api.Post("/login", controllers.LoginController)
-	api.Get("/verify", controllers.VerifyTokenController)
+	c.Post("api/v1/login", controllers.LoginController)
+	c.Get("api/v1/verify", controllers.VerifyTokenController)
 
 	auth := api.Use(services.AuthorizationRequired)
 	// Book

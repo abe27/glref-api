@@ -198,6 +198,15 @@ func GlrefPostController(c *fiber.Ctx) error {
 	tx.Commit()
 	// End
 	r.Message = fmt.Sprintf("%s <> %s", fccode, uid)
+
+	// msg := fmt.Sprintf("\nบันทึก%s\nเลขที่: %s \nสินค้า: %d รายการ\nจำนวน: %d\nเรียบร้อยแล้ว\n%s", book.FCNAME, glref.FCREFNO, len(frm.REFPROD), int(fcamt), time.Now().Format("2006-01-02 15:04:05"))
+	// var line models.Linenotify
+	// if err := configs.Store.First(&line, &models.Linenotify{Jobs: book.FCREFTYPE}).Error; err == nil {
+	// 	if line.Token != "" {
+	// 		go services.LineNotify(line.Token, msg)
+	// 	}
+	// }
+
 	r.Data = &glref
 	return c.Status(fiber.StatusCreated).JSON(&r)
 }
