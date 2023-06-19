@@ -14,6 +14,7 @@ type Refprod struct {
 	FCBOICARD  string      `gorm:"column:FCBOICARD;" json:"fcboicard"  form:"fcboicard" `
 	FCBOIGROUP string      `gorm:"column:FCBOIGROUP;" json:"fcboigroup"  form:"fcboigroup" `
 	FCBRANCH   string      `gorm:"column:FCBRANCH;" json:"fcbranch"  form:"fcbranch" `
+	FCCOOR     string      `gorm:"column:FCCOOR;" json:"fccoor"`
 	FCCORP     string      `gorm:"column:FCCORP;" json:"fccorp"  form:"fccorp" `
 	FCCORRECTB string      `gorm:"column:FCCORRECTB;" json:"fccorrectb"  form:"fccorrectb" `
 	FCCOUNTER  string      `gorm:"column:FCCOUNTER;" json:"fccounter"  form:"fccounter" `
@@ -173,8 +174,15 @@ func (Refprod) TableName() string {
 func (obj *Refprod) BeforeCreate(tx *gorm.DB) (err error) {
 	id, _ := g.New(6)
 	obj.FCSKID = fmt.Sprintf("G%sF", id)
+	obj.FCCREATEAP = "$/"
 	obj.FCDATASER = "$$$+"
 	obj.FCREFPDTYP = "P"
+	obj.FCLUPDAPP = "$/"
+	obj.FCVATISOUT = "Y"
+	obj.FCVATTYPE = "1"
+	obj.FNVATRATE = 7
+	obj.FCEAFTERR = "E"
+	obj.FNXRATE = 1
 	obj.FTDATETIME = time.Now()
 	obj.FTLASTEDIT = time.Now()
 	obj.FTLASTUPD = time.Now()

@@ -143,7 +143,7 @@ type Orderh struct {
 	FNAMT float64 `gorm:"column:FNAMT;" json:"fnamt"  form:"fnamt" `
 	// FNAMT2     float64   `gorm:"column:FNAMT2;" json:"fnamt2"  form:"fnamt2" `
 	FNAMTKE    float64 `gorm:"column:FNAMTKE;" json:"fnamtke"  form:"fnamtke" `
-	FNCREDTERM float64 `gorm:"column:FNCREDTERM;" json:"fncredterm"  form:"fncredterm" `
+	FNCREDTERM int     `gorm:"column:FNCREDTERM;" json:"fncredterm"  form:"fncredterm" `
 	// FNDAYASSUR float64   `gorm:"column:FNDAYASSUR;" json:"fndayassur"  form:"fndayassur" `
 	// FNDISCAMT1 float64   `gorm:"column:FNDISCAMT1;" json:"fndiscamt1"  form:"fndiscamt1" `
 	// FNDISCAMT2 float64   `gorm:"column:FNDISCAMT2;" json:"fndiscamt2"  form:"fndiscamt2" `

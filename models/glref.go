@@ -36,15 +36,29 @@ type Glref struct {
 	FCTOWHOUSE string      `gorm:"column:FCTOWHOUSE;" json:"fctowhouse"  form:"fctowhouse" `
 	FCVATCOOR  string      `gorm:"column:FCVATCOOR;" json:"fcvatcoor"  form:"fcvatcoor" `
 	FDDATE     time.Time   `gorm:"column:FDDATE;" json:"fddate"  form:"fddate" default:"now"`
+	FDRECEDATE time.Time   `gorm:"column:FDRECEDATE;" json:"fdrecedate"`
+	FDDUEDATE  time.Time   `gorm:"column:FDDUEDATE;" json:"fdduedate"`
 	FIMILLISEC int64       `gorm:"column:FIMILLISEC;" json:"fimillisec"  form:"fimillisec" `
 	FNAFTDEP   float64     `gorm:"column:FNAFTDEP;" json:"fnaftdep"  form:"fnaftdep" defualt:"0"`
 	FNAFTDEPKE float64     `gorm:"column:FNAFTDEPKE;" json:"fnaftdepke"  form:"fnaftdepke" defualt:"0"`
 	FNAMT      float64     `gorm:"column:FNAMT;" json:"fnamt"  form:"fnamt" `
+	FNXRATE    float64     `gorm:"column:FNXRATE;" json:"fnxate"`
+	FNAMTKE    float64     `gorm:"column:FNAMTKE;" json:"fnamtke"`
+	FNVATAMTKE float64     `gorm:"column:FNVATAMTKE;" json:"fnvatamtke"`
+	FNCREDTERM int         `gorm:"column:FNCREDTERM;" json:"fncredterm"`
+	FCVATTYPE  string      `gorm:"column:FCVATTYPE;" json:"fcvattype"`
+	FNVATRATE  float64     `gorm:"column:FNVATRATE;" json:"fnvatrate"`
+	FNVATAMT   float64     `gorm:"column:FNVATAMT;" json:"fnvatamt"`
+	FCISCASH   string      `gorm:"column:FCISCASH;" json:"fciscash"`
+	FCHASRET   string      `gorm:"column:FCHASRET;" json:"fcchasret"`
+	FCVATDUE   string      `gorm:"column:FCVATDUE;" json:"fcvatdue"`
+	FNSTOCKUPD float64     `gorm:"column:FNSTOCKUPD;" json:"fnstockupd"`
 	FTDATETIME time.Time   `gorm:"column:FTDATETIME;" json:"ftdatetime"  form:"ftdatetime" default:"now"`
 	FTLASTEDIT time.Time   `gorm:"column:FTLASTEDIT;" json:"ftlastedit"  form:"ftlastedit" default:"now"`
 	FTLASTUPD  time.Time   `gorm:"column:FTLASTUPD;" json:"ftlastupd"  form:"ftlastupd" default:"now"`
 	FCLUPDAPP  string      `gorm:"column:FCLUPDAPP;" json:"fclupdapp"  form:"fclupdapp" `
 	FMMEMDATA  string      `gorm:"column:FMMEMDATA;" json:"fmmemdata"  form:"fmmemdata" `
+	FCCREATEAP string      `gorm:"column:FCCREATEAP;" json:"fccreateap"`
 	BOOK       *Booking    `gorm:"foreignKey:FCBOOK;references:FCSKID;" json:"book"`
 	BRANCH     *Branch     `gorm:"foreignKey:FCBRANCH;references:FCSKID;" json:"branch"`
 	COOR       *Coor       `gorm:"foreignKey:FCCOOR;references:FCSKID;" json:"coor"`
@@ -68,11 +82,25 @@ func (obj *Glref) BeforeCreate(tx *gorm.DB) (err error) {
 	uid, _ := g.New(26)
 	obj.FCGID = uid
 	obj.FCDATASER = "$$$+"
+	obj.FCSTEP = "1"
+	obj.FCLUPDAPP = "$0"
+	obj.FCVATTYPE = "1"
+	obj.FNVATRATE = 7
+	obj.FNVATAMT = 0
+	obj.FNCREDTERM = 0
+	obj.FCISCASH = "N"
+	obj.FCHASRET = "Y"
+	obj.FCVATDUE = "Y"
+	obj.FCEAFTERR = "E"
+	obj.FNXRATE = 1
+	obj.FNAMTKE = 0
+	obj.FNVATAMTKE = 0
+	obj.FNSTOCKUPD = 1
+	obj.FCCREATEAP = "$/"
 	obj.FIMILLISEC = time.Now().Unix()
 	obj.FTDATETIME = time.Now()
 	obj.FTLASTEDIT = time.Now()
 	obj.FTLASTUPD = time.Now()
-	obj.FCLUPDAPP = "$0"
 	return
 }
 

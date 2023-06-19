@@ -104,6 +104,10 @@ func GlrefPostController(c *fiber.Ctx) error {
 	glref.FCCORRECTB = empID
 	glref.FMMEMDATA = strings.ToUpper(frm.InvoiceNo)
 	glref.FCTOWHOUSE = frm.Whs
+	glref.FCCREATEBY = empID
+	glref.FCVATCOOR = frm.Coor
+	glref.FCCREATETY = empID
+	glref.FCDELICOOR = frm.Coor
 
 	if err := tx.Create(&glref).Error; err != nil {
 		tx.Rollback()
@@ -127,15 +131,16 @@ func GlrefPostController(c *fiber.Ctx) error {
 		refProd.FCIOTYPE = glref.FCSTEP
 		refProd.FCRFTYPE = book.REFTYPE.FCRFTYPE
 		refProd.FCREFTYPE = book.FCREFTYPE
-		refProd.FCPRODTYPE = book.REFTYPE.FCRFTYPE
+		refProd.FCCOOR = frm.Coor
 		refProd.FCCORP = frm.Corp
 		refProd.FCBRANCH = frm.Branch
 		refProd.FCWHOUSE = frm.Whs
+		refProd.FCPROJ = frm.Proj
 		refProd.FCJOB = frm.Job
 		refProd.FCSECT = sect.FCSKID
 		refProd.FCDEPT = sect.FCDEPT
 		refProd.FCPROD = i.Product
-		refProd.FCPRODTYPE = prod.FCPRTYPE
+		refProd.FCPRODTYPE = prod.FCTYPE
 		refProd.FNUMQTY = 1
 		refProd.FNQTY = i.Qty
 		refProd.FNPRICE = i.Price
@@ -144,9 +149,10 @@ func GlrefPostController(c *fiber.Ctx) error {
 		refProd.FCSTUM = i.Unit
 		refProd.FCSTUMSTD = i.Unit
 		refProd.FNSTUMQTY = 1
-		refProd.FTDATETIME = time.Now()
-		refProd.FTLASTEDIT = time.Now()
-		refProd.FTLASTUPD = time.Now()
+		refProd.FNCOSTAMT = i.Price * i.Qty
+		refProd.FNVATAMT = (i.Price * i.Qty) * 0.07
+		refProd.FNPRICEKE = i.Price
+		refProd.FCCREATEBY = empID
 
 		if err := tx.Create(&refProd).Error; err != nil {
 			tx.Rollback()
@@ -292,8 +298,18 @@ func GlrefTransferController(c *fiber.Ctx) error {
 	}
 
 	// Check Part from orderi
+	var vatAmt float64 = 0
+	var fnAmt float64 = 0    // FNAMTKE
+	var fnVatAmt float64 = 0 // FNVATAMTKE
 	var listOrderI []models.OrderiView
 	for _, p := range refProd {
+		vatAmt = vatAmt + p.FNVATAMT
+		fnAmt = fnAmt + p.FNCOSTAMT
+		fnVatAmt = fnVatAmt + p.FNPRICEKE
+
+		// refProd.FNCOSTAMT = i.Price * i.Qty
+		// refProd.FNVATAMT = (i.Price * i.Qty) * 0.07
+		// refProd.FNPRICEKE = i.Price
 		var prodOrderI models.OrderiView
 		if err := tx.Where("FCSTEP", "1").First(&prodOrderI, &models.OrderiView{FCORDERH: orderH.FCSKID, FCPROD: p.FCPROD}).Error; err != nil {
 			r.Message = "พบสินค้าไม่ตรงกับเอกสาร"
@@ -340,6 +356,7 @@ func GlrefTransferController(c *fiber.Ctx) error {
 	glhead.FCACCBOOK = accBook.FCSKID
 
 	onYear, _ := strconv.Atoi(time.Now().Format("2006"))
+	onMonth, _ := strconv.Atoi(time.Now().Format("200601"))
 	thYear := fmt.Sprintf("%d", (onYear + 543))
 	var rnn int64
 	if err := tx.Select("FCCODE").Where("FCCODE LIKE ?", (thYear + ((time.Now().Format("20060102"))[4:6]))[2:6]+"%").Model(&models.Glhead{}).Count(&rnn).Error; err != nil {
@@ -363,11 +380,18 @@ func GlrefTransferController(c *fiber.Ctx) error {
 		return c.Status(fiber.StatusInternalServerError).JSON(&r)
 	}
 
+	creditDate := time.Now().AddDate(0, 0, orderH.FNCREDTERM) //time.Now() + orderH.FNCREDTERM
 	glRef.FCBOOK = book.FCSKID
 	glRef.FCGLHEAD = glhead.FCSKID
 	glRef.FCRFTYPE = "B"
 	glRef.FCREFTYPE = "BI"
-	glRef.FCSTEP = "P"
+	glRef.FCSTEP = "1"
+	glRef.FDDUEDATE = creditDate
+	glRef.FNVATAMT = vatAmt
+	glRef.FNAMTKE = fnAmt
+	glRef.FNVATAMTKE = fnVatAmt
+	glRef.FNCREDTERM = orderH.FNCREDTERM
+	glRef.FDRECEDATE, _ = time.Parse("20060102", fmt.Sprintf("%d%s", onMonth, "01"))
 	glRef.FTLASTEDIT = time.Now()
 	glRef.FTLASTUPD = time.Now()
 	if err := tx.Save(&glRef).Error; err != nil {
@@ -422,13 +446,13 @@ func GlrefTransferController(c *fiber.Ctx) error {
 		// fmt.Println("orderIStatus: ", orderIStatus)
 		// sumCtn += orderIQty
 
-		// UPDATE GLREF HISTORY
-		var orderH models.Orderh
-		if err := tx.Select("FCREFNO").First(&orderH, &models.Orderh{FCSKID: listOrderI[0].FCORDERH}).Error; err != nil {
-			tx.Rollback()
-			r.Message = err.Error()
-			return c.Status(fiber.StatusNotFound).JSON(&r)
-		}
+		// // UPDATE GLREF HISTORY
+		// var orderH models.Orderh
+		// if err := tx.Select("FCREFNO,FNCREDTERM").First(&orderH, &models.Orderh{FCSKID: listOrderI[0].FCORDERH}).Error; err != nil {
+		// 	tx.Rollback()
+		// 	r.Message = err.Error()
+		// 	return c.Status(fiber.StatusNotFound).JSON(&r)
+		// }
 
 		var prod models.Product
 		if err := tx.Select("FCSKID,FCACCSCRED").First(&prod, &models.Product{FCSKID: i.FCPROD}).Error; err != nil {
