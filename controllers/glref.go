@@ -410,7 +410,7 @@ func GlrefTransferController(c *fiber.Ctx) error {
 	for _, i := range listOrderI {
 		// fmt.Println("GLREF: %s PROD: %s ORDERH: %s ORDERI: %s", glRef.FCSKID, i.FCPROD, i.FCORDERH, i.FCSKID)
 		var refProd models.Refprod
-		if err := tx.Select("FCSKID,FNQTY,FCSEQ,FNPRICE").First(&refProd, &models.Refprod{FCGLREF: glRef.FCSKID, FCPROD: i.FCPROD}).Error; err != nil {
+		if err := tx.First(&refProd, &models.Refprod{FCGLREF: glRef.FCSKID, FCPROD: i.FCPROD}).Error; err != nil {
 			tx.Rollback()
 			r.Message = err.Error()
 			return c.Status(fiber.StatusInternalServerError).JSON(&r)
@@ -472,6 +472,7 @@ func GlrefTransferController(c *fiber.Ctx) error {
 			r.Message = err.Error()
 			return c.Status(fiber.StatusNotFound).JSON(&r)
 		}
+
 		// CREATE GL Round 1
 		var glFirst models.Gl
 		glFirst.FCACCHART = acChart.FCSKID
@@ -483,6 +484,9 @@ func GlrefTransferController(c *fiber.Ctx) error {
 		glFirst.FCSEQ = fmt.Sprintf("%04d", 1)
 		glFirst.FDDATE = glRef.FDDATE
 		glFirst.FNAMT = refProd.FNPRICE
+		glFirst.FCJOB = refProd.FCJOB
+		glFirst.FCPROJ = refProd.FCPROJ
+		glFirst.FCCREATEBY = refProd.FCCREATEBY
 		if err := tx.Create(&glFirst).Error; err != nil {
 			tx.Rollback()
 			r.Message = err.Error()
@@ -515,6 +519,9 @@ func GlrefTransferController(c *fiber.Ctx) error {
 			gl.FCGLHEAD = glRef.FCGLHEAD
 			gl.FCSEQ = fmt.Sprintf("%04d", (seqGl + 1))
 			gl.FDDATE = glRef.FDDATE
+			gl.FCJOB = refProd.FCJOB
+			gl.FCPROJ = refProd.FCPROJ
+			gl.FCCREATEBY = refProd.FCCREATEBY
 			vatSum = (refProd.FNPRICE * 0.07)
 			if runn == 0 {
 				gl.FNAMT = vatSum
@@ -538,6 +545,7 @@ func GlrefTransferController(c *fiber.Ctx) error {
 		noteCut.FCMASTERH = glRef.FCSKID
 		noteCut.FCMASTERI = refProd.FCSKID
 		noteCut.FNQTY = i.FNRECEIVEQTY
+		noteCut.FCCREATEBY = refProd.FCCREATEBY
 		if err := tx.Create(&noteCut).Error; err != nil {
 			tx.Rollback()
 			r.Message = err.Error()
