@@ -217,7 +217,11 @@ func GlrefPostController(c *fiber.Ctx) error {
 	// 	}
 	// }
 
-	msg := fmt.Sprintf("\nบันทึก%s\nเลขที่: %s \nสินค้า: %d รายการ\nจำนวน: %d %s\nเรียบร้อยแล้ว\n%s", book.FCNAME, glref.FCREFNO, len(frm.Items), int(fcamt), "ชิ้น", time.Now().Format("2006-01-02 15:04:05"))
+	fnQty := 0
+	for _, q := range frm.Items {
+		fnQty += int(q.Qty)
+	}
+	msg := fmt.Sprintf("\nบันทึก%s\nเลขที่: %s \nสินค้า: %d รายการ\nจำนวน: %d %s\nเรียบร้อยแล้ว\n%s", book.FCNAME, glref.FCREFNO, len(frm.Items), int(fnQty), "ชิ้น", time.Now().Format("2006-01-02 15:04:05"))
 	go services.LineNotify(configs.APP_LINE_TOKEN, msg)
 
 	r.Data = &glref
@@ -330,6 +334,20 @@ func GlrefTransferController(c *fiber.Ctx) error {
 			}
 			store.Commit()
 			return c.Status(fiber.StatusNotFound).JSON(&r)
+		}
+
+		if prodOrderI.FNBACKQTY <= 0 {
+			r.Message = "สินค้ารับเข้าคลังหมดไปแล้ว"
+			glHistory.FCREMARK = "สินค้ารับเข้าคลังหมดไปแล้ว"
+			glHistory.FCSTATUS = 2
+			if err := store.Save(&glHistory).Error; err != nil {
+				tx.Rollback()
+				store.Rollback()
+				r.Message = err.Error()
+				return c.Status(fiber.StatusInternalServerError).JSON(&r)
+			}
+			store.Commit()
+			return c.Status(fiber.StatusInternalServerError).JSON(&r)
 		}
 
 		if p.FNQTY > prodOrderI.FNQTY {
@@ -613,7 +631,7 @@ func GlrefHistoryController(c *fiber.Ctx) error {
 	var r models.Response
 	var gl []models.GlrefHistory
 	if c.Query("fcskid") != "" {
-		if err := configs.Store.Where("fcsk_id", c.Query("fcskid")).Find(&gl).Error; err != nil {
+		if err := configs.Store.Order("created_at").Where("fcsk_id", c.Query("fcskid")).Find(&gl).Error; err != nil {
 			r.Message = err.Error()
 			return c.Status(fiber.StatusNotFound).JSON(&gl)
 		}

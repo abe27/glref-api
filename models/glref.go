@@ -153,6 +153,8 @@ type GlrefHistory struct {
 	FCPONO    string    `json:"fcpono"`
 	FCREMARK  string    `json:"fcremark"`
 	FCSTATUS  int       `json:"fcstatus"`
+	CreatedAt time.Time `json:"created_at,omitempty" default:"now"`
+	UpdatedAt time.Time `json:"updated_at,omitempty" default:"now"`
 }
 
 func (obj *GlrefHistory) BeforeCreate(tx *gorm.DB) (err error) {
