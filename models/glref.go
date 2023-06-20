@@ -49,6 +49,10 @@ type Glref struct {
 	FCVATTYPE  string      `gorm:"column:FCVATTYPE;" json:"fcvattype"`
 	FNVATRATE  float64     `gorm:"column:FNVATRATE;" json:"fnvatrate"`
 	FNVATAMT   float64     `gorm:"column:FNVATAMT;" json:"fnvatamt"`
+	FNPAYAMT   float64     `gorm:"column:FNPAYAMT;" json:"fnpayamt"`
+	FNSPAYAMT  float64     `gorm:"column:FNSPAYAMT;" json:"fnspayamt"`
+	FNBEFOAMT  float64     `gorm:"column:FNBEFOAMT;" json:"fnbefoamt"`
+	FCVATISOUT string      `gorm:"column:FCVATISOUT;" json:"fcvatisout"`
 	FCISCASH   string      `gorm:"column:FCISCASH;" json:"fciscash"`
 	FCHASRET   string      `gorm:"column:FCHASRET;" json:"fcchasret"`
 	FCVATDUE   string      `gorm:"column:FCVATDUE;" json:"fcvatdue"`
@@ -92,11 +96,17 @@ func (obj *Glref) BeforeCreate(tx *gorm.DB) (err error) {
 	obj.FCHASRET = "Y"
 	obj.FCVATDUE = "Y"
 	obj.FCEAFTERR = "E"
+	obj.FNPAYAMT = 0
+	obj.FNSPAYAMT = 0
+	obj.FNBEFOAMT = 0
+	obj.FCVATISOUT = "Y"
 	obj.FNXRATE = 1
 	obj.FNAMTKE = 0
 	obj.FNVATAMTKE = 0
 	obj.FNSTOCKUPD = 1
 	obj.FCCREATEAP = "$/"
+	obj.FDRECEDATE = time.Now()
+	obj.FDDUEDATE = time.Now()
 	obj.FIMILLISEC = time.Now().Unix()
 	obj.FTDATETIME = time.Now()
 	obj.FTLASTEDIT = time.Now()

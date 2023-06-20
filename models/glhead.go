@@ -48,7 +48,7 @@ type Glhead struct {
 	// FCAPPROVER string `gorm:"column:FCAPPROVER;" json:"fcapprover"  form:"fcapprover" `
 
 	// FCCPATADJ  string `gorm:"column:FCCPATADJ;" json:"fccpatadj"  form:"fccpatadj" `
-	// FCCREATEAP string `gorm:"column:FCCREATEAP;" json:"fccreateap"  form:"fccreateap" `
+	FCCREATEAP string `gorm:"column:FCCREATEAP;" json:"fccreateap"  form:"fccreateap" `
 	// FCCREATETY string `gorm:"column:FCCREATETY;" json:"fccreatety"  form:"fccreatety" `
 	// FCCUACC    string `gorm:"column:FCCUACC;" json:"fccuacc"  form:"fccuacc" `
 	// FCDATAIMP  string `gorm:"column:FCDATAIMP;" json:"fcdataimp"  form:"fcdataimp" `
@@ -72,7 +72,7 @@ type Glhead struct {
 	// FCLID      string `gorm:"column:FCLID;" json:"fclid"  form:"fclid" `
 
 	// FCLOCKBY   string `gorm:"column:FCLOCKBY;" json:"fclockby"  form:"fclockby" `
-	// FCLUPDAPP  string `gorm:"column:FCLUPDAPP;" json:"fclupdapp"  form:"fclupdapp" `
+	FCLUPDAPP string `gorm:"column:FCLUPDAPP;" json:"fclupdapp"  form:"fclupdapp" `
 	// FCMANDATE  string `gorm:"column:FCMANDATE;" json:"fcmandate"  form:"fcmandate" `
 	// FCORGCODE  string `gorm:"column:FCORGCODE;" json:"fcorgcode"  form:"fcorgcode" `
 	// FCPOSTBY   string `gorm:"column:FCPOSTBY;" json:"fcpostby"  form:"fcpostby" `
@@ -128,6 +128,8 @@ func (obj *Glhead) BeforeCreate(tx *gorm.DB) (err error) {
 	obj.FCGID = gid
 
 	obj.FIMILLISEC = time.Now().Unix()
+	obj.FCLUPDAPP = "$/"
+	obj.FCCREATEAP = "$/"
 	obj.FCDATASER = "$$$+"
 	obj.FCSTEP = "E"
 	obj.FCSTYLE = "A"

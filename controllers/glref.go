@@ -79,8 +79,10 @@ func GlrefPostController(c *fiber.Ctx) error {
 	}
 
 	var fcamt float64 = 0
+	var fvatamt float64 = 0
 	for _, i := range frm.Items {
-		fcamt += i.Qty
+		fcamt += (i.Price * i.Qty)
+		fvatamt += (i.Price * i.Qty) * 0.07
 	}
 
 	empID := fmt.Sprintf("%s", uid)
@@ -94,6 +96,7 @@ func GlrefPostController(c *fiber.Ctx) error {
 	glref.FDDATE = frm.RecDate
 	glref.FCBRANCH = frm.Branch
 	glref.FNAMT = fcamt
+	glref.FNVATAMT = fvatamt
 	glref.FCPROJ = frm.Proj
 	glref.FCJOB = frm.Job
 	glref.FCCOOR = frm.Coor
@@ -106,7 +109,7 @@ func GlrefPostController(c *fiber.Ctx) error {
 	glref.FCTOWHOUSE = frm.Whs
 	glref.FCCREATEBY = empID
 	glref.FCVATCOOR = frm.Coor
-	glref.FCCREATETY = empID
+	// glref.FCCREATETY = empID
 	glref.FCDELICOOR = frm.Coor
 
 	if err := tx.Create(&glref).Error; err != nil {
@@ -128,7 +131,7 @@ func GlrefPostController(c *fiber.Ctx) error {
 		refProd.FCSEQ = fmt.Sprintf("%03d", seq)
 		refProd.FCGLREF = glref.FCSKID
 		refProd.FDDATE = glref.FDDATE
-		refProd.FCIOTYPE = glref.FCSTEP
+		refProd.FCIOTYPE = frm.Step
 		refProd.FCRFTYPE = book.REFTYPE.FCRFTYPE
 		refProd.FCREFTYPE = book.FCREFTYPE
 		refProd.FCCOOR = frm.Coor
@@ -213,7 +216,7 @@ func GlrefPostController(c *fiber.Ctx) error {
 	// 	}
 	// }
 
-	msg := fmt.Sprintf("\nบันทึก%s\nเลขที่: %s \nสินค้า: %d รายการ\nจำนวน: %d\nเรียบร้อยแล้ว\n%s", book.FCNAME, glref.FCREFNO, len(frm.Items), int(fcamt), time.Now().Format("2006-01-02 15:04:05"))
+	msg := fmt.Sprintf("\nบันทึก%s\nเลขที่: %s \nสินค้า: %d รายการ\nจำนวน: %d %s\nเรียบร้อยแล้ว\n%s", book.FCNAME, glref.FCREFNO, len(frm.Items), int(fcamt), "ชิ้น", time.Now().Format("2006-01-02 15:04:05"))
 	go services.LineNotify(configs.APP_LINE_TOKEN, msg)
 
 	r.Data = &glref
@@ -348,6 +351,8 @@ func GlrefTransferController(c *fiber.Ctx) error {
 	glhead.FCCORP = glRef.FCCORP
 	glhead.FCBRANCH = glRef.FCBRANCH
 	glhead.FDDATE = glRef.FDDATE
+	glhead.FMREMARK = glRef.FMMEMDATA
+	glhead.FCCREATEBY = glRef.FCCREATEBY
 	var accBook models.Accbook
 	if err := tx.First(&accBook, &models.Accbook{FCCODE: "PD"}).Error; err != nil {
 		r.Message = "ไม่พบข้อมูล ACCBOOK!"
@@ -425,7 +430,7 @@ func GlrefTransferController(c *fiber.Ctx) error {
 			return c.Status(fiber.StatusInternalServerError).JSON(&r)
 		}
 
-		backQty := i.FNBACKQTY - i.FNRECEIVEQTY
+		backQty := i.FNBACKQTY - refProd.FNQTY
 		orderIStatus := "1"
 		if backQty == 0 {
 			orderIStatus = "P"
@@ -563,7 +568,6 @@ func GlrefTransferController(c *fiber.Ctx) error {
 		r.Message = err.Error()
 		return c.Status(fiber.StatusInternalServerError).JSON(&r)
 	}
-
 	// Update History
 	glHistory.FCPONO = strings.ToUpper(c.Query("pono"))
 	glHistory.FCSTATUS = 1
