@@ -162,6 +162,12 @@ func (obj *Orderi) BeforeCreate(tx *gorm.DB) (err error) {
 	return
 }
 
+func (obj *Orderi) BeforeUpdate(tx *gorm.DB) (err error) {
+	obj.FTLASTEDIT = time.Now()
+	obj.FTLASTUPD = time.Now()
+	return
+}
+
 type OrderiView struct {
 	FCORDERH     string  `gorm:"column:FCORDERH;" json:"fcorderh"  form:"fcorderh" `
 	FCPROD       string  `gorm:"column:FCPROD;" json:"fcprod"  form:"fcprod" `
