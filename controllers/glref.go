@@ -125,6 +125,97 @@ func GlrefPostController(c *fiber.Ctx) error {
 	switch frm.Prefix {
 	case "PVF1":
 		//start refprod
+		numRun := 1
+		for _, typeName := range [2]string{"O", "I"} {
+			strRound := fmt.Sprintf("%03d", numRun)
+			fmt.Println(typeName + " ::==> " + strRound)
+			var seq int64 = 1
+			for _, i := range frm.Items {
+				var prod models.Product
+				if err := tx.Where("FCCODE", i.Product).First(&prod).Error; err != nil {
+					tx.Rollback()
+					r.Message = err.Error()
+					return c.Status(fiber.StatusInternalServerError).JSON(&r)
+				}
+
+				var refProd models.Refprod
+				refProd.FCSEQ = fmt.Sprintf("%03d", seq)
+				refProd.FCGLREF = glref.FCSKID
+				refProd.FDDATE = glref.FDDATE
+				refProd.FCIOTYPE = typeName
+				refProd.FCRFTYPE = book.REFTYPE.FCRFTYPE
+				refProd.FCREFTYPE = book.FCREFTYPE
+				refProd.FCCOOR = frm.Coor
+				refProd.FCCORP = frm.Corp
+				refProd.FCBRANCH = frm.Branch
+				switch typeName {
+				case "I":
+					refProd.FCWHOUSE = frm.ToWhs
+				default:
+					refProd.FCWHOUSE = frm.FromWhs
+				}
+
+				refProd.FCPROJ = frm.Proj
+				refProd.FCJOB = frm.Job
+				refProd.FCSECT = sect.FCSKID
+				refProd.FCDEPT = sect.FCDEPT
+				refProd.FCPROD = prod.FCSKID
+				refProd.FCPRODTYPE = prod.FCTYPE
+				refProd.FNUMQTY = 1
+				refProd.FNQTY = i.Qty
+				// refProd.FNPRICE = i.Price
+				refProd.FNPRICE = 0
+				refProd.FCUM = prod.FCUM
+				refProd.FCUMSTD = prod.FCUM
+				refProd.FCSTUM = prod.FCUM
+				refProd.FCSTUMSTD = prod.FCUM
+				refProd.FNSTUMQTY = 1
+				// refProd.FNCOSTAMT = i.Price * i.Qty
+				// refProd.FNVATAMT = (i.Price * i.Qty) * 0.07
+				// refProd.FNPRICEKE = i.Price
+				refProd.FNCOSTAMT = 0
+				refProd.FNVATAMT = 0
+				refProd.FNPRICEKE = 0
+				refProd.FCCREATEBY = empID
+
+				if err := tx.Create(&refProd).Error; err != nil {
+					tx.Rollback()
+					r.Message = err.Error()
+					return c.Status(fiber.StatusInternalServerError).JSON(&r)
+				}
+
+				var stock models.Stock
+				tx.First(&stock, &models.Stock{FCPROD: prod.FCSKID, FCWHOUSE: frm.ToWhs})
+				stock.FCCORP = frm.Corp
+				stock.FCBRANCH = frm.Branch
+				stock.FCWHOUSE = frm.ToWhs
+				stock.FCPROD = prod.FCSKID
+				stock.FDDATE = glref.FDDATE
+				switch typeName {
+				case "I":
+					stock.FNQTY = stock.FNQTY + i.Qty
+				default:
+					if stock.FNQTY > 0 {
+						stock.FNQTY = stock.FNQTY - i.Qty
+					}
+				}
+
+				if stock.FCSKID == "" {
+					stock.FTDATETIME = time.Now()
+				}
+
+				stock.FTLASTUPD = time.Now()
+				stock.FTLASTEDIT = time.Now()
+				if err := tx.Save(&stock).Error; err != nil {
+					tx.Rollback()
+					r.Message = fmt.Sprintf("Failed transection on Stock: %v", err.Error())
+					return c.Status(fiber.StatusInternalServerError).JSON(&r)
+				}
+				seq++
+			}
+			numRun++
+		}
+
 	case "ADJ":
 		var seq int64 = 1
 		for _, i := range frm.Items {
@@ -215,16 +306,9 @@ func GlrefPostController(c *fiber.Ctx) error {
 		return c.Status(fiber.StatusInternalServerError).JSON(&r)
 	}
 	tx.Commit()
+	// tx.Rollback()
 	// End
 	r.Message = fmt.Sprintf("%s <> %s", fccode, uid)
-
-	// msg := fmt.Sprintf("\nบันทึก%s\nเลขที่: %s \nสินค้า: %d รายการ\nจำนวน: %d\nเรียบร้อยแล้ว\n%s", book.FCNAME, glref.FCREFNO, len(frm.REFPROD), int(fcamt), time.Now().Format("2006-01-02 15:04:05"))
-	// var line models.Linenotify
-	// if err := configs.Store.First(&line, &models.Linenotify{Jobs: book.FCREFTYPE}).Error; err == nil {
-	// 	if line.Token != "" {
-	// 		go services.LineNotify(line.Token, msg)
-	// 	}
-	// }
 
 	fnQty := 0
 	for _, q := range frm.Items {
