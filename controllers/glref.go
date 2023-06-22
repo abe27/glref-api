@@ -199,11 +199,9 @@ func GlrefPostController(c *fiber.Ctx) error {
 						stock.FNQTY = stock.FNQTY - i.Qty
 					}
 				}
-
 				if stock.FCSKID == "" {
 					stock.FTDATETIME = time.Now()
 				}
-
 				stock.FTLASTUPD = time.Now()
 				stock.FTLASTEDIT = time.Now()
 				if err := tx.Save(&stock).Error; err != nil {
