@@ -130,7 +130,8 @@ type GlrefForm struct {
 	Proj       string        `json:"proj"`
 	RecDate    time.Time     `json:"recdate"`
 	Booking    string        `json:"booking"`
-	Whs        string        `json:"whs"`
+	FromWhs    string        `json:"from_whs"`
+	ToWhs      string        `json:"to_whs"`
 	Coor       string        `json:"coor"`
 	Department string        `json:"department"`
 	InvoiceNo  string        `json:"invoice_no"`
@@ -153,6 +154,7 @@ type GlrefHistory struct {
 	FCPONO    string    `json:"fcpono"`
 	FCREMARK  string    `json:"fcremark"`
 	FCSTATUS  int       `json:"fcstatus"`
+	FCTYPE    string    `gorm:"size:5;not null;" json:"fctype"`
 	CreatedAt time.Time `json:"created_at,omitempty" default:"now"`
 	UpdatedAt time.Time `json:"updated_at,omitempty" default:"now"`
 }

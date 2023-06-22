@@ -107,7 +107,7 @@ func GlrefPostController(c *fiber.Ctx) error {
 	glref.FCBOOK = book.FCSKID
 	glref.FCCORRECTB = empID
 	glref.FMMEMDATA = strings.ToUpper(frm.InvoiceNo)
-	glref.FCTOWHOUSE = frm.Whs
+	glref.FCTOWHOUSE = frm.ToWhs
 	glref.FCCREATEBY = empID
 	glref.FCVATCOOR = frm.Coor
 	// glref.FCCREATETY = empID
@@ -138,7 +138,7 @@ func GlrefPostController(c *fiber.Ctx) error {
 		refProd.FCCOOR = frm.Coor
 		refProd.FCCORP = frm.Corp
 		refProd.FCBRANCH = frm.Branch
-		refProd.FCWHOUSE = frm.Whs
+		refProd.FCWHOUSE = frm.ToWhs
 		refProd.FCPROJ = frm.Proj
 		refProd.FCJOB = frm.Job
 		refProd.FCSECT = sect.FCSKID
@@ -165,10 +165,10 @@ func GlrefPostController(c *fiber.Ctx) error {
 		}
 
 		var stock models.Stock
-		tx.First(&stock, &models.Stock{FCPROD: prod.FCSKID, FCWHOUSE: frm.Whs})
+		tx.First(&stock, &models.Stock{FCPROD: prod.FCSKID, FCWHOUSE: frm.ToWhs})
 		stock.FCCORP = frm.Corp
 		stock.FCBRANCH = frm.Branch
-		stock.FCWHOUSE = frm.Whs
+		stock.FCWHOUSE = frm.ToWhs
 		stock.FCPROD = prod.FCSKID
 		stock.FDDATE = glref.FDDATE
 		switch frm.Step {
@@ -195,6 +195,7 @@ func GlrefPostController(c *fiber.Ctx) error {
 
 	// Glref History
 	var glrefHistory models.GlrefHistory
+	glrefHistory.FCTYPE = frm.Prefix
 	glrefHistory.FCSKID = glref.FCSKID
 	glrefHistory.FCCODE = glref.FCCODE
 	glrefHistory.FCREFNO = glref.FCREFNO
@@ -632,6 +633,13 @@ func GlrefHistoryController(c *fiber.Ctx) error {
 	var gl []models.GlrefHistory
 	if c.Query("fcskid") != "" {
 		if err := configs.Store.Order("created_at").Where("fcsk_id", c.Query("fcskid")).Find(&gl).Error; err != nil {
+			r.Message = err.Error()
+			return c.Status(fiber.StatusNotFound).JSON(&gl)
+		}
+	}
+
+	if c.Query("fctype") != "" {
+		if err := configs.Store.Limit(150).Order("created_at").Where("fctype", c.Query("fctype")).Find(&gl).Error; err != nil {
 			r.Message = err.Error()
 			return c.Status(fiber.StatusNotFound).JSON(&gl)
 		}
