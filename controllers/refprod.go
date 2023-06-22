@@ -10,8 +10,11 @@ func RefProdController(c *fiber.Ctx) error {
 	var r models.Response
 	var refpro []models.Refprod
 	if err := configs.StoreFormula.
+		Order("FCSEQ").
+		Order("FCIOTYPE desc").
 		Preload("Prod").
 		Preload("Unit").
+		Preload("WHouse").
 		Where("FCGLREF", c.Query("glref")).Find(&refpro).Error; err != nil {
 		r.Message = err.Error()
 		return c.Status(fiber.StatusNotFound).JSON(&r)

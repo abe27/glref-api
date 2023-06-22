@@ -731,6 +731,8 @@ func GlrefHistoryController(c *fiber.Ctx) error {
 			r.Message = err.Error()
 			return c.Status(fiber.StatusNotFound).JSON(&gl)
 		}
+		r.Data = &gl
+		return c.Status(fiber.StatusOK).JSON(&r)
 	}
 
 	if c.Query("fctype") != "" {
@@ -738,6 +740,8 @@ func GlrefHistoryController(c *fiber.Ctx) error {
 			r.Message = err.Error()
 			return c.Status(fiber.StatusNotFound).JSON(&gl)
 		}
+		r.Data = &gl
+		return c.Status(fiber.StatusOK).JSON(&r)
 	}
 
 	if err := configs.Store.Limit(150).Order("FCDATE").Find(&gl).Error; err != nil {
