@@ -1,5 +1,5 @@
 
-CREATE TABLE Formula.dbo.AALLOC (
+CREATE TABLE dbo.AALLOC (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSELTAG char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCAPPSKID char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -81,13 +81,13 @@ CREATE TABLE Formula.dbo.AALLOC (
 );
 
 
--- Formula.dbo.ACBUDGET definition
+-- dbo.ACBUDGET definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ACBUDGET;
+-- DROP TABLE dbo.ACBUDGET;
 
-CREATE TABLE Formula.dbo.ACBUDGET (
+CREATE TABLE dbo.ACBUDGET (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -158,13 +158,13 @@ CREATE TABLE Formula.dbo.ACBUDGET (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.ACCBOOK definition
+-- dbo.ACCBOOK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ACCBOOK;
+-- DROP TABLE dbo.ACCBOOK;
 
-CREATE TABLE Formula.dbo.ACCBOOK (
+CREATE TABLE dbo.ACCBOOK (
 	FCSELTAG char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCODE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCNAME char(40) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -253,13 +253,13 @@ CREATE TABLE Formula.dbo.ACCBOOK (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.ACCDET definition
+-- dbo.ACCDET definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ACCDET;
+-- DROP TABLE dbo.ACCDET;
 
-CREATE TABLE Formula.dbo.ACCDET (
+CREATE TABLE dbo.ACCDET (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -329,13 +329,13 @@ CREATE TABLE Formula.dbo.ACCDET (
 );
 
 
--- Formula.dbo.ACCESTYP definition
+-- dbo.ACCESTYP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ACCESTYP;
+-- DROP TABLE dbo.ACCESTYP;
 
-CREATE TABLE Formula.dbo.ACCESTYP (
+CREATE TABLE dbo.ACCESTYP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -403,13 +403,13 @@ CREATE TABLE Formula.dbo.ACCESTYP (
 );
 
 
--- Formula.dbo.ACCHART definition
+-- dbo.ACCHART definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ACCHART;
+-- DROP TABLE dbo.ACCHART;
 
-CREATE TABLE Formula.dbo.ACCHART (
+CREATE TABLE dbo.ACCHART (
 	FCSELTAG char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCODE char(25) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCNAME char(60) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -494,13 +494,13 @@ CREATE TABLE Formula.dbo.ACCHART (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.ACEXP definition
+-- dbo.ACEXP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ACEXP;
+-- DROP TABLE dbo.ACEXP;
 
-CREATE TABLE Formula.dbo.ACEXP (
+CREATE TABLE dbo.ACEXP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -569,13 +569,13 @@ CREATE TABLE Formula.dbo.ACEXP (
 );
 
 
--- Formula.dbo.ACLINK definition
+-- dbo.ACLINK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ACLINK;
+-- DROP TABLE dbo.ACLINK;
 
-CREATE TABLE Formula.dbo.ACLINK (
+CREATE TABLE dbo.ACLINK (
 	FCSELTAG char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCODE char(10) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCNAME char(65) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -658,13 +658,13 @@ CREATE TABLE Formula.dbo.ACLINK (
 );
 
 
--- Formula.dbo.ACLOCK definition
+-- dbo.ACLOCK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ACLOCK;
+-- DROP TABLE dbo.ACLOCK;
 
-CREATE TABLE Formula.dbo.ACLOCK (
+CREATE TABLE dbo.ACLOCK (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCLUPDAPP char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -702,13 +702,13 @@ CREATE TABLE Formula.dbo.ACLOCK (
 );
 
 
--- Formula.dbo.ADCHARTI definition
+-- dbo.ADCHARTI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ADCHARTI;
+-- DROP TABLE dbo.ADCHARTI;
 
-CREATE TABLE Formula.dbo.ADCHARTI (
+CREATE TABLE dbo.ADCHARTI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -740,13 +740,13 @@ CREATE TABLE Formula.dbo.ADCHARTI (
 );
 
 
--- Formula.dbo.ADJBOQH definition
+-- dbo.ADJBOQH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ADJBOQH;
+-- DROP TABLE dbo.ADJBOQH;
 
-CREATE TABLE Formula.dbo.ADJBOQH (
+CREATE TABLE dbo.ADJBOQH (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCBRANCH char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -824,13 +824,13 @@ CREATE TABLE Formula.dbo.ADJBOQH (
 );
 
 
--- Formula.dbo.ADJBOQI definition
+-- dbo.ADJBOQI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ADJBOQI;
+-- DROP TABLE dbo.ADJBOQI;
 
-CREATE TABLE Formula.dbo.ADJBOQI (
+CREATE TABLE dbo.ADJBOQI (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCBRANCH char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -883,13 +883,13 @@ CREATE TABLE Formula.dbo.ADJBOQI (
 );
 
 
--- Formula.dbo.AGL definition
+-- dbo.AGL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.AGL;
+-- DROP TABLE dbo.AGL;
 
-CREATE TABLE Formula.dbo.AGL (
+CREATE TABLE dbo.AGL (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCLUPDAPP char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -938,13 +938,13 @@ CREATE TABLE Formula.dbo.AGL (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.ALERTCFG definition
+-- dbo.ALERTCFG definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ALERTCFG;
+-- DROP TABLE dbo.ALERTCFG;
 
-CREATE TABLE Formula.dbo.ALERTCFG (
+CREATE TABLE dbo.ALERTCFG (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -1007,13 +1007,13 @@ CREATE TABLE Formula.dbo.ALERTCFG (
 );
 
 
--- Formula.dbo.ALERTMSG definition
+-- dbo.ALERTMSG definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ALERTMSG;
+-- DROP TABLE dbo.ALERTMSG;
 
-CREATE TABLE Formula.dbo.ALERTMSG (
+CREATE TABLE dbo.ALERTMSG (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -1079,13 +1079,13 @@ CREATE TABLE Formula.dbo.ALERTMSG (
 );
 
 
--- Formula.dbo.AMPHUR definition
+-- dbo.AMPHUR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.AMPHUR;
+-- DROP TABLE dbo.AMPHUR;
 
-CREATE TABLE Formula.dbo.AMPHUR (
+CREATE TABLE dbo.AMPHUR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -1115,13 +1115,13 @@ CREATE TABLE Formula.dbo.AMPHUR (
 );
 
 
--- Formula.dbo.APVPO definition
+-- dbo.APVPO definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.APVPO;
+-- DROP TABLE dbo.APVPO;
 
-CREATE TABLE Formula.dbo.APVPO (
+CREATE TABLE dbo.APVPO (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -1191,13 +1191,13 @@ CREATE TABLE Formula.dbo.APVPO (
 );
 
 
--- Formula.dbo.APVSO definition
+-- dbo.APVSO definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.APVSO;
+-- DROP TABLE dbo.APVSO;
 
-CREATE TABLE Formula.dbo.APVSO (
+CREATE TABLE dbo.APVSO (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -1264,13 +1264,13 @@ CREATE TABLE Formula.dbo.APVSO (
 );
 
 
--- Formula.dbo.ASCHED definition
+-- dbo.ASCHED definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ASCHED;
+-- DROP TABLE dbo.ASCHED;
 
-CREATE TABLE Formula.dbo.ASCHED (
+CREATE TABLE dbo.ASCHED (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -1343,13 +1343,13 @@ CREATE TABLE Formula.dbo.ASCHED (
 );
 
 
--- Formula.dbo.ASGRP definition
+-- dbo.ASGRP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ASGRP;
+-- DROP TABLE dbo.ASGRP;
 
-CREATE TABLE Formula.dbo.ASGRP (
+CREATE TABLE dbo.ASGRP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -1422,13 +1422,13 @@ CREATE TABLE Formula.dbo.ASGRP (
 );
 
 
--- Formula.dbo.ASSET definition
+-- dbo.ASSET definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ASSET;
+-- DROP TABLE dbo.ASSET;
 
-CREATE TABLE Formula.dbo.ASSET (
+CREATE TABLE dbo.ASSET (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -1589,13 +1589,13 @@ CREATE TABLE Formula.dbo.ASSET (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.ASSETDPR definition
+-- dbo.ASSETDPR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ASSETDPR;
+-- DROP TABLE dbo.ASSETDPR;
 
-CREATE TABLE Formula.dbo.ASSETDPR (
+CREATE TABLE dbo.ASSETDPR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -1637,13 +1637,13 @@ CREATE TABLE Formula.dbo.ASSETDPR (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.ASSETX02 definition
+-- dbo.ASSETX02 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ASSETX02;
+-- DROP TABLE dbo.ASSETX02;
 
-CREATE TABLE Formula.dbo.ASSETX02 (
+CREATE TABLE dbo.ASSETX02 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -1712,13 +1712,13 @@ CREATE TABLE Formula.dbo.ASSETX02 (
 );
 
 
--- Formula.dbo.ASSMVMNT definition
+-- dbo.ASSMVMNT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ASSMVMNT;
+-- DROP TABLE dbo.ASSMVMNT;
 
-CREATE TABLE Formula.dbo.ASSMVMNT (
+CREATE TABLE dbo.ASSMVMNT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -1793,13 +1793,13 @@ CREATE TABLE Formula.dbo.ASSMVMNT (
 );
 
 
--- Formula.dbo.AUTUSER definition
+-- dbo.AUTUSER definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.AUTUSER;
+-- DROP TABLE dbo.AUTUSER;
 
-CREATE TABLE Formula.dbo.AUTUSER (
+CREATE TABLE dbo.AUTUSER (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -1868,13 +1868,13 @@ CREATE TABLE Formula.dbo.AUTUSER (
 );
 
 
--- Formula.dbo.BACCBOOK definition
+-- dbo.BACCBOOK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BACCBOOK;
+-- DROP TABLE dbo.BACCBOOK;
 
-CREATE TABLE Formula.dbo.BACCBOOK (
+CREATE TABLE dbo.BACCBOOK (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCODE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -1937,13 +1937,13 @@ CREATE TABLE Formula.dbo.BACCBOOK (
 );
 
 
--- Formula.dbo.BAKYRHIS definition
+-- dbo.BAKYRHIS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BAKYRHIS;
+-- DROP TABLE dbo.BAKYRHIS;
 
-CREATE TABLE Formula.dbo.BAKYRHIS (
+CREATE TABLE dbo.BAKYRHIS (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -1973,13 +1973,13 @@ CREATE TABLE Formula.dbo.BAKYRHIS (
 );
 
 
--- Formula.dbo.BANK definition
+-- dbo.BANK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BANK;
+-- DROP TABLE dbo.BANK;
 
-CREATE TABLE Formula.dbo.BANK (
+CREATE TABLE dbo.BANK (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -2055,13 +2055,13 @@ CREATE TABLE Formula.dbo.BANK (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.BANKACCT definition
+-- dbo.BANKACCT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BANKACCT;
+-- DROP TABLE dbo.BANKACCT;
 
-CREATE TABLE Formula.dbo.BANKACCT (
+CREATE TABLE dbo.BANKACCT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -2177,13 +2177,13 @@ CREATE TABLE Formula.dbo.BANKACCT (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.BANKBR definition
+-- dbo.BANKBR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BANKBR;
+-- DROP TABLE dbo.BANKBR;
 
-CREATE TABLE Formula.dbo.BANKBR (
+CREATE TABLE dbo.BANKBR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCBANK char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -2252,13 +2252,13 @@ CREATE TABLE Formula.dbo.BANKBR (
 );
 
 
--- Formula.dbo.BARCODE definition
+-- dbo.BARCODE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BARCODE;
+-- DROP TABLE dbo.BARCODE;
 
-CREATE TABLE Formula.dbo.BARCODE (
+CREATE TABLE dbo.BARCODE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -2326,13 +2326,13 @@ CREATE TABLE Formula.dbo.BARCODE (
 );
 
 
--- Formula.dbo.BEHAVE definition
+-- dbo.BEHAVE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BEHAVE;
+-- DROP TABLE dbo.BEHAVE;
 
-CREATE TABLE Formula.dbo.BEHAVE (
+CREATE TABLE dbo.BEHAVE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -2397,13 +2397,13 @@ CREATE TABLE Formula.dbo.BEHAVE (
 );
 
 
--- Formula.dbo.BEHAVERF definition
+-- dbo.BEHAVERF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BEHAVERF;
+-- DROP TABLE dbo.BEHAVERF;
 
-CREATE TABLE Formula.dbo.BEHAVERF (
+CREATE TABLE dbo.BEHAVERF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -2462,13 +2462,13 @@ CREATE TABLE Formula.dbo.BEHAVERF (
 );
 
 
--- Formula.dbo.BILPAY definition
+-- dbo.BILPAY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BILPAY;
+-- DROP TABLE dbo.BILPAY;
 
-CREATE TABLE Formula.dbo.BILPAY (
+CREATE TABLE dbo.BILPAY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -2511,13 +2511,13 @@ CREATE TABLE Formula.dbo.BILPAY (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.BILPAYCT definition
+-- dbo.BILPAYCT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BILPAYCT;
+-- DROP TABLE dbo.BILPAYCT;
 
-CREATE TABLE Formula.dbo.BILPAYCT (
+CREATE TABLE dbo.BILPAYCT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -2553,13 +2553,13 @@ CREATE TABLE Formula.dbo.BILPAYCT (
 );
 
 
--- Formula.dbo.BOICARD definition
+-- dbo.BOICARD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOICARD;
+-- DROP TABLE dbo.BOICARD;
 
-CREATE TABLE Formula.dbo.BOICARD (
+CREATE TABLE dbo.BOICARD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -2639,13 +2639,13 @@ CREATE TABLE Formula.dbo.BOICARD (
 );
 
 
--- Formula.dbo.BOIGROUP definition
+-- dbo.BOIGROUP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOIGROUP;
+-- DROP TABLE dbo.BOIGROUP;
 
-CREATE TABLE Formula.dbo.BOIGROUP (
+CREATE TABLE dbo.BOIGROUP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -2724,13 +2724,13 @@ CREATE TABLE Formula.dbo.BOIGROUP (
 );
 
 
--- Formula.dbo.BOOK definition
+-- dbo.BOOK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOOK;
+-- DROP TABLE dbo.BOOK;
 
-CREATE TABLE Formula.dbo.BOOK (
+CREATE TABLE dbo.BOOK (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -2864,13 +2864,13 @@ CREATE TABLE Formula.dbo.BOOK (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.BOOKAPV definition
+-- dbo.BOOKAPV definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOOKAPV;
+-- DROP TABLE dbo.BOOKAPV;
 
-CREATE TABLE Formula.dbo.BOOKAPV (
+CREATE TABLE dbo.BOOKAPV (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -2951,13 +2951,13 @@ CREATE TABLE Formula.dbo.BOOKAPV (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.BOOKEXT definition
+-- dbo.BOOKEXT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOOKEXT;
+-- DROP TABLE dbo.BOOKEXT;
 
-CREATE TABLE Formula.dbo.BOOKEXT (
+CREATE TABLE dbo.BOOKEXT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -3032,13 +3032,13 @@ CREATE TABLE Formula.dbo.BOOKEXT (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.BOOKPL definition
+-- dbo.BOOKPL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOOKPL;
+-- DROP TABLE dbo.BOOKPL;
 
-CREATE TABLE Formula.dbo.BOOKPL (
+CREATE TABLE dbo.BOOKPL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -3170,13 +3170,13 @@ CREATE TABLE Formula.dbo.BOOKPL (
 );
 
 
--- Formula.dbo.BOQGRPH definition
+-- dbo.BOQGRPH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOQGRPH;
+-- DROP TABLE dbo.BOQGRPH;
 
-CREATE TABLE Formula.dbo.BOQGRPH (
+CREATE TABLE dbo.BOQGRPH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -3238,13 +3238,13 @@ CREATE TABLE Formula.dbo.BOQGRPH (
 );
 
 
--- Formula.dbo.BOQGRPI definition
+-- dbo.BOQGRPI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOQGRPI;
+-- DROP TABLE dbo.BOQGRPI;
 
-CREATE TABLE Formula.dbo.BOQGRPI (
+CREATE TABLE dbo.BOQGRPI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -3277,13 +3277,13 @@ CREATE TABLE Formula.dbo.BOQGRPI (
 );
 
 
--- Formula.dbo.BOQH definition
+-- dbo.BOQH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOQH;
+-- DROP TABLE dbo.BOQH;
 
-CREATE TABLE Formula.dbo.BOQH (
+CREATE TABLE dbo.BOQH (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCBRANCH char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -3365,13 +3365,13 @@ CREATE TABLE Formula.dbo.BOQH (
 );
 
 
--- Formula.dbo.BOQI definition
+-- dbo.BOQI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOQI;
+-- DROP TABLE dbo.BOQI;
 
-CREATE TABLE Formula.dbo.BOQI (
+CREATE TABLE dbo.BOQI (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCBRANCH char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -3417,13 +3417,13 @@ CREATE TABLE Formula.dbo.BOQI (
 );
 
 
--- Formula.dbo.BOQLEVEL definition
+-- dbo.BOQLEVEL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOQLEVEL;
+-- DROP TABLE dbo.BOQLEVEL;
 
-CREATE TABLE Formula.dbo.BOQLEVEL (
+CREATE TABLE dbo.BOQLEVEL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -3468,13 +3468,13 @@ CREATE TABLE Formula.dbo.BOQLEVEL (
 );
 
 
--- Formula.dbo.BOQMKUP definition
+-- dbo.BOQMKUP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOQMKUP;
+-- DROP TABLE dbo.BOQMKUP;
 
-CREATE TABLE Formula.dbo.BOQMKUP (
+CREATE TABLE dbo.BOQMKUP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -3513,13 +3513,13 @@ CREATE TABLE Formula.dbo.BOQMKUP (
 );
 
 
--- Formula.dbo.BOQREF definition
+-- dbo.BOQREF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOQREF;
+-- DROP TABLE dbo.BOQREF;
 
-CREATE TABLE Formula.dbo.BOQREF (
+CREATE TABLE dbo.BOQREF (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCBRANCH char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -3565,13 +3565,13 @@ CREATE TABLE Formula.dbo.BOQREF (
 );
 
 
--- Formula.dbo.BOQREFPD definition
+-- dbo.BOQREFPD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOQREFPD;
+-- DROP TABLE dbo.BOQREFPD;
 
-CREATE TABLE Formula.dbo.BOQREFPD (
+CREATE TABLE dbo.BOQREFPD (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCTABNAME char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -3637,13 +3637,13 @@ CREATE TABLE Formula.dbo.BOQREFPD (
 );
 
 
--- Formula.dbo.BOQRETOT definition
+-- dbo.BOQRETOT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOQRETOT;
+-- DROP TABLE dbo.BOQRETOT;
 
-CREATE TABLE Formula.dbo.BOQRETOT (
+CREATE TABLE dbo.BOQRETOT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -3711,13 +3711,13 @@ CREATE TABLE Formula.dbo.BOQRETOT (
 );
 
 
--- Formula.dbo.BOQRETRN definition
+-- dbo.BOQRETRN definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOQRETRN;
+-- DROP TABLE dbo.BOQRETRN;
 
-CREATE TABLE Formula.dbo.BOQRETRN (
+CREATE TABLE dbo.BOQRETRN (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -3769,13 +3769,13 @@ CREATE TABLE Formula.dbo.BOQRETRN (
 );
 
 
--- Formula.dbo.BOQRFPAY definition
+-- dbo.BOQRFPAY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOQRFPAY;
+-- DROP TABLE dbo.BOQRFPAY;
 
-CREATE TABLE Formula.dbo.BOQRFPAY (
+CREATE TABLE dbo.BOQRFPAY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -3809,13 +3809,13 @@ CREATE TABLE Formula.dbo.BOQRFPAY (
 );
 
 
--- Formula.dbo.BOTCOSTA definition
+-- dbo.BOTCOSTA definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOTCOSTA;
+-- DROP TABLE dbo.BOTCOSTA;
 
-CREATE TABLE Formula.dbo.BOTCOSTA (
+CREATE TABLE dbo.BOTCOSTA (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -3845,13 +3845,13 @@ CREATE TABLE Formula.dbo.BOTCOSTA (
 );
 
 
--- Formula.dbo.BOTCOSTF definition
+-- dbo.BOTCOSTF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOTCOSTF;
+-- DROP TABLE dbo.BOTCOSTF;
 
-CREATE TABLE Formula.dbo.BOTCOSTF (
+CREATE TABLE dbo.BOTCOSTF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -3881,13 +3881,13 @@ CREATE TABLE Formula.dbo.BOTCOSTF (
 );
 
 
--- Formula.dbo.BOTCRBAL definition
+-- dbo.BOTCRBAL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOTCRBAL;
+-- DROP TABLE dbo.BOTCRBAL;
 
-CREATE TABLE Formula.dbo.BOTCRBAL (
+CREATE TABLE dbo.BOTCRBAL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -3918,13 +3918,13 @@ CREATE TABLE Formula.dbo.BOTCRBAL (
 );
 
 
--- Formula.dbo.BOTQTY definition
+-- dbo.BOTQTY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BOTQTY;
+-- DROP TABLE dbo.BOTQTY;
 
-CREATE TABLE Formula.dbo.BOTQTY (
+CREATE TABLE dbo.BOTQTY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -3957,13 +3957,13 @@ CREATE TABLE Formula.dbo.BOTQTY (
 );
 
 
--- Formula.dbo.BRANCH definition
+-- dbo.BRANCH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BRANCH;
+-- DROP TABLE dbo.BRANCH;
 
-CREATE TABLE Formula.dbo.BRANCH (
+CREATE TABLE dbo.BRANCH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -4090,13 +4090,13 @@ CREATE TABLE Formula.dbo.BRANCH (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.BRANCHX1 definition
+-- dbo.BRANCHX1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BRANCHX1;
+-- DROP TABLE dbo.BRANCHX1;
 
-CREATE TABLE Formula.dbo.BRANCHX1 (
+CREATE TABLE dbo.BRANCHX1 (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -4163,13 +4163,13 @@ CREATE TABLE Formula.dbo.BRANCHX1 (
 );
 
 
--- Formula.dbo.BUDAJH definition
+-- dbo.BUDAJH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BUDAJH;
+-- DROP TABLE dbo.BUDAJH;
 
-CREATE TABLE Formula.dbo.BUDAJH (
+CREATE TABLE dbo.BUDAJH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -4241,13 +4241,13 @@ CREATE TABLE Formula.dbo.BUDAJH (
 );
 
 
--- Formula.dbo.BUDAJI definition
+-- dbo.BUDAJI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BUDAJI;
+-- DROP TABLE dbo.BUDAJI;
 
-CREATE TABLE Formula.dbo.BUDAJI (
+CREATE TABLE dbo.BUDAJI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -4294,13 +4294,13 @@ CREATE TABLE Formula.dbo.BUDAJI (
 );
 
 
--- Formula.dbo.BUDCHRT definition
+-- dbo.BUDCHRT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BUDCHRT;
+-- DROP TABLE dbo.BUDCHRT;
 
-CREATE TABLE Formula.dbo.BUDCHRT (
+CREATE TABLE dbo.BUDCHRT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -4365,13 +4365,13 @@ CREATE TABLE Formula.dbo.BUDCHRT (
 );
 
 
--- Formula.dbo.BUDGET definition
+-- dbo.BUDGET definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BUDGET;
+-- DROP TABLE dbo.BUDGET;
 
-CREATE TABLE Formula.dbo.BUDGET (
+CREATE TABLE dbo.BUDGET (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -4477,13 +4477,13 @@ CREATE TABLE Formula.dbo.BUDGET (
 );
 
 
--- Formula.dbo.BUDGETPD definition
+-- dbo.BUDGETPD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BUDGETPD;
+-- DROP TABLE dbo.BUDGETPD;
 
-CREATE TABLE Formula.dbo.BUDGETPD (
+CREATE TABLE dbo.BUDGETPD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -4568,13 +4568,13 @@ CREATE TABLE Formula.dbo.BUDGETPD (
 );
 
 
--- Formula.dbo.BUDGRP definition
+-- dbo.BUDGRP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BUDGRP;
+-- DROP TABLE dbo.BUDGRP;
 
-CREATE TABLE Formula.dbo.BUDGRP (
+CREATE TABLE dbo.BUDGRP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -4607,13 +4607,13 @@ CREATE TABLE Formula.dbo.BUDGRP (
 );
 
 
--- Formula.dbo.BUDPDH definition
+-- dbo.BUDPDH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BUDPDH;
+-- DROP TABLE dbo.BUDPDH;
 
-CREATE TABLE Formula.dbo.BUDPDH (
+CREATE TABLE dbo.BUDPDH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -4697,13 +4697,13 @@ CREATE TABLE Formula.dbo.BUDPDH (
 );
 
 
--- Formula.dbo.BUDREQH definition
+-- dbo.BUDREQH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BUDREQH;
+-- DROP TABLE dbo.BUDREQH;
 
-CREATE TABLE Formula.dbo.BUDREQH (
+CREATE TABLE dbo.BUDREQH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -4780,13 +4780,13 @@ CREATE TABLE Formula.dbo.BUDREQH (
 );
 
 
--- Formula.dbo.BUDREQI definition
+-- dbo.BUDREQI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BUDREQI;
+-- DROP TABLE dbo.BUDREQI;
 
-CREATE TABLE Formula.dbo.BUDREQI (
+CREATE TABLE dbo.BUDREQI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -4869,13 +4869,13 @@ CREATE TABLE Formula.dbo.BUDREQI (
 );
 
 
--- Formula.dbo.BUDRQH definition
+-- dbo.BUDRQH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BUDRQH;
+-- DROP TABLE dbo.BUDRQH;
 
-CREATE TABLE Formula.dbo.BUDRQH (
+CREATE TABLE dbo.BUDRQH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -4956,13 +4956,13 @@ CREATE TABLE Formula.dbo.BUDRQH (
 );
 
 
--- Formula.dbo.BUDRQI definition
+-- dbo.BUDRQI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.BUDRQI;
+-- DROP TABLE dbo.BUDRQI;
 
-CREATE TABLE Formula.dbo.BUDRQI (
+CREATE TABLE dbo.BUDRQI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -5047,13 +5047,13 @@ CREATE TABLE Formula.dbo.BUDRQI (
 );
 
 
--- Formula.dbo.CAPTABLE definition
+-- dbo.CAPTABLE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CAPTABLE;
+-- DROP TABLE dbo.CAPTABLE;
 
-CREATE TABLE Formula.dbo.CAPTABLE (
+CREATE TABLE dbo.CAPTABLE (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSYSTEM char(10) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSYSTASK char(20) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -5113,13 +5113,13 @@ CREATE TABLE Formula.dbo.CAPTABLE (
 );
 
 
--- Formula.dbo.CARACCES definition
+-- dbo.CARACCES definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CARACCES;
+-- DROP TABLE dbo.CARACCES;
 
-CREATE TABLE Formula.dbo.CARACCES (
+CREATE TABLE dbo.CARACCES (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -5189,13 +5189,13 @@ CREATE TABLE Formula.dbo.CARACCES (
 );
 
 
--- Formula.dbo.CARCODE definition
+-- dbo.CARCODE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CARCODE;
+-- DROP TABLE dbo.CARCODE;
 
-CREATE TABLE Formula.dbo.CARCODE (
+CREATE TABLE dbo.CARCODE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -5267,13 +5267,13 @@ CREATE TABLE Formula.dbo.CARCODE (
 );
 
 
--- Formula.dbo.CARRIER definition
+-- dbo.CARRIER definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CARRIER;
+-- DROP TABLE dbo.CARRIER;
 
-CREATE TABLE Formula.dbo.CARRIER (
+CREATE TABLE dbo.CARRIER (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -5348,13 +5348,13 @@ CREATE TABLE Formula.dbo.CARRIER (
 );
 
 
--- Formula.dbo.CARRYTYP definition
+-- dbo.CARRYTYP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CARRYTYP;
+-- DROP TABLE dbo.CARRYTYP;
 
-CREATE TABLE Formula.dbo.CARRYTYP (
+CREATE TABLE dbo.CARRYTYP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -5415,13 +5415,13 @@ CREATE TABLE Formula.dbo.CARRYTYP (
 );
 
 
--- Formula.dbo.CARTIME definition
+-- dbo.CARTIME definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CARTIME;
+-- DROP TABLE dbo.CARTIME;
 
-CREATE TABLE Formula.dbo.CARTIME (
+CREATE TABLE dbo.CARTIME (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -5483,13 +5483,13 @@ CREATE TABLE Formula.dbo.CARTIME (
 );
 
 
--- Formula.dbo.CARTYPE definition
+-- dbo.CARTYPE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CARTYPE;
+-- DROP TABLE dbo.CARTYPE;
 
-CREATE TABLE Formula.dbo.CARTYPE (
+CREATE TABLE dbo.CARTYPE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -5554,13 +5554,13 @@ CREATE TABLE Formula.dbo.CARTYPE (
 );
 
 
--- Formula.dbo.CASHACT definition
+-- dbo.CASHACT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CASHACT;
+-- DROP TABLE dbo.CASHACT;
 
-CREATE TABLE Formula.dbo.CASHACT (
+CREATE TABLE dbo.CASHACT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -5631,13 +5631,13 @@ CREATE TABLE Formula.dbo.CASHACT (
 );
 
 
--- Formula.dbo.CHGASAMT definition
+-- dbo.CHGASAMT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CHGASAMT;
+-- DROP TABLE dbo.CHGASAMT;
 
-CREATE TABLE Formula.dbo.CHGASAMT (
+CREATE TABLE dbo.CHGASAMT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -5674,13 +5674,13 @@ CREATE TABLE Formula.dbo.CHGASAMT (
 );
 
 
--- Formula.dbo.CITY definition
+-- dbo.CITY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CITY;
+-- DROP TABLE dbo.CITY;
 
-CREATE TABLE Formula.dbo.CITY (
+CREATE TABLE dbo.CITY (
 	FCSELTAG char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(6) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCOUNTRY char(3) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -5748,13 +5748,13 @@ CREATE TABLE Formula.dbo.CITY (
 );
 
 
--- Formula.dbo.CLOUDIMG definition
+-- dbo.CLOUDIMG definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CLOUDIMG;
+-- DROP TABLE dbo.CLOUDIMG;
 
-CREATE TABLE Formula.dbo.CLOUDIMG (
+CREATE TABLE dbo.CLOUDIMG (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -5787,13 +5787,13 @@ CREATE TABLE Formula.dbo.CLOUDIMG (
 );
 
 
--- Formula.dbo.CMDCOMM definition
+-- dbo.CMDCOMM definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CMDCOMM;
+-- DROP TABLE dbo.CMDCOMM;
 
-CREATE TABLE Formula.dbo.CMDCOMM (
+CREATE TABLE dbo.CMDCOMM (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -5869,13 +5869,13 @@ CREATE TABLE Formula.dbo.CMDCOMM (
 );
 
 
--- Formula.dbo.COCNTMAP definition
+-- dbo.COCNTMAP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COCNTMAP;
+-- DROP TABLE dbo.COCNTMAP;
 
-CREATE TABLE Formula.dbo.COCNTMAP (
+CREATE TABLE dbo.COCNTMAP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -5941,13 +5941,13 @@ CREATE TABLE Formula.dbo.COCNTMAP (
 );
 
 
--- Formula.dbo.COCOMAP definition
+-- dbo.COCOMAP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COCOMAP;
+-- DROP TABLE dbo.COCOMAP;
 
-CREATE TABLE Formula.dbo.COCOMAP (
+CREATE TABLE dbo.COCOMAP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -5980,13 +5980,13 @@ CREATE TABLE Formula.dbo.COCOMAP (
 );
 
 
--- Formula.dbo.CONFGREQ definition
+-- dbo.CONFGREQ definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CONFGREQ;
+-- DROP TABLE dbo.CONFGREQ;
 
-CREATE TABLE Formula.dbo.CONFGREQ (
+CREATE TABLE dbo.CONFGREQ (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -6016,13 +6016,13 @@ CREATE TABLE Formula.dbo.CONFGREQ (
 );
 
 
--- Formula.dbo.CONFLIST definition
+-- dbo.CONFLIST definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CONFLIST;
+-- DROP TABLE dbo.CONFLIST;
 
-CREATE TABLE Formula.dbo.CONFLIST (
+CREATE TABLE dbo.CONFLIST (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -6088,13 +6088,13 @@ CREATE TABLE Formula.dbo.CONFLIST (
 );
 
 
--- Formula.dbo.CONNID definition
+-- dbo.CONNID definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CONNID;
+-- DROP TABLE dbo.CONNID;
 
-CREATE TABLE Formula.dbo.CONNID (
+CREATE TABLE dbo.CONNID (
 	FCNAME char(50) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(10) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCFCHR char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -6127,13 +6127,13 @@ CREATE TABLE Formula.dbo.CONNID (
 );
 
 
--- Formula.dbo.CONNID2 definition
+-- dbo.CONNID2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CONNID2;
+-- DROP TABLE dbo.CONNID2;
 
-CREATE TABLE Formula.dbo.CONNID2 (
+CREATE TABLE dbo.CONNID2 (
 	FCNAME char(10) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(10) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCFCHR char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -6154,13 +6154,13 @@ CREATE TABLE Formula.dbo.CONNID2 (
 );
 
 
--- Formula.dbo.CONTPROD definition
+-- dbo.CONTPROD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CONTPROD;
+-- DROP TABLE dbo.CONTPROD;
 
-CREATE TABLE Formula.dbo.CONTPROD (
+CREATE TABLE dbo.CONTPROD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -6230,13 +6230,13 @@ CREATE TABLE Formula.dbo.CONTPROD (
 );
 
 
--- Formula.dbo.COOR definition
+-- dbo.COOR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COOR;
+-- DROP TABLE dbo.COOR;
 
-CREATE TABLE Formula.dbo.COOR (
+CREATE TABLE dbo.COOR (
 	FCSELTAG char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCODE char(20) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCNAME char(140) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -6506,13 +6506,13 @@ CREATE TABLE Formula.dbo.COOR (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.COORBAL definition
+-- dbo.COORBAL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COORBAL;
+-- DROP TABLE dbo.COORBAL;
 
-CREATE TABLE Formula.dbo.COORBAL (
+CREATE TABLE dbo.COORBAL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -6546,13 +6546,13 @@ CREATE TABLE Formula.dbo.COORBAL (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.COORFIFO definition
+-- dbo.COORFIFO definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COORFIFO;
+-- DROP TABLE dbo.COORFIFO;
 
-CREATE TABLE Formula.dbo.COORFIFO (
+CREATE TABLE dbo.COORFIFO (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -6586,13 +6586,13 @@ CREATE TABLE Formula.dbo.COORFIFO (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.COORPGRP definition
+-- dbo.COORPGRP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COORPGRP;
+-- DROP TABLE dbo.COORPGRP;
 
-CREATE TABLE Formula.dbo.COORPGRP (
+CREATE TABLE dbo.COORPGRP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -6661,13 +6661,13 @@ CREATE TABLE Formula.dbo.COORPGRP (
 );
 
 
--- Formula.dbo.COORX3 definition
+-- dbo.COORX3 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COORX3;
+-- DROP TABLE dbo.COORX3;
 
-CREATE TABLE Formula.dbo.COORX3 (
+CREATE TABLE dbo.COORX3 (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -6733,13 +6733,13 @@ CREATE TABLE Formula.dbo.COORX3 (
 );
 
 
--- Formula.dbo.COORX4 definition
+-- dbo.COORX4 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COORX4;
+-- DROP TABLE dbo.COORX4;
 
-CREATE TABLE Formula.dbo.COORX4 (
+CREATE TABLE dbo.COORX4 (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -6824,13 +6824,13 @@ CREATE TABLE Formula.dbo.COORX4 (
 );
 
 
--- Formula.dbo.COORX5 definition
+-- dbo.COORX5 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COORX5;
+-- DROP TABLE dbo.COORX5;
 
-CREATE TABLE Formula.dbo.COORX5 (
+CREATE TABLE dbo.COORX5 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -6905,13 +6905,13 @@ CREATE TABLE Formula.dbo.COORX5 (
 );
 
 
--- Formula.dbo.COORX6 definition
+-- dbo.COORX6 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COORX6;
+-- DROP TABLE dbo.COORX6;
 
-CREATE TABLE Formula.dbo.COORX6 (
+CREATE TABLE dbo.COORX6 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -6979,13 +6979,13 @@ CREATE TABLE Formula.dbo.COORX6 (
 );
 
 
--- Formula.dbo.COORX7 definition
+-- dbo.COORX7 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COORX7;
+-- DROP TABLE dbo.COORX7;
 
-CREATE TABLE Formula.dbo.COORX7 (
+CREATE TABLE dbo.COORX7 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -7057,13 +7057,13 @@ CREATE TABLE Formula.dbo.COORX7 (
 );
 
 
--- Formula.dbo.COORX8 definition
+-- dbo.COORX8 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COORX8;
+-- DROP TABLE dbo.COORX8;
 
-CREATE TABLE Formula.dbo.COORX8 (
+CREATE TABLE dbo.COORX8 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -7130,13 +7130,13 @@ CREATE TABLE Formula.dbo.COORX8 (
 );
 
 
--- Formula.dbo.COPDMAP definition
+-- dbo.COPDMAP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COPDMAP;
+-- DROP TABLE dbo.COPDMAP;
 
-CREATE TABLE Formula.dbo.COPDMAP (
+CREATE TABLE dbo.COPDMAP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -7227,13 +7227,13 @@ CREATE TABLE Formula.dbo.COPDMAP (
 );
 
 
--- Formula.dbo.CORESO definition
+-- dbo.CORESO definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CORESO;
+-- DROP TABLE dbo.CORESO;
 
-CREATE TABLE Formula.dbo.CORESO (
+CREATE TABLE dbo.CORESO (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCRESOCODE char(20) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -7271,13 +7271,13 @@ CREATE TABLE Formula.dbo.CORESO (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.CORP definition
+-- dbo.CORP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CORP;
+-- DROP TABLE dbo.CORP;
 
-CREATE TABLE Formula.dbo.CORP (
+CREATE TABLE dbo.CORP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -7506,13 +7506,13 @@ CREATE TABLE Formula.dbo.CORP (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.CORPX1 definition
+-- dbo.CORPX1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CORPX1;
+-- DROP TABLE dbo.CORPX1;
 
-CREATE TABLE Formula.dbo.CORPX1 (
+CREATE TABLE dbo.CORPX1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -7640,13 +7640,13 @@ CREATE TABLE Formula.dbo.CORPX1 (
 );
 
 
--- Formula.dbo.CORPX2 definition
+-- dbo.CORPX2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CORPX2;
+-- DROP TABLE dbo.CORPX2;
 
-CREATE TABLE Formula.dbo.CORPX2 (
+CREATE TABLE dbo.CORPX2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -7704,13 +7704,13 @@ CREATE TABLE Formula.dbo.CORPX2 (
 );
 
 
--- Formula.dbo.COSTABCH definition
+-- dbo.COSTABCH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COSTABCH;
+-- DROP TABLE dbo.COSTABCH;
 
-CREATE TABLE Formula.dbo.COSTABCH (
+CREATE TABLE dbo.COSTABCH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -7786,13 +7786,13 @@ CREATE TABLE Formula.dbo.COSTABCH (
 );
 
 
--- Formula.dbo.COSTABCI definition
+-- dbo.COSTABCI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COSTABCI;
+-- DROP TABLE dbo.COSTABCI;
 
-CREATE TABLE Formula.dbo.COSTABCI (
+CREATE TABLE dbo.COSTABCI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -7844,13 +7844,13 @@ CREATE TABLE Formula.dbo.COSTABCI (
 );
 
 
--- Formula.dbo.COSTPOOL definition
+-- dbo.COSTPOOL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COSTPOOL;
+-- DROP TABLE dbo.COSTPOOL;
 
-CREATE TABLE Formula.dbo.COSTPOOL (
+CREATE TABLE dbo.COSTPOOL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -7913,13 +7913,13 @@ CREATE TABLE Formula.dbo.COSTPOOL (
 );
 
 
--- Formula.dbo.COSTSECT definition
+-- dbo.COSTSECT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COSTSECT;
+-- DROP TABLE dbo.COSTSECT;
 
-CREATE TABLE Formula.dbo.COSTSECT (
+CREATE TABLE dbo.COSTSECT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -7988,13 +7988,13 @@ CREATE TABLE Formula.dbo.COSTSECT (
 );
 
 
--- Formula.dbo.COTHDMAP definition
+-- dbo.COTHDMAP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COTHDMAP;
+-- DROP TABLE dbo.COTHDMAP;
 
-CREATE TABLE Formula.dbo.COTHDMAP (
+CREATE TABLE dbo.COTHDMAP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -8053,13 +8053,13 @@ CREATE TABLE Formula.dbo.COTHDMAP (
 );
 
 
--- Formula.dbo.COUMMAP definition
+-- dbo.COUMMAP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COUMMAP;
+-- DROP TABLE dbo.COUMMAP;
 
-CREATE TABLE Formula.dbo.COUMMAP (
+CREATE TABLE dbo.COUMMAP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -8092,13 +8092,13 @@ CREATE TABLE Formula.dbo.COUMMAP (
 );
 
 
--- Formula.dbo.COUNTER definition
+-- dbo.COUNTER definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COUNTER;
+-- DROP TABLE dbo.COUNTER;
 
-CREATE TABLE Formula.dbo.COUNTER (
+CREATE TABLE dbo.COUNTER (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -8165,13 +8165,13 @@ CREATE TABLE Formula.dbo.COUNTER (
 );
 
 
--- Formula.dbo.COUNTRY definition
+-- dbo.COUNTRY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COUNTRY;
+-- DROP TABLE dbo.COUNTRY;
 
-CREATE TABLE Formula.dbo.COUNTRY (
+CREATE TABLE dbo.COUNTRY (
 	FCSELTAG char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(3) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCODE char(3) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -8239,13 +8239,13 @@ CREATE TABLE Formula.dbo.COUNTRY (
 );
 
 
--- Formula.dbo.COURSE definition
+-- dbo.COURSE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COURSE;
+-- DROP TABLE dbo.COURSE;
 
-CREATE TABLE Formula.dbo.COURSE (
+CREATE TABLE dbo.COURSE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -8342,13 +8342,13 @@ CREATE TABLE Formula.dbo.COURSE (
 );
 
 
--- Formula.dbo.COURSETY definition
+-- dbo.COURSETY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.COURSETY;
+-- DROP TABLE dbo.COURSETY;
 
-CREATE TABLE Formula.dbo.COURSETY (
+CREATE TABLE dbo.COURSETY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -8408,13 +8408,13 @@ CREATE TABLE Formula.dbo.COURSETY (
 );
 
 
--- Formula.dbo.CPAYROLL definition
+-- dbo.CPAYROLL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CPAYROLL;
+-- DROP TABLE dbo.CPAYROLL;
 
-CREATE TABLE Formula.dbo.CPAYROLL (
+CREATE TABLE dbo.CPAYROLL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -8524,13 +8524,13 @@ CREATE TABLE Formula.dbo.CPAYROLL (
 );
 
 
--- Formula.dbo.CPERIODS definition
+-- dbo.CPERIODS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CPERIODS;
+-- DROP TABLE dbo.CPERIODS;
 
-CREATE TABLE Formula.dbo.CPERIODS (
+CREATE TABLE dbo.CPERIODS (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -8597,13 +8597,13 @@ CREATE TABLE Formula.dbo.CPERIODS (
 );
 
 
--- Formula.dbo.CPOINT definition
+-- dbo.CPOINT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CPOINT;
+-- DROP TABLE dbo.CPOINT;
 
-CREATE TABLE Formula.dbo.CPOINT (
+CREATE TABLE dbo.CPOINT (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -8666,13 +8666,13 @@ CREATE TABLE Formula.dbo.CPOINT (
 );
 
 
--- Formula.dbo.CPS definition
+-- dbo.CPS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CPS;
+-- DROP TABLE dbo.CPS;
 
-CREATE TABLE Formula.dbo.CPS (
+CREATE TABLE dbo.CPS (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -8751,13 +8751,13 @@ CREATE TABLE Formula.dbo.CPS (
 );
 
 
--- Formula.dbo.CRGRP definition
+-- dbo.CRGRP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CRGRP;
+-- DROP TABLE dbo.CRGRP;
 
-CREATE TABLE Formula.dbo.CRGRP (
+CREATE TABLE dbo.CRGRP (
 	FCSELTAG char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCODE char(5) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCNAME char(40) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -8837,13 +8837,13 @@ CREATE TABLE Formula.dbo.CRGRP (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.CRGVAT definition
+-- dbo.CRGVAT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CRGVAT;
+-- DROP TABLE dbo.CRGVAT;
 
-CREATE TABLE Formula.dbo.CRGVAT (
+CREATE TABLE dbo.CRGVAT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -8912,13 +8912,13 @@ CREATE TABLE Formula.dbo.CRGVAT (
 );
 
 
--- Formula.dbo.CRMAPOP definition
+-- dbo.CRMAPOP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CRMAPOP;
+-- DROP TABLE dbo.CRMAPOP;
 
-CREATE TABLE Formula.dbo.CRMAPOP (
+CREATE TABLE dbo.CRMAPOP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -8987,13 +8987,13 @@ CREATE TABLE Formula.dbo.CRMAPOP (
 );
 
 
--- Formula.dbo.CRMAPPH definition
+-- dbo.CRMAPPH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CRMAPPH;
+-- DROP TABLE dbo.CRMAPPH;
 
-CREATE TABLE Formula.dbo.CRMAPPH (
+CREATE TABLE dbo.CRMAPPH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -9082,13 +9082,13 @@ CREATE TABLE Formula.dbo.CRMAPPH (
 );
 
 
--- Formula.dbo.CRMAPPI definition
+-- dbo.CRMAPPI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CRMAPPI;
+-- DROP TABLE dbo.CRMAPPI;
 
-CREATE TABLE Formula.dbo.CRMAPPI (
+CREATE TABLE dbo.CRMAPPI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -9124,13 +9124,13 @@ CREATE TABLE Formula.dbo.CRMAPPI (
 );
 
 
--- Formula.dbo.CRMCONTH definition
+-- dbo.CRMCONTH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CRMCONTH;
+-- DROP TABLE dbo.CRMCONTH;
 
-CREATE TABLE Formula.dbo.CRMCONTH (
+CREATE TABLE dbo.CRMCONTH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -9198,13 +9198,13 @@ CREATE TABLE Formula.dbo.CRMCONTH (
 );
 
 
--- Formula.dbo.CRMCONTI definition
+-- dbo.CRMCONTI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CRMCONTI;
+-- DROP TABLE dbo.CRMCONTI;
 
-CREATE TABLE Formula.dbo.CRMCONTI (
+CREATE TABLE dbo.CRMCONTI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -9246,13 +9246,13 @@ CREATE TABLE Formula.dbo.CRMCONTI (
 );
 
 
--- Formula.dbo.CRMLEAD definition
+-- dbo.CRMLEAD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CRMLEAD;
+-- DROP TABLE dbo.CRMLEAD;
 
-CREATE TABLE Formula.dbo.CRMLEAD (
+CREATE TABLE dbo.CRMLEAD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -9331,13 +9331,13 @@ CREATE TABLE Formula.dbo.CRMLEAD (
 );
 
 
--- Formula.dbo.CRMOPPOR definition
+-- dbo.CRMOPPOR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CRMOPPOR;
+-- DROP TABLE dbo.CRMOPPOR;
 
-CREATE TABLE Formula.dbo.CRMOPPOR (
+CREATE TABLE dbo.CRMOPPOR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -9402,13 +9402,13 @@ CREATE TABLE Formula.dbo.CRMOPPOR (
 );
 
 
--- Formula.dbo.CRRCPLAN definition
+-- dbo.CRRCPLAN definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CRRCPLAN;
+-- DROP TABLE dbo.CRRCPLAN;
 
-CREATE TABLE Formula.dbo.CRRCPLAN (
+CREATE TABLE dbo.CRRCPLAN (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -9469,13 +9469,13 @@ CREATE TABLE Formula.dbo.CRRCPLAN (
 );
 
 
--- Formula.dbo.CRZONE definition
+-- dbo.CRZONE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CRZONE;
+-- DROP TABLE dbo.CRZONE;
 
-CREATE TABLE Formula.dbo.CRZONE (
+CREATE TABLE dbo.CRZONE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -9547,13 +9547,13 @@ CREATE TABLE Formula.dbo.CRZONE (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.CTINVH definition
+-- dbo.CTINVH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CTINVH;
+-- DROP TABLE dbo.CTINVH;
 
-CREATE TABLE Formula.dbo.CTINVH (
+CREATE TABLE dbo.CTINVH (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -9734,13 +9734,13 @@ CREATE TABLE Formula.dbo.CTINVH (
 );
 
 
--- Formula.dbo.CTINVI definition
+-- dbo.CTINVI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CTINVI;
+-- DROP TABLE dbo.CTINVI;
 
-CREATE TABLE Formula.dbo.CTINVI (
+CREATE TABLE dbo.CTINVI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -9850,13 +9850,13 @@ CREATE TABLE Formula.dbo.CTINVI (
 );
 
 
--- Formula.dbo.CURRENCY definition
+-- dbo.CURRENCY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CURRENCY;
+-- DROP TABLE dbo.CURRENCY;
 
-CREATE TABLE Formula.dbo.CURRENCY (
+CREATE TABLE dbo.CURRENCY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -9929,13 +9929,13 @@ CREATE TABLE Formula.dbo.CURRENCY (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.CVEHICLE definition
+-- dbo.CVEHICLE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.CVEHICLE;
+-- DROP TABLE dbo.CVEHICLE;
 
-CREATE TABLE Formula.dbo.CVEHICLE (
+CREATE TABLE dbo.CVEHICLE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -10035,13 +10035,13 @@ CREATE TABLE Formula.dbo.CVEHICLE (
 );
 
 
--- Formula.dbo.DATALUPD definition
+-- dbo.DATALUPD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DATALUPD;
+-- DROP TABLE dbo.DATALUPD;
 
-CREATE TABLE Formula.dbo.DATALUPD (
+CREATE TABLE dbo.DATALUPD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -10104,13 +10104,13 @@ CREATE TABLE Formula.dbo.DATALUPD (
 );
 
 
--- Formula.dbo.DATASER definition
+-- dbo.DATASER definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DATASER;
+-- DROP TABLE dbo.DATASER;
 
-CREATE TABLE Formula.dbo.DATASER (
+CREATE TABLE dbo.DATASER (
 	FCSKID char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCTYPE char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FDDATE datetime DEFAULT NULL NULL,
@@ -10172,13 +10172,13 @@ CREATE TABLE Formula.dbo.DATASER (
 );
 
 
--- Formula.dbo.DEBTALOW definition
+-- dbo.DEBTALOW definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DEBTALOW;
+-- DROP TABLE dbo.DEBTALOW;
 
-CREATE TABLE Formula.dbo.DEBTALOW (
+CREATE TABLE dbo.DEBTALOW (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -10253,13 +10253,13 @@ CREATE TABLE Formula.dbo.DEBTALOW (
 );
 
 
--- Formula.dbo.DEFAWH definition
+-- dbo.DEFAWH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DEFAWH;
+-- DROP TABLE dbo.DEFAWH;
 
-CREATE TABLE Formula.dbo.DEFAWH (
+CREATE TABLE dbo.DEFAWH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -10341,13 +10341,13 @@ CREATE TABLE Formula.dbo.DEFAWH (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.DELHIS definition
+-- dbo.DELHIS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DELHIS;
+-- DROP TABLE dbo.DELHIS;
 
-CREATE TABLE Formula.dbo.DELHIS (
+CREATE TABLE dbo.DELHIS (
 	FCTABNAME char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCTABSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCTABCODE char(50) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -10369,13 +10369,13 @@ CREATE TABLE Formula.dbo.DELHIS (
 );
 
 
--- Formula.dbo.DELIH definition
+-- dbo.DELIH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DELIH;
+-- DROP TABLE dbo.DELIH;
 
-CREATE TABLE Formula.dbo.DELIH (
+CREATE TABLE dbo.DELIH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -10464,13 +10464,13 @@ CREATE TABLE Formula.dbo.DELIH (
 );
 
 
--- Formula.dbo.DELII definition
+-- dbo.DELII definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DELII;
+-- DROP TABLE dbo.DELII;
 
-CREATE TABLE Formula.dbo.DELII (
+CREATE TABLE dbo.DELII (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -10542,13 +10542,13 @@ CREATE TABLE Formula.dbo.DELII (
 );
 
 
--- Formula.dbo.DELLOG definition
+-- dbo.DELLOG definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DELLOG;
+-- DROP TABLE dbo.DELLOG;
 
-CREATE TABLE Formula.dbo.DELLOG (
+CREATE TABLE dbo.DELLOG (
 	FCTABNAME char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCTABSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FTDATETIME datetime DEFAULT getdate() NOT NULL,
@@ -10573,13 +10573,13 @@ CREATE TABLE Formula.dbo.DELLOG (
 );
 
 
--- Formula.dbo.DEPREF definition
+-- dbo.DEPREF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DEPREF;
+-- DROP TABLE dbo.DEPREF;
 
-CREATE TABLE Formula.dbo.DEPREF (
+CREATE TABLE dbo.DEPREF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -10652,13 +10652,13 @@ CREATE TABLE Formula.dbo.DEPREF (
 );
 
 
--- Formula.dbo.DEPT definition
+-- dbo.DEPT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DEPT;
+-- DROP TABLE dbo.DEPT;
 
-CREATE TABLE Formula.dbo.DEPT (
+CREATE TABLE dbo.DEPT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -10741,13 +10741,13 @@ CREATE TABLE Formula.dbo.DEPT (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.DICUT definition
+-- dbo.DICUT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DICUT;
+-- DROP TABLE dbo.DICUT;
 
-CREATE TABLE Formula.dbo.DICUT (
+CREATE TABLE dbo.DICUT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -10788,13 +10788,13 @@ CREATE TABLE Formula.dbo.DICUT (
 );
 
 
--- Formula.dbo.DISCTYPE definition
+-- dbo.DISCTYPE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DISCTYPE;
+-- DROP TABLE dbo.DISCTYPE;
 
-CREATE TABLE Formula.dbo.DISCTYPE (
+CREATE TABLE dbo.DISCTYPE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -10862,13 +10862,13 @@ CREATE TABLE Formula.dbo.DISCTYPE (
 );
 
 
--- Formula.dbo.DISEASE definition
+-- dbo.DISEASE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DISEASE;
+-- DROP TABLE dbo.DISEASE;
 
-CREATE TABLE Formula.dbo.DISEASE (
+CREATE TABLE dbo.DISEASE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -10927,13 +10927,13 @@ CREATE TABLE Formula.dbo.DISEASE (
 );
 
 
--- Formula.dbo.DISEASRF definition
+-- dbo.DISEASRF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DISEASRF;
+-- DROP TABLE dbo.DISEASRF;
 
-CREATE TABLE Formula.dbo.DISEASRF (
+CREATE TABLE dbo.DISEASRF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -10992,13 +10992,13 @@ CREATE TABLE Formula.dbo.DISEASRF (
 );
 
 
--- Formula.dbo.DOCDATH definition
+-- dbo.DOCDATH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DOCDATH;
+-- DROP TABLE dbo.DOCDATH;
 
-CREATE TABLE Formula.dbo.DOCDATH (
+CREATE TABLE dbo.DOCDATH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -11062,13 +11062,13 @@ CREATE TABLE Formula.dbo.DOCDATH (
 );
 
 
--- Formula.dbo.DOCFLOWH definition
+-- dbo.DOCFLOWH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DOCFLOWH;
+-- DROP TABLE dbo.DOCFLOWH;
 
-CREATE TABLE Formula.dbo.DOCFLOWH (
+CREATE TABLE dbo.DOCFLOWH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -11127,13 +11127,13 @@ CREATE TABLE Formula.dbo.DOCFLOWH (
 );
 
 
--- Formula.dbo.DOCFLOWI definition
+-- dbo.DOCFLOWI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DOCFLOWI;
+-- DROP TABLE dbo.DOCFLOWI;
 
-CREATE TABLE Formula.dbo.DOCFLOWI (
+CREATE TABLE dbo.DOCFLOWI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -11217,13 +11217,13 @@ CREATE TABLE Formula.dbo.DOCFLOWI (
 );
 
 
--- Formula.dbo.DOCREM definition
+-- dbo.DOCREM definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DOCREM;
+-- DROP TABLE dbo.DOCREM;
 
-CREATE TABLE Formula.dbo.DOCREM (
+CREATE TABLE dbo.DOCREM (
 	FCSELTAG char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -11291,13 +11291,13 @@ CREATE TABLE Formula.dbo.DOCREM (
 );
 
 
--- Formula.dbo.DOCSTEP definition
+-- dbo.DOCSTEP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DOCSTEP;
+-- DROP TABLE dbo.DOCSTEP;
 
-CREATE TABLE Formula.dbo.DOCSTEP (
+CREATE TABLE dbo.DOCSTEP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -11366,13 +11366,13 @@ CREATE TABLE Formula.dbo.DOCSTEP (
 );
 
 
--- Formula.dbo.DORDEHX1 definition
+-- dbo.DORDEHX1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DORDEHX1;
+-- DROP TABLE dbo.DORDEHX1;
 
-CREATE TABLE Formula.dbo.DORDEHX1 (
+CREATE TABLE dbo.DORDEHX1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -11432,13 +11432,13 @@ CREATE TABLE Formula.dbo.DORDEHX1 (
 );
 
 
--- Formula.dbo.DORDERH definition
+-- dbo.DORDERH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DORDERH;
+-- DROP TABLE dbo.DORDERH;
 
-CREATE TABLE Formula.dbo.DORDERH (
+CREATE TABLE dbo.DORDERH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -11574,13 +11574,13 @@ CREATE TABLE Formula.dbo.DORDERH (
 );
 
 
--- Formula.dbo.DORDERI definition
+-- dbo.DORDERI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DORDERI;
+-- DROP TABLE dbo.DORDERI;
 
-CREATE TABLE Formula.dbo.DORDERI (
+CREATE TABLE dbo.DORDERI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -11685,13 +11685,13 @@ CREATE TABLE Formula.dbo.DORDERI (
 );
 
 
--- Formula.dbo.DORDIX6 definition
+-- dbo.DORDIX6 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DORDIX6;
+-- DROP TABLE dbo.DORDIX6;
 
-CREATE TABLE Formula.dbo.DORDIX6 (
+CREATE TABLE dbo.DORDIX6 (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -11728,13 +11728,13 @@ CREATE TABLE Formula.dbo.DORDIX6 (
 );
 
 
--- Formula.dbo.DRAWPIC definition
+-- dbo.DRAWPIC definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DRAWPIC;
+-- DROP TABLE dbo.DRAWPIC;
 
-CREATE TABLE Formula.dbo.DRAWPIC (
+CREATE TABLE dbo.DRAWPIC (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -11810,13 +11810,13 @@ CREATE TABLE Formula.dbo.DRAWPIC (
 );
 
 
--- Formula.dbo.DSTDCOST definition
+-- dbo.DSTDCOST definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DSTDCOST;
+-- DROP TABLE dbo.DSTDCOST;
 
-CREATE TABLE Formula.dbo.DSTDCOST (
+CREATE TABLE dbo.DSTDCOST (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -11883,13 +11883,13 @@ CREATE TABLE Formula.dbo.DSTDCOST (
 );
 
 
--- Formula.dbo.DXCHAIN definition
+-- dbo.DXCHAIN definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.DXCHAIN;
+-- DROP TABLE dbo.DXCHAIN;
 
-CREATE TABLE Formula.dbo.DXCHAIN (
+CREATE TABLE dbo.DXCHAIN (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -11940,13 +11940,13 @@ CREATE TABLE Formula.dbo.DXCHAIN (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.EDUCATRF definition
+-- dbo.EDUCATRF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EDUCATRF;
+-- DROP TABLE dbo.EDUCATRF;
 
-CREATE TABLE Formula.dbo.EDUCATRF (
+CREATE TABLE dbo.EDUCATRF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -12009,13 +12009,13 @@ CREATE TABLE Formula.dbo.EDUCATRF (
 );
 
 
--- Formula.dbo.EDULEVEL definition
+-- dbo.EDULEVEL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EDULEVEL;
+-- DROP TABLE dbo.EDULEVEL;
 
-CREATE TABLE Formula.dbo.EDULEVEL (
+CREATE TABLE dbo.EDULEVEL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -12075,13 +12075,13 @@ CREATE TABLE Formula.dbo.EDULEVEL (
 );
 
 
--- Formula.dbo.EDUMAJOR definition
+-- dbo.EDUMAJOR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EDUMAJOR;
+-- DROP TABLE dbo.EDUMAJOR;
 
-CREATE TABLE Formula.dbo.EDUMAJOR (
+CREATE TABLE dbo.EDUMAJOR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -12140,13 +12140,13 @@ CREATE TABLE Formula.dbo.EDUMAJOR (
 );
 
 
--- Formula.dbo.EMPDOCPN definition
+-- dbo.EMPDOCPN definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EMPDOCPN;
+-- DROP TABLE dbo.EMPDOCPN;
 
-CREATE TABLE Formula.dbo.EMPDOCPN (
+CREATE TABLE dbo.EMPDOCPN (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -12245,13 +12245,13 @@ CREATE TABLE Formula.dbo.EMPDOCPN (
 );
 
 
--- Formula.dbo.EMPDOCTA definition
+-- dbo.EMPDOCTA definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EMPDOCTA;
+-- DROP TABLE dbo.EMPDOCTA;
 
-CREATE TABLE Formula.dbo.EMPDOCTA (
+CREATE TABLE dbo.EMPDOCTA (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -12352,13 +12352,13 @@ CREATE TABLE Formula.dbo.EMPDOCTA (
 );
 
 
--- Formula.dbo.EMPDOCTN definition
+-- dbo.EMPDOCTN definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EMPDOCTN;
+-- DROP TABLE dbo.EMPDOCTN;
 
-CREATE TABLE Formula.dbo.EMPDOCTN (
+CREATE TABLE dbo.EMPDOCTN (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -12442,13 +12442,13 @@ CREATE TABLE Formula.dbo.EMPDOCTN (
 );
 
 
--- Formula.dbo.EMPDOCWL definition
+-- dbo.EMPDOCWL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EMPDOCWL;
+-- DROP TABLE dbo.EMPDOCWL;
 
-CREATE TABLE Formula.dbo.EMPDOCWL (
+CREATE TABLE dbo.EMPDOCWL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -12551,13 +12551,13 @@ CREATE TABLE Formula.dbo.EMPDOCWL (
 );
 
 
--- Formula.dbo.EMPERSON definition
+-- dbo.EMPERSON definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EMPERSON;
+-- DROP TABLE dbo.EMPERSON;
 
-CREATE TABLE Formula.dbo.EMPERSON (
+CREATE TABLE dbo.EMPERSON (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -12647,13 +12647,13 @@ CREATE TABLE Formula.dbo.EMPERSON (
 );
 
 
--- Formula.dbo.EMPHWORK definition
+-- dbo.EMPHWORK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EMPHWORK;
+-- DROP TABLE dbo.EMPHWORK;
 
-CREATE TABLE Formula.dbo.EMPHWORK (
+CREATE TABLE dbo.EMPHWORK (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -12717,13 +12717,13 @@ CREATE TABLE Formula.dbo.EMPHWORK (
 );
 
 
--- Formula.dbo.EMPL definition
+-- dbo.EMPL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EMPL;
+-- DROP TABLE dbo.EMPL;
 
-CREATE TABLE Formula.dbo.EMPL (
+CREATE TABLE dbo.EMPL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -12849,13 +12849,13 @@ CREATE TABLE Formula.dbo.EMPL (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.EMPL2 definition
+-- dbo.EMPL2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EMPL2;
+-- DROP TABLE dbo.EMPL2;
 
-CREATE TABLE Formula.dbo.EMPL2 (
+CREATE TABLE dbo.EMPL2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -12943,13 +12943,13 @@ CREATE TABLE Formula.dbo.EMPL2 (
 );
 
 
--- Formula.dbo.EMPLGRP definition
+-- dbo.EMPLGRP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EMPLGRP;
+-- DROP TABLE dbo.EMPLGRP;
 
-CREATE TABLE Formula.dbo.EMPLGRP (
+CREATE TABLE dbo.EMPLGRP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -13007,13 +13007,13 @@ CREATE TABLE Formula.dbo.EMPLGRP (
 );
 
 
--- Formula.dbo.EMPLR definition
+-- dbo.EMPLR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EMPLR;
+-- DROP TABLE dbo.EMPLR;
 
-CREATE TABLE Formula.dbo.EMPLR (
+CREATE TABLE dbo.EMPLR (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -13062,13 +13062,13 @@ CREATE TABLE Formula.dbo.EMPLR (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.EMPLX1 definition
+-- dbo.EMPLX1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EMPLX1;
+-- DROP TABLE dbo.EMPLX1;
 
-CREATE TABLE Formula.dbo.EMPLX1 (
+CREATE TABLE dbo.EMPLX1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCEMPL char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -13289,13 +13289,13 @@ CREATE TABLE Formula.dbo.EMPLX1 (
 );
 
 
--- Formula.dbo.EMPPOST definition
+-- dbo.EMPPOST definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EMPPOST;
+-- DROP TABLE dbo.EMPPOST;
 
-CREATE TABLE Formula.dbo.EMPPOST (
+CREATE TABLE dbo.EMPPOST (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSTAT char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -13358,13 +13358,13 @@ CREATE TABLE Formula.dbo.EMPPOST (
 );
 
 
--- Formula.dbo.EMPRANK definition
+-- dbo.EMPRANK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EMPRANK;
+-- DROP TABLE dbo.EMPRANK;
 
-CREATE TABLE Formula.dbo.EMPRANK (
+CREATE TABLE dbo.EMPRANK (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -13422,13 +13422,13 @@ CREATE TABLE Formula.dbo.EMPRANK (
 );
 
 
--- Formula.dbo.EMZONE definition
+-- dbo.EMZONE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EMZONE;
+-- DROP TABLE dbo.EMZONE;
 
-CREATE TABLE Formula.dbo.EMZONE (
+CREATE TABLE dbo.EMZONE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -13504,13 +13504,13 @@ CREATE TABLE Formula.dbo.EMZONE (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.EPAYDET definition
+-- dbo.EPAYDET definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EPAYDET;
+-- DROP TABLE dbo.EPAYDET;
 
-CREATE TABLE Formula.dbo.EPAYDET (
+CREATE TABLE dbo.EPAYDET (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -13564,13 +13564,13 @@ CREATE TABLE Formula.dbo.EPAYDET (
 );
 
 
--- Formula.dbo.ESTBOQH definition
+-- dbo.ESTBOQH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ESTBOQH;
+-- DROP TABLE dbo.ESTBOQH;
 
-CREATE TABLE Formula.dbo.ESTBOQH (
+CREATE TABLE dbo.ESTBOQH (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCBRANCH char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -13653,13 +13653,13 @@ CREATE TABLE Formula.dbo.ESTBOQH (
 );
 
 
--- Formula.dbo.ESTBOQI definition
+-- dbo.ESTBOQI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ESTBOQI;
+-- DROP TABLE dbo.ESTBOQI;
 
-CREATE TABLE Formula.dbo.ESTBOQI (
+CREATE TABLE dbo.ESTBOQI (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCBRANCH char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -13719,13 +13719,13 @@ CREATE TABLE Formula.dbo.ESTBOQI (
 );
 
 
--- Formula.dbo.ETRUST definition
+-- dbo.ETRUST definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ETRUST;
+-- DROP TABLE dbo.ETRUST;
 
-CREATE TABLE Formula.dbo.ETRUST (
+CREATE TABLE dbo.ETRUST (
 	FCEMPL char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSYSOBJ char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FNPWREQRIG decimal(12,0) DEFAULT 0 NOT NULL,
@@ -13752,13 +13752,13 @@ CREATE TABLE Formula.dbo.ETRUST (
 );
 
 
--- Formula.dbo.ETRUSTX1 definition
+-- dbo.ETRUSTX1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ETRUSTX1;
+-- DROP TABLE dbo.ETRUSTX1;
 
-CREATE TABLE Formula.dbo.ETRUSTX1 (
+CREATE TABLE dbo.ETRUSTX1 (
 	FCEMPL char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSYSOBJ char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCROSS char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -13784,13 +13784,13 @@ CREATE TABLE Formula.dbo.ETRUSTX1 (
 );
 
 
--- Formula.dbo.EVALUATH definition
+-- dbo.EVALUATH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EVALUATH;
+-- DROP TABLE dbo.EVALUATH;
 
-CREATE TABLE Formula.dbo.EVALUATH (
+CREATE TABLE dbo.EVALUATH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -13852,13 +13852,13 @@ CREATE TABLE Formula.dbo.EVALUATH (
 );
 
 
--- Formula.dbo.EVALUATI definition
+-- dbo.EVALUATI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.EVALUATI;
+-- DROP TABLE dbo.EVALUATI;
 
-CREATE TABLE Formula.dbo.EVALUATI (
+CREATE TABLE dbo.EVALUATI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -13918,13 +13918,13 @@ CREATE TABLE Formula.dbo.EVALUATI (
 );
 
 
--- Formula.dbo.FLEXBASE definition
+-- dbo.FLEXBASE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.FLEXBASE;
+-- DROP TABLE dbo.FLEXBASE;
 
-CREATE TABLE Formula.dbo.FLEXBASE (
+CREATE TABLE dbo.FLEXBASE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -13994,13 +13994,13 @@ CREATE TABLE Formula.dbo.FLEXBASE (
 );
 
 
--- Formula.dbo.FLEXDATA definition
+-- dbo.FLEXDATA definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.FLEXDATA;
+-- DROP TABLE dbo.FLEXDATA;
 
-CREATE TABLE Formula.dbo.FLEXDATA (
+CREATE TABLE dbo.FLEXDATA (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -14077,13 +14077,13 @@ CREATE TABLE Formula.dbo.FLEXDATA (
 );
 
 
--- Formula.dbo.FLEXTYPE definition
+-- dbo.FLEXTYPE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.FLEXTYPE;
+-- DROP TABLE dbo.FLEXTYPE;
 
-CREATE TABLE Formula.dbo.FLEXTYPE (
+CREATE TABLE dbo.FLEXTYPE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -14156,13 +14156,13 @@ CREATE TABLE Formula.dbo.FLEXTYPE (
 );
 
 
--- Formula.dbo.FLEXVALU definition
+-- dbo.FLEXVALU definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.FLEXVALU;
+-- DROP TABLE dbo.FLEXVALU;
 
-CREATE TABLE Formula.dbo.FLEXVALU (
+CREATE TABLE dbo.FLEXVALU (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -14236,13 +14236,13 @@ CREATE TABLE Formula.dbo.FLEXVALU (
 );
 
 
--- Formula.dbo.FMCNFG2 definition
+-- dbo.FMCNFG2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.FMCNFG2;
+-- DROP TABLE dbo.FMCNFG2;
 
-CREATE TABLE Formula.dbo.FMCNFG2 (
+CREATE TABLE dbo.FMCNFG2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -14321,13 +14321,13 @@ CREATE TABLE Formula.dbo.FMCNFG2 (
 );
 
 
--- Formula.dbo.FMCONFIG definition
+-- dbo.FMCONFIG definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.FMCONFIG;
+-- DROP TABLE dbo.FMCONFIG;
 
-CREATE TABLE Formula.dbo.FMCONFIG (
+CREATE TABLE dbo.FMCONFIG (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCON000 char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCON001 char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -14428,13 +14428,13 @@ CREATE TABLE Formula.dbo.FMCONFIG (
 );
 
 
--- Formula.dbo.FORMH definition
+-- dbo.FORMH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.FORMH;
+-- DROP TABLE dbo.FORMH;
 
-CREATE TABLE Formula.dbo.FORMH (
+CREATE TABLE dbo.FORMH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -14531,13 +14531,13 @@ CREATE TABLE Formula.dbo.FORMH (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.FORMH2 definition
+-- dbo.FORMH2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.FORMH2;
+-- DROP TABLE dbo.FORMH2;
 
-CREATE TABLE Formula.dbo.FORMH2 (
+CREATE TABLE dbo.FORMH2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -14663,13 +14663,13 @@ CREATE TABLE Formula.dbo.FORMH2 (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.FORMI definition
+-- dbo.FORMI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.FORMI;
+-- DROP TABLE dbo.FORMI;
 
-CREATE TABLE Formula.dbo.FORMI (
+CREATE TABLE dbo.FORMI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -14764,13 +14764,13 @@ CREATE TABLE Formula.dbo.FORMI (
 );
 
 
--- Formula.dbo.FORMI2 definition
+-- dbo.FORMI2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.FORMI2;
+-- DROP TABLE dbo.FORMI2;
 
-CREATE TABLE Formula.dbo.FORMI2 (
+CREATE TABLE dbo.FORMI2 (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCFORMIOBJ char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -14905,13 +14905,13 @@ CREATE TABLE Formula.dbo.FORMI2 (
 );
 
 
--- Formula.dbo.FORMIFON definition
+-- dbo.FORMIFON definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.FORMIFON;
+-- DROP TABLE dbo.FORMIFON;
 
-CREATE TABLE Formula.dbo.FORMIFON (
+CREATE TABLE dbo.FORMIFON (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCTYPE char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCODE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -14976,13 +14976,13 @@ CREATE TABLE Formula.dbo.FORMIFON (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.FORMIOBJ definition
+-- dbo.FORMIOBJ definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.FORMIOBJ;
+-- DROP TABLE dbo.FORMIOBJ;
 
-CREATE TABLE Formula.dbo.FORMIOBJ (
+CREATE TABLE dbo.FORMIOBJ (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCTYPE char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -15092,13 +15092,13 @@ CREATE TABLE Formula.dbo.FORMIOBJ (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.FORMITYP definition
+-- dbo.FORMITYP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.FORMITYP;
+-- DROP TABLE dbo.FORMITYP;
 
-CREATE TABLE Formula.dbo.FORMITYP (
+CREATE TABLE dbo.FORMITYP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCODE char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCNAME char(40) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -15161,13 +15161,13 @@ CREATE TABLE Formula.dbo.FORMITYP (
 );
 
 
--- Formula.dbo.FORMULAS definition
+-- dbo.FORMULAS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.FORMULAS;
+-- DROP TABLE dbo.FORMULAS;
 
-CREATE TABLE Formula.dbo.FORMULAS (
+CREATE TABLE dbo.FORMULAS (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -15257,13 +15257,13 @@ CREATE TABLE Formula.dbo.FORMULAS (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.FUNDRATE definition
+-- dbo.FUNDRATE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.FUNDRATE;
+-- DROP TABLE dbo.FUNDRATE;
 
-CREATE TABLE Formula.dbo.FUNDRATE (
+CREATE TABLE dbo.FUNDRATE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -15321,13 +15321,13 @@ CREATE TABLE Formula.dbo.FUNDRATE (
 );
 
 
--- Formula.dbo.FUNDREF definition
+-- dbo.FUNDREF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.FUNDREF;
+-- DROP TABLE dbo.FUNDREF;
 
-CREATE TABLE Formula.dbo.FUNDREF (
+CREATE TABLE dbo.FUNDREF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -15355,13 +15355,13 @@ CREATE TABLE Formula.dbo.FUNDREF (
 );
 
 
--- Formula.dbo.GL definition
+-- dbo.GL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GL;
+-- DROP TABLE dbo.GL;
 
-CREATE TABLE Formula.dbo.GL (
+CREATE TABLE dbo.GL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -15430,13 +15430,13 @@ CREATE TABLE Formula.dbo.GL (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.GLHEAD definition
+-- dbo.GLHEAD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GLHEAD;
+-- DROP TABLE dbo.GLHEAD;
 
-CREATE TABLE Formula.dbo.GLHEAD (
+CREATE TABLE dbo.GLHEAD (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -15552,13 +15552,13 @@ CREATE TABLE Formula.dbo.GLHEAD (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.GLREF definition
+-- dbo.GLREF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GLREF;
+-- DROP TABLE dbo.GLREF;
 
-CREATE TABLE Formula.dbo.GLREF (
+CREATE TABLE dbo.GLREF (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -15843,13 +15843,13 @@ CREATE TABLE Formula.dbo.GLREF (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.GLREFCT definition
+-- dbo.GLREFCT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GLREFCT;
+-- DROP TABLE dbo.GLREFCT;
 
-CREATE TABLE Formula.dbo.GLREFCT (
+CREATE TABLE dbo.GLREFCT (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -16055,13 +16055,13 @@ CREATE TABLE Formula.dbo.GLREFCT (
 );
 
 
--- Formula.dbo.GLREFDT definition
+-- dbo.GLREFDT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GLREFDT;
+-- DROP TABLE dbo.GLREFDT;
 
-CREATE TABLE Formula.dbo.GLREFDT (
+CREATE TABLE dbo.GLREFDT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -16141,13 +16141,13 @@ CREATE TABLE Formula.dbo.GLREFDT (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.GLREFPL definition
+-- dbo.GLREFPL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GLREFPL;
+-- DROP TABLE dbo.GLREFPL;
 
-CREATE TABLE Formula.dbo.GLREFPL (
+CREATE TABLE dbo.GLREFPL (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -16373,13 +16373,13 @@ CREATE TABLE Formula.dbo.GLREFPL (
 );
 
 
--- Formula.dbo.GLREFPV definition
+-- dbo.GLREFPV definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GLREFPV;
+-- DROP TABLE dbo.GLREFPV;
 
-CREATE TABLE Formula.dbo.GLREFPV (
+CREATE TABLE dbo.GLREFPV (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -16447,13 +16447,13 @@ CREATE TABLE Formula.dbo.GLREFPV (
 );
 
 
--- Formula.dbo.GLREFRD definition
+-- dbo.GLREFRD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GLREFRD;
+-- DROP TABLE dbo.GLREFRD;
 
-CREATE TABLE Formula.dbo.GLREFRD (
+CREATE TABLE dbo.GLREFRD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -16517,13 +16517,13 @@ CREATE TABLE Formula.dbo.GLREFRD (
 );
 
 
--- Formula.dbo.GLREFX definition
+-- dbo.GLREFX definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GLREFX;
+-- DROP TABLE dbo.GLREFX;
 
-CREATE TABLE Formula.dbo.GLREFX (
+CREATE TABLE dbo.GLREFX (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -16594,13 +16594,13 @@ CREATE TABLE Formula.dbo.GLREFX (
 );
 
 
--- Formula.dbo.GLREFX1 definition
+-- dbo.GLREFX1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GLREFX1;
+-- DROP TABLE dbo.GLREFX1;
 
-CREATE TABLE Formula.dbo.GLREFX1 (
+CREATE TABLE dbo.GLREFX1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -16689,13 +16689,13 @@ CREATE TABLE Formula.dbo.GLREFX1 (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.GLREFX2 definition
+-- dbo.GLREFX2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GLREFX2;
+-- DROP TABLE dbo.GLREFX2;
 
-CREATE TABLE Formula.dbo.GLREFX2 (
+CREATE TABLE dbo.GLREFX2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -16760,13 +16760,13 @@ CREATE TABLE Formula.dbo.GLREFX2 (
 );
 
 
--- Formula.dbo.GLREFX3 definition
+-- dbo.GLREFX3 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GLREFX3;
+-- DROP TABLE dbo.GLREFX3;
 
-CREATE TABLE Formula.dbo.GLREFX3 (
+CREATE TABLE dbo.GLREFX3 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -16830,13 +16830,13 @@ CREATE TABLE Formula.dbo.GLREFX3 (
 );
 
 
--- Formula.dbo.GLREFX4 definition
+-- dbo.GLREFX4 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GLREFX4;
+-- DROP TABLE dbo.GLREFX4;
 
-CREATE TABLE Formula.dbo.GLREFX4 (
+CREATE TABLE dbo.GLREFX4 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -16946,13 +16946,13 @@ CREATE TABLE Formula.dbo.GLREFX4 (
 );
 
 
--- Formula.dbo.GLREFX5 definition
+-- dbo.GLREFX5 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GLREFX5;
+-- DROP TABLE dbo.GLREFX5;
 
-CREATE TABLE Formula.dbo.GLREFX5 (
+CREATE TABLE dbo.GLREFX5 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -17012,13 +17012,13 @@ CREATE TABLE Formula.dbo.GLREFX5 (
 );
 
 
--- Formula.dbo.GLREFXH definition
+-- dbo.GLREFXH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GLREFXH;
+-- DROP TABLE dbo.GLREFXH;
 
-CREATE TABLE Formula.dbo.GLREFXH (
+CREATE TABLE dbo.GLREFXH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -17056,13 +17056,13 @@ CREATE TABLE Formula.dbo.GLREFXH (
 );
 
 
--- Formula.dbo.GLX definition
+-- dbo.GLX definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GLX;
+-- DROP TABLE dbo.GLX;
 
-CREATE TABLE Formula.dbo.GLX (
+CREATE TABLE dbo.GLX (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -17099,13 +17099,13 @@ CREATE TABLE Formula.dbo.GLX (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.GLX1 definition
+-- dbo.GLX1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GLX1;
+-- DROP TABLE dbo.GLX1;
 
-CREATE TABLE Formula.dbo.GLX1 (
+CREATE TABLE dbo.GLX1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -17138,13 +17138,13 @@ CREATE TABLE Formula.dbo.GLX1 (
 );
 
 
--- Formula.dbo.GMACHINE definition
+-- dbo.GMACHINE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GMACHINE;
+-- DROP TABLE dbo.GMACHINE;
 
-CREATE TABLE Formula.dbo.GMACHINE (
+CREATE TABLE dbo.GMACHINE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -17226,13 +17226,13 @@ CREATE TABLE Formula.dbo.GMACHINE (
 );
 
 
--- Formula.dbo.GMACHMB definition
+-- dbo.GMACHMB definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GMACHMB;
+-- DROP TABLE dbo.GMACHMB;
 
-CREATE TABLE Formula.dbo.GMACHMB (
+CREATE TABLE dbo.GMACHMB (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -17312,13 +17312,13 @@ CREATE TABLE Formula.dbo.GMACHMB (
 );
 
 
--- Formula.dbo.GMODHEAD definition
+-- dbo.GMODHEAD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GMODHEAD;
+-- DROP TABLE dbo.GMODHEAD;
 
-CREATE TABLE Formula.dbo.GMODHEAD (
+CREATE TABLE dbo.GMODHEAD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -17396,13 +17396,13 @@ CREATE TABLE Formula.dbo.GMODHEAD (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.GMODHED2 definition
+-- dbo.GMODHED2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GMODHED2;
+-- DROP TABLE dbo.GMODHED2;
 
-CREATE TABLE Formula.dbo.GMODHED2 (
+CREATE TABLE dbo.GMODHED2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -17488,13 +17488,13 @@ CREATE TABLE Formula.dbo.GMODHED2 (
 );
 
 
--- Formula.dbo.GMODITEM definition
+-- dbo.GMODITEM definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GMODITEM;
+-- DROP TABLE dbo.GMODITEM;
 
-CREATE TABLE Formula.dbo.GMODITEM (
+CREATE TABLE dbo.GMODITEM (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -17570,13 +17570,13 @@ CREATE TABLE Formula.dbo.GMODITEM (
 );
 
 
--- Formula.dbo.GMODITM2 definition
+-- dbo.GMODITM2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GMODITM2;
+-- DROP TABLE dbo.GMODITM2;
 
-CREATE TABLE Formula.dbo.GMODITM2 (
+CREATE TABLE dbo.GMODITM2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -17636,13 +17636,13 @@ CREATE TABLE Formula.dbo.GMODITM2 (
 );
 
 
--- Formula.dbo.GREFWKR definition
+-- dbo.GREFWKR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GREFWKR;
+-- DROP TABLE dbo.GREFWKR;
 
-CREATE TABLE Formula.dbo.GREFWKR (
+CREATE TABLE dbo.GREFWKR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -17677,13 +17677,13 @@ CREATE TABLE Formula.dbo.GREFWKR (
 );
 
 
--- Formula.dbo.GRPEMPLH definition
+-- dbo.GRPEMPLH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GRPEMPLH;
+-- DROP TABLE dbo.GRPEMPLH;
 
-CREATE TABLE Formula.dbo.GRPEMPLH (
+CREATE TABLE dbo.GRPEMPLH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -17747,13 +17747,13 @@ CREATE TABLE Formula.dbo.GRPEMPLH (
 );
 
 
--- Formula.dbo.GRPEMPLI definition
+-- dbo.GRPEMPLI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.GRPEMPLI;
+-- DROP TABLE dbo.GRPEMPLI;
 
-CREATE TABLE Formula.dbo.GRPEMPLI (
+CREATE TABLE dbo.GRPEMPLI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -17786,13 +17786,13 @@ CREATE TABLE Formula.dbo.GRPEMPLI (
 );
 
 
--- Formula.dbo.HASSTAT definition
+-- dbo.HASSTAT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.HASSTAT;
+-- DROP TABLE dbo.HASSTAT;
 
-CREATE TABLE Formula.dbo.HASSTAT (
+CREATE TABLE dbo.HASSTAT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -17862,13 +17862,13 @@ CREATE TABLE Formula.dbo.HASSTAT (
 );
 
 
--- Formula.dbo.HDATATRN definition
+-- dbo.HDATATRN definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.HDATATRN;
+-- DROP TABLE dbo.HDATATRN;
 
-CREATE TABLE Formula.dbo.HDATATRN (
+CREATE TABLE dbo.HDATATRN (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -17937,13 +17937,13 @@ CREATE TABLE Formula.dbo.HDATATRN (
 );
 
 
--- Formula.dbo.HEMPTA definition
+-- dbo.HEMPTA definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.HEMPTA;
+-- DROP TABLE dbo.HEMPTA;
 
-CREATE TABLE Formula.dbo.HEMPTA (
+CREATE TABLE dbo.HEMPTA (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -18002,13 +18002,13 @@ CREATE TABLE Formula.dbo.HEMPTA (
 );
 
 
--- Formula.dbo.HLOCA1 definition
+-- dbo.HLOCA1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.HLOCA1;
+-- DROP TABLE dbo.HLOCA1;
 
-CREATE TABLE Formula.dbo.HLOCA1 (
+CREATE TABLE dbo.HLOCA1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -18082,13 +18082,13 @@ CREATE TABLE Formula.dbo.HLOCA1 (
 );
 
 
--- Formula.dbo.HOLIDAY definition
+-- dbo.HOLIDAY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.HOLIDAY;
+-- DROP TABLE dbo.HOLIDAY;
 
-CREATE TABLE Formula.dbo.HOLIDAY (
+CREATE TABLE dbo.HOLIDAY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -18157,13 +18157,13 @@ CREATE TABLE Formula.dbo.HOLIDAY (
 );
 
 
--- Formula.dbo.HOSPITAL definition
+-- dbo.HOSPITAL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.HOSPITAL;
+-- DROP TABLE dbo.HOSPITAL;
 
-CREATE TABLE Formula.dbo.HOSPITAL (
+CREATE TABLE dbo.HOSPITAL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -18232,13 +18232,13 @@ CREATE TABLE Formula.dbo.HOSPITAL (
 );
 
 
--- Formula.dbo.HOTHCOST definition
+-- dbo.HOTHCOST definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.HOTHCOST;
+-- DROP TABLE dbo.HOTHCOST;
 
-CREATE TABLE Formula.dbo.HOTHCOST (
+CREATE TABLE dbo.HOTHCOST (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -18316,13 +18316,13 @@ CREATE TABLE Formula.dbo.HOTHCOST (
 );
 
 
--- Formula.dbo.HRPERSON definition
+-- dbo.HRPERSON definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.HRPERSON;
+-- DROP TABLE dbo.HRPERSON;
 
-CREATE TABLE Formula.dbo.HRPERSON (
+CREATE TABLE dbo.HRPERSON (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -18394,13 +18394,13 @@ CREATE TABLE Formula.dbo.HRPERSON (
 );
 
 
--- Formula.dbo.HRTYPE definition
+-- dbo.HRTYPE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.HRTYPE;
+-- DROP TABLE dbo.HRTYPE;
 
-CREATE TABLE Formula.dbo.HRTYPE (
+CREATE TABLE dbo.HRTYPE (
 	FCDATASERF char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(3) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -18473,13 +18473,13 @@ CREATE TABLE Formula.dbo.HRTYPE (
 );
 
 
--- Formula.dbo.HSALARY definition
+-- dbo.HSALARY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.HSALARY;
+-- DROP TABLE dbo.HSALARY;
 
-CREATE TABLE Formula.dbo.HSALARY (
+CREATE TABLE dbo.HSALARY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -18562,13 +18562,13 @@ CREATE TABLE Formula.dbo.HSALARY (
 );
 
 
--- Formula.dbo.HSTDCOST definition
+-- dbo.HSTDCOST definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.HSTDCOST;
+-- DROP TABLE dbo.HSTDCOST;
 
-CREATE TABLE Formula.dbo.HSTDCOST (
+CREATE TABLE dbo.HSTDCOST (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -18641,13 +18641,13 @@ CREATE TABLE Formula.dbo.HSTDCOST (
 );
 
 
--- Formula.dbo.HSTDTIME definition
+-- dbo.HSTDTIME definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.HSTDTIME;
+-- DROP TABLE dbo.HSTDTIME;
 
-CREATE TABLE Formula.dbo.HSTDTIME (
+CREATE TABLE dbo.HSTDTIME (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -18713,13 +18713,13 @@ CREATE TABLE Formula.dbo.HSTDTIME (
 );
 
 
--- Formula.dbo.HSUBCOST definition
+-- dbo.HSUBCOST definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.HSUBCOST;
+-- DROP TABLE dbo.HSUBCOST;
 
-CREATE TABLE Formula.dbo.HSUBCOST (
+CREATE TABLE dbo.HSUBCOST (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -18787,13 +18787,13 @@ CREATE TABLE Formula.dbo.HSUBCOST (
 );
 
 
--- Formula.dbo.IMCOGH definition
+-- dbo.IMCOGH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.IMCOGH;
+-- DROP TABLE dbo.IMCOGH;
 
-CREATE TABLE Formula.dbo.IMCOGH (
+CREATE TABLE dbo.IMCOGH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -18916,13 +18916,13 @@ CREATE TABLE Formula.dbo.IMCOGH (
 );
 
 
--- Formula.dbo.IMCOGI definition
+-- dbo.IMCOGI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.IMCOGI;
+-- DROP TABLE dbo.IMCOGI;
 
-CREATE TABLE Formula.dbo.IMCOGI (
+CREATE TABLE dbo.IMCOGI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -18974,13 +18974,13 @@ CREATE TABLE Formula.dbo.IMCOGI (
 );
 
 
--- Formula.dbo.IMCOGT definition
+-- dbo.IMCOGT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.IMCOGT;
+-- DROP TABLE dbo.IMCOGT;
 
-CREATE TABLE Formula.dbo.IMCOGT (
+CREATE TABLE dbo.IMCOGT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -19016,13 +19016,13 @@ CREATE TABLE Formula.dbo.IMCOGT (
 );
 
 
--- Formula.dbo.INSTITUT definition
+-- dbo.INSTITUT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.INSTITUT;
+-- DROP TABLE dbo.INSTITUT;
 
-CREATE TABLE Formula.dbo.INSTITUT (
+CREATE TABLE dbo.INSTITUT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -19099,13 +19099,13 @@ CREATE TABLE Formula.dbo.INSTITUT (
 );
 
 
--- Formula.dbo.INSTLMNH definition
+-- dbo.INSTLMNH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.INSTLMNH;
+-- DROP TABLE dbo.INSTLMNH;
 
-CREATE TABLE Formula.dbo.INSTLMNH (
+CREATE TABLE dbo.INSTLMNH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -19204,13 +19204,13 @@ CREATE TABLE Formula.dbo.INSTLMNH (
 );
 
 
--- Formula.dbo.INSTLMNI definition
+-- dbo.INSTLMNI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.INSTLMNI;
+-- DROP TABLE dbo.INSTLMNI;
 
-CREATE TABLE Formula.dbo.INSTLMNI (
+CREATE TABLE dbo.INSTLMNI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -19290,13 +19290,13 @@ CREATE TABLE Formula.dbo.INSTLMNI (
 );
 
 
--- Formula.dbo.INVCS definition
+-- dbo.INVCS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.INVCS;
+-- DROP TABLE dbo.INVCS;
 
-CREATE TABLE Formula.dbo.INVCS (
+CREATE TABLE dbo.INVCS (
 	RUN char(10) COLLATE Thai_BIN NULL,
 	[TYPE] char(1) COLLATE Thai_BIN NULL,
 	ID int NULL,
@@ -19307,13 +19307,13 @@ CREATE TABLE Formula.dbo.INVCS (
 );
 
 
--- Formula.dbo.ITABLIS1 definition
+-- dbo.ITABLIS1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ITABLIS1;
+-- DROP TABLE dbo.ITABLIS1;
 
-CREATE TABLE Formula.dbo.ITABLIS1 (
+CREATE TABLE dbo.ITABLIS1 (
 	FCNAME char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCIDTYPE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FISKIDLEN int DEFAULT 0 NOT NULL,
@@ -19340,13 +19340,13 @@ CREATE TABLE Formula.dbo.ITABLIS1 (
 );
 
 
--- Formula.dbo.ITABLIS2 definition
+-- dbo.ITABLIS2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ITABLIS2;
+-- DROP TABLE dbo.ITABLIS2;
 
-CREATE TABLE Formula.dbo.ITABLIS2 (
+CREATE TABLE dbo.ITABLIS2 (
 	FCNAME char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCIDTYPE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FTDATETIME datetime DEFAULT getdate() NOT NULL,
@@ -19381,13 +19381,13 @@ CREATE TABLE Formula.dbo.ITABLIS2 (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.JANGWAT definition
+-- dbo.JANGWAT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.JANGWAT;
+-- DROP TABLE dbo.JANGWAT;
 
-CREATE TABLE Formula.dbo.JANGWAT (
+CREATE TABLE dbo.JANGWAT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -19416,13 +19416,13 @@ CREATE TABLE Formula.dbo.JANGWAT (
 );
 
 
--- Formula.dbo.JBBUDGET definition
+-- dbo.JBBUDGET definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.JBBUDGET;
+-- DROP TABLE dbo.JBBUDGET;
 
-CREATE TABLE Formula.dbo.JBBUDGET (
+CREATE TABLE dbo.JBBUDGET (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -19490,13 +19490,13 @@ CREATE TABLE Formula.dbo.JBBUDGET (
 );
 
 
--- Formula.dbo.JOB definition
+-- dbo.JOB definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.JOB;
+-- DROP TABLE dbo.JOB;
 
-CREATE TABLE Formula.dbo.JOB (
+CREATE TABLE dbo.JOB (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -19580,13 +19580,13 @@ CREATE TABLE Formula.dbo.JOB (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.JOBDESC definition
+-- dbo.JOBDESC definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.JOBDESC;
+-- DROP TABLE dbo.JOBDESC;
 
-CREATE TABLE Formula.dbo.JOBDESC (
+CREATE TABLE dbo.JOBDESC (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -19681,13 +19681,13 @@ CREATE TABLE Formula.dbo.JOBDESC (
 );
 
 
--- Formula.dbo.JOBDESRF definition
+-- dbo.JOBDESRF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.JOBDESRF;
+-- DROP TABLE dbo.JOBDESRF;
 
-CREATE TABLE Formula.dbo.JOBDESRF (
+CREATE TABLE dbo.JOBDESRF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -19750,13 +19750,13 @@ CREATE TABLE Formula.dbo.JOBDESRF (
 );
 
 
--- Formula.dbo.JOBDESX1 definition
+-- dbo.JOBDESX1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.JOBDESX1;
+-- DROP TABLE dbo.JOBDESX1;
 
-CREATE TABLE Formula.dbo.JOBDESX1 (
+CREATE TABLE dbo.JOBDESX1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -19818,13 +19818,13 @@ CREATE TABLE Formula.dbo.JOBDESX1 (
 );
 
 
--- Formula.dbo.KEEPFILE definition
+-- dbo.KEEPFILE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.KEEPFILE;
+-- DROP TABLE dbo.KEEPFILE;
 
-CREATE TABLE Formula.dbo.KEEPFILE (
+CREATE TABLE dbo.KEEPFILE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -19893,13 +19893,13 @@ CREATE TABLE Formula.dbo.KEEPFILE (
 );
 
 
--- Formula.dbo.KEEPTRAC definition
+-- dbo.KEEPTRAC definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.KEEPTRAC;
+-- DROP TABLE dbo.KEEPTRAC;
 
-CREATE TABLE Formula.dbo.KEEPTRAC (
+CREATE TABLE dbo.KEEPTRAC (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCBRANCH char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -19939,13 +19939,13 @@ CREATE TABLE Formula.dbo.KEEPTRAC (
 );
 
 
--- Formula.dbo.LAYH definition
+-- dbo.LAYH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LAYH;
+-- DROP TABLE dbo.LAYH;
 
-CREATE TABLE Formula.dbo.LAYH (
+CREATE TABLE dbo.LAYH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -20040,13 +20040,13 @@ CREATE TABLE Formula.dbo.LAYH (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.LAYH2 definition
+-- dbo.LAYH2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LAYH2;
+-- DROP TABLE dbo.LAYH2;
 
-CREATE TABLE Formula.dbo.LAYH2 (
+CREATE TABLE dbo.LAYH2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -20141,13 +20141,13 @@ CREATE TABLE Formula.dbo.LAYH2 (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.LAYI definition
+-- dbo.LAYI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LAYI;
+-- DROP TABLE dbo.LAYI;
 
-CREATE TABLE Formula.dbo.LAYI (
+CREATE TABLE dbo.LAYI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -20188,13 +20188,13 @@ CREATE TABLE Formula.dbo.LAYI (
 );
 
 
--- Formula.dbo.LAYI2 definition
+-- dbo.LAYI2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LAYI2;
+-- DROP TABLE dbo.LAYI2;
 
-CREATE TABLE Formula.dbo.LAYI2 (
+CREATE TABLE dbo.LAYI2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -20242,13 +20242,13 @@ CREATE TABLE Formula.dbo.LAYI2 (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.LAYIPD definition
+-- dbo.LAYIPD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LAYIPD;
+-- DROP TABLE dbo.LAYIPD;
 
-CREATE TABLE Formula.dbo.LAYIPD (
+CREATE TABLE dbo.LAYIPD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -20322,13 +20322,13 @@ CREATE TABLE Formula.dbo.LAYIPD (
 );
 
 
--- Formula.dbo.LAYMETHD definition
+-- dbo.LAYMETHD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LAYMETHD;
+-- DROP TABLE dbo.LAYMETHD;
 
-CREATE TABLE Formula.dbo.LAYMETHD (
+CREATE TABLE dbo.LAYMETHD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -20393,13 +20393,13 @@ CREATE TABLE Formula.dbo.LAYMETHD (
 );
 
 
--- Formula.dbo.LEADTYPE definition
+-- dbo.LEADTYPE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LEADTYPE;
+-- DROP TABLE dbo.LEADTYPE;
 
-CREATE TABLE Formula.dbo.LEADTYPE (
+CREATE TABLE dbo.LEADTYPE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -20467,13 +20467,13 @@ CREATE TABLE Formula.dbo.LEADTYPE (
 );
 
 
--- Formula.dbo.LEAVE definition
+-- dbo.LEAVE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LEAVE;
+-- DROP TABLE dbo.LEAVE;
 
-CREATE TABLE Formula.dbo.LEAVE (
+CREATE TABLE dbo.LEAVE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -20540,13 +20540,13 @@ CREATE TABLE Formula.dbo.LEAVE (
 );
 
 
--- Formula.dbo.LGFLOW definition
+-- dbo.LGFLOW definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LGFLOW;
+-- DROP TABLE dbo.LGFLOW;
 
-CREATE TABLE Formula.dbo.LGFLOW (
+CREATE TABLE dbo.LGFLOW (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -20614,13 +20614,13 @@ CREATE TABLE Formula.dbo.LGFLOW (
 );
 
 
--- Formula.dbo.LINKFILE definition
+-- dbo.LINKFILE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LINKFILE;
+-- DROP TABLE dbo.LINKFILE;
 
-CREATE TABLE Formula.dbo.LINKFILE (
+CREATE TABLE dbo.LINKFILE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -20686,13 +20686,13 @@ CREATE TABLE Formula.dbo.LINKFILE (
 );
 
 
--- Formula.dbo.LINKGRP definition
+-- dbo.LINKGRP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LINKGRP;
+-- DROP TABLE dbo.LINKGRP;
 
-CREATE TABLE Formula.dbo.LINKGRP (
+CREATE TABLE dbo.LINKGRP (
 	FCSKID char(10) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCODE char(10) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCNAME char(100) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -20722,13 +20722,13 @@ CREATE TABLE Formula.dbo.LINKGRP (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.LINKREPA definition
+-- dbo.LINKREPA definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LINKREPA;
+-- DROP TABLE dbo.LINKREPA;
 
-CREATE TABLE Formula.dbo.LINKREPA (
+CREATE TABLE dbo.LINKREPA (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -20799,13 +20799,13 @@ CREATE TABLE Formula.dbo.LINKREPA (
 );
 
 
--- Formula.dbo.LNKFORMH definition
+-- dbo.LNKFORMH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LNKFORMH;
+-- DROP TABLE dbo.LNKFORMH;
 
-CREATE TABLE Formula.dbo.LNKFORMH (
+CREATE TABLE dbo.LNKFORMH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -20875,13 +20875,13 @@ CREATE TABLE Formula.dbo.LNKFORMH (
 );
 
 
--- Formula.dbo.LOCA1 definition
+-- dbo.LOCA1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LOCA1;
+-- DROP TABLE dbo.LOCA1;
 
-CREATE TABLE Formula.dbo.LOCA1 (
+CREATE TABLE dbo.LOCA1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -20959,13 +20959,13 @@ CREATE TABLE Formula.dbo.LOCA1 (
 );
 
 
--- Formula.dbo.LOCATION definition
+-- dbo.LOCATION definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LOCATION;
+-- DROP TABLE dbo.LOCATION;
 
-CREATE TABLE Formula.dbo.LOCATION (
+CREATE TABLE dbo.LOCATION (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -21039,13 +21039,13 @@ CREATE TABLE Formula.dbo.LOCATION (
 );
 
 
--- Formula.dbo.LOCMOVH1 definition
+-- dbo.LOCMOVH1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LOCMOVH1;
+-- DROP TABLE dbo.LOCMOVH1;
 
-CREATE TABLE Formula.dbo.LOCMOVH1 (
+CREATE TABLE dbo.LOCMOVH1 (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -21142,13 +21142,13 @@ CREATE TABLE Formula.dbo.LOCMOVH1 (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.LOCMOVI1 definition
+-- dbo.LOCMOVI1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LOCMOVI1;
+-- DROP TABLE dbo.LOCMOVI1;
 
-CREATE TABLE Formula.dbo.LOCMOVI1 (
+CREATE TABLE dbo.LOCMOVI1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -21222,13 +21222,13 @@ CREATE TABLE Formula.dbo.LOCMOVI1 (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.LOCSTOC1 definition
+-- dbo.LOCSTOC1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LOCSTOC1;
+-- DROP TABLE dbo.LOCSTOC1;
 
-CREATE TABLE Formula.dbo.LOCSTOC1 (
+CREATE TABLE dbo.LOCSTOC1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -21303,13 +21303,13 @@ CREATE TABLE Formula.dbo.LOCSTOC1 (
 );
 
 
--- Formula.dbo.LOGILOCK definition
+-- dbo.LOGILOCK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LOGILOCK;
+-- DROP TABLE dbo.LOGILOCK;
 
-CREATE TABLE Formula.dbo.LOGILOCK (
+CREATE TABLE dbo.LOGILOCK (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSTRING char(90) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCONNID char(10) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -21330,13 +21330,13 @@ CREATE TABLE Formula.dbo.LOGILOCK (
 );
 
 
--- Formula.dbo.LOGINLOG definition
+-- dbo.LOGINLOG definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LOGINLOG;
+-- DROP TABLE dbo.LOGINLOG;
 
-CREATE TABLE Formula.dbo.LOGINLOG (
+CREATE TABLE dbo.LOGINLOG (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -21407,13 +21407,13 @@ CREATE TABLE Formula.dbo.LOGINLOG (
 );
 
 
--- Formula.dbo.LOGIPAT definition
+-- dbo.LOGIPAT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LOGIPAT;
+-- DROP TABLE dbo.LOGIPAT;
 
-CREATE TABLE Formula.dbo.LOGIPAT (
+CREATE TABLE dbo.LOGIPAT (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCPATERN char(50) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSELTAG char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -21437,13 +21437,13 @@ CREATE TABLE Formula.dbo.LOGIPAT (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.LOGOUTBX definition
+-- dbo.LOGOUTBX definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.LOGOUTBX;
+-- DROP TABLE dbo.LOGOUTBX;
 
-CREATE TABLE Formula.dbo.LOGOUTBX (
+CREATE TABLE dbo.LOGOUTBX (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -21506,13 +21506,13 @@ CREATE TABLE Formula.dbo.LOGOUTBX (
 );
 
 
--- Formula.dbo.MACHINE definition
+-- dbo.MACHINE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MACHINE;
+-- DROP TABLE dbo.MACHINE;
 
-CREATE TABLE Formula.dbo.MACHINE (
+CREATE TABLE dbo.MACHINE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -21593,13 +21593,13 @@ CREATE TABLE Formula.dbo.MACHINE (
 );
 
 
--- Formula.dbo.MAINJOBH definition
+-- dbo.MAINJOBH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MAINJOBH;
+-- DROP TABLE dbo.MAINJOBH;
 
-CREATE TABLE Formula.dbo.MAINJOBH (
+CREATE TABLE dbo.MAINJOBH (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCODE char(20) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -21662,13 +21662,13 @@ CREATE TABLE Formula.dbo.MAINJOBH (
 );
 
 
--- Formula.dbo.MAINJOBI definition
+-- dbo.MAINJOBI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MAINJOBI;
+-- DROP TABLE dbo.MAINJOBI;
 
-CREATE TABLE Formula.dbo.MAINJOBI (
+CREATE TABLE dbo.MAINJOBI (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCMAINJOBH char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -21710,13 +21710,13 @@ CREATE TABLE Formula.dbo.MAINJOBI (
 );
 
 
--- Formula.dbo.MAPMBOOK definition
+-- dbo.MAPMBOOK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MAPMBOOK;
+-- DROP TABLE dbo.MAPMBOOK;
 
-CREATE TABLE Formula.dbo.MAPMBOOK (
+CREATE TABLE dbo.MAPMBOOK (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -21786,13 +21786,13 @@ CREATE TABLE Formula.dbo.MAPMBOOK (
 );
 
 
--- Formula.dbo.MATYPE definition
+-- dbo.MATYPE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MATYPE;
+-- DROP TABLE dbo.MATYPE;
 
-CREATE TABLE Formula.dbo.MATYPE (
+CREATE TABLE dbo.MATYPE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -21853,13 +21853,13 @@ CREATE TABLE Formula.dbo.MATYPE (
 );
 
 
--- Formula.dbo.MBAPPV definition
+-- dbo.MBAPPV definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MBAPPV;
+-- DROP TABLE dbo.MBAPPV;
 
-CREATE TABLE Formula.dbo.MBAPPV (
+CREATE TABLE dbo.MBAPPV (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -21899,13 +21899,13 @@ CREATE TABLE Formula.dbo.MBAPPV (
 );
 
 
--- Formula.dbo.MBOOK definition
+-- dbo.MBOOK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MBOOK;
+-- DROP TABLE dbo.MBOOK;
 
-CREATE TABLE Formula.dbo.MBOOK (
+CREATE TABLE dbo.MBOOK (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -21992,13 +21992,13 @@ CREATE TABLE Formula.dbo.MBOOK (
 );
 
 
--- Formula.dbo.MBOOKEXT definition
+-- dbo.MBOOKEXT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MBOOKEXT;
+-- DROP TABLE dbo.MBOOKEXT;
 
-CREATE TABLE Formula.dbo.MBOOKEXT (
+CREATE TABLE dbo.MBOOKEXT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -22069,13 +22069,13 @@ CREATE TABLE Formula.dbo.MBOOKEXT (
 );
 
 
--- Formula.dbo.MCALDEBT definition
+-- dbo.MCALDEBT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MCALDEBT;
+-- DROP TABLE dbo.MCALDEBT;
 
-CREATE TABLE Formula.dbo.MCALDEBT (
+CREATE TABLE dbo.MCALDEBT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -22152,13 +22152,13 @@ CREATE TABLE Formula.dbo.MCALDEBT (
 );
 
 
--- Formula.dbo.MCALDEPR definition
+-- dbo.MCALDEPR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MCALDEPR;
+-- DROP TABLE dbo.MCALDEPR;
 
-CREATE TABLE Formula.dbo.MCALDEPR (
+CREATE TABLE dbo.MCALDEPR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -22246,13 +22246,13 @@ CREATE TABLE Formula.dbo.MCALDEPR (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.MEMO01 definition
+-- dbo.MEMO01 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MEMO01;
+-- DROP TABLE dbo.MEMO01;
 
-CREATE TABLE Formula.dbo.MEMO01 (
+CREATE TABLE dbo.MEMO01 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -22331,13 +22331,13 @@ CREATE TABLE Formula.dbo.MEMO01 (
 );
 
 
--- Formula.dbo.MFGCLOSH definition
+-- dbo.MFGCLOSH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MFGCLOSH;
+-- DROP TABLE dbo.MFGCLOSH;
 
-CREATE TABLE Formula.dbo.MFGCLOSH (
+CREATE TABLE dbo.MFGCLOSH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -22458,13 +22458,13 @@ CREATE TABLE Formula.dbo.MFGCLOSH (
 );
 
 
--- Formula.dbo.MFGCLOSI definition
+-- dbo.MFGCLOSI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MFGCLOSI;
+-- DROP TABLE dbo.MFGCLOSI;
 
-CREATE TABLE Formula.dbo.MFGCLOSI (
+CREATE TABLE dbo.MFGCLOSI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -22572,13 +22572,13 @@ CREATE TABLE Formula.dbo.MFGCLOSI (
 );
 
 
--- Formula.dbo.MFGCOST definition
+-- dbo.MFGCOST definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MFGCOST;
+-- DROP TABLE dbo.MFGCOST;
 
-CREATE TABLE Formula.dbo.MFGCOST (
+CREATE TABLE dbo.MFGCOST (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -22615,13 +22615,13 @@ CREATE TABLE Formula.dbo.MFGCOST (
 );
 
 
--- Formula.dbo.MFGCUT definition
+-- dbo.MFGCUT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MFGCUT;
+-- DROP TABLE dbo.MFGCUT;
 
-CREATE TABLE Formula.dbo.MFGCUT (
+CREATE TABLE dbo.MFGCUT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -22659,13 +22659,13 @@ CREATE TABLE Formula.dbo.MFGCUT (
 );
 
 
--- Formula.dbo.MFORM definition
+-- dbo.MFORM definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MFORM;
+-- DROP TABLE dbo.MFORM;
 
-CREATE TABLE Formula.dbo.MFORM (
+CREATE TABLE dbo.MFORM (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -22737,13 +22737,13 @@ CREATE TABLE Formula.dbo.MFORM (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.MFORMBR definition
+-- dbo.MFORMBR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MFORMBR;
+-- DROP TABLE dbo.MFORMBR;
 
-CREATE TABLE Formula.dbo.MFORMBR (
+CREATE TABLE dbo.MFORMBR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCMFORM char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -22811,13 +22811,13 @@ CREATE TABLE Formula.dbo.MFORMBR (
 );
 
 
--- Formula.dbo.MGL definition
+-- dbo.MGL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MGL;
+-- DROP TABLE dbo.MGL;
 
-CREATE TABLE Formula.dbo.MGL (
+CREATE TABLE dbo.MGL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -22868,13 +22868,13 @@ CREATE TABLE Formula.dbo.MGL (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.MLOTH definition
+-- dbo.MLOTH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MLOTH;
+-- DROP TABLE dbo.MLOTH;
 
-CREATE TABLE Formula.dbo.MLOTH (
+CREATE TABLE dbo.MLOTH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -23002,13 +23002,13 @@ CREATE TABLE Formula.dbo.MLOTH (
 );
 
 
--- Formula.dbo.MLOTI definition
+-- dbo.MLOTI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MLOTI;
+-- DROP TABLE dbo.MLOTI;
 
-CREATE TABLE Formula.dbo.MLOTI (
+CREATE TABLE dbo.MLOTI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -23083,13 +23083,13 @@ CREATE TABLE Formula.dbo.MLOTI (
 );
 
 
--- Formula.dbo.MNBOOK definition
+-- dbo.MNBOOK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MNBOOK;
+-- DROP TABLE dbo.MNBOOK;
 
-CREATE TABLE Formula.dbo.MNBOOK (
+CREATE TABLE dbo.MNBOOK (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -23160,13 +23160,13 @@ CREATE TABLE Formula.dbo.MNBOOK (
 );
 
 
--- Formula.dbo.MNMAGL definition
+-- dbo.MNMAGL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MNMAGL;
+-- DROP TABLE dbo.MNMAGL;
 
-CREATE TABLE Formula.dbo.MNMAGL (
+CREATE TABLE dbo.MNMAGL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -23209,13 +23209,13 @@ CREATE TABLE Formula.dbo.MNMAGL (
 );
 
 
--- Formula.dbo.MNMGL definition
+-- dbo.MNMGL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MNMGL;
+-- DROP TABLE dbo.MNMGL;
 
-CREATE TABLE Formula.dbo.MNMGL (
+CREATE TABLE dbo.MNMGL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -23266,13 +23266,13 @@ CREATE TABLE Formula.dbo.MNMGL (
 );
 
 
--- Formula.dbo.MNMGLH definition
+-- dbo.MNMGLH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MNMGLH;
+-- DROP TABLE dbo.MNMGLH;
 
-CREATE TABLE Formula.dbo.MNMGLH (
+CREATE TABLE dbo.MNMGLH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -23357,13 +23357,13 @@ CREATE TABLE Formula.dbo.MNMGLH (
 );
 
 
--- Formula.dbo.MNMMGL definition
+-- dbo.MNMMGL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MNMMGL;
+-- DROP TABLE dbo.MNMMGL;
 
-CREATE TABLE Formula.dbo.MNMMGL (
+CREATE TABLE dbo.MNMMGL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -23411,13 +23411,13 @@ CREATE TABLE Formula.dbo.MNMMGL (
 );
 
 
--- Formula.dbo.MNTRAN definition
+-- dbo.MNTRAN definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MNTRAN;
+-- DROP TABLE dbo.MNTRAN;
 
-CREATE TABLE Formula.dbo.MNTRAN (
+CREATE TABLE dbo.MNTRAN (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -23460,13 +23460,13 @@ CREATE TABLE Formula.dbo.MNTRAN (
 );
 
 
--- Formula.dbo.MOP definition
+-- dbo.MOP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MOP;
+-- DROP TABLE dbo.MOP;
 
-CREATE TABLE Formula.dbo.MOP (
+CREATE TABLE dbo.MOP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -23549,13 +23549,13 @@ CREATE TABLE Formula.dbo.MOP (
 );
 
 
--- Formula.dbo.MORDERH definition
+-- dbo.MORDERH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MORDERH;
+-- DROP TABLE dbo.MORDERH;
 
-CREATE TABLE Formula.dbo.MORDERH (
+CREATE TABLE dbo.MORDERH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -23695,13 +23695,13 @@ CREATE TABLE Formula.dbo.MORDERH (
 );
 
 
--- Formula.dbo.MORDERI definition
+-- dbo.MORDERI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MORDERI;
+-- DROP TABLE dbo.MORDERI;
 
-CREATE TABLE Formula.dbo.MORDERI (
+CREATE TABLE dbo.MORDERI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -23787,13 +23787,13 @@ CREATE TABLE Formula.dbo.MORDERI (
 );
 
 
--- Formula.dbo.MORDEROP definition
+-- dbo.MORDEROP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MORDEROP;
+-- DROP TABLE dbo.MORDEROP;
 
-CREATE TABLE Formula.dbo.MORDEROP (
+CREATE TABLE dbo.MORDEROP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -23845,13 +23845,13 @@ CREATE TABLE Formula.dbo.MORDEROP (
 );
 
 
--- Formula.dbo.MORDERWC definition
+-- dbo.MORDERWC definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MORDERWC;
+-- DROP TABLE dbo.MORDERWC;
 
-CREATE TABLE Formula.dbo.MORDERWC (
+CREATE TABLE dbo.MORDERWC (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -23947,13 +23947,13 @@ CREATE TABLE Formula.dbo.MORDERWC (
 );
 
 
--- Formula.dbo.MPLANH definition
+-- dbo.MPLANH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MPLANH;
+-- DROP TABLE dbo.MPLANH;
 
-CREATE TABLE Formula.dbo.MPLANH (
+CREATE TABLE dbo.MPLANH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -24062,13 +24062,13 @@ CREATE TABLE Formula.dbo.MPLANH (
 );
 
 
--- Formula.dbo.MPLANI definition
+-- dbo.MPLANI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MPLANI;
+-- DROP TABLE dbo.MPLANI;
 
-CREATE TABLE Formula.dbo.MPLANI (
+CREATE TABLE dbo.MPLANI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -24136,13 +24136,13 @@ CREATE TABLE Formula.dbo.MPLANI (
 );
 
 
--- Formula.dbo.MPS definition
+-- dbo.MPS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MPS;
+-- DROP TABLE dbo.MPS;
 
-CREATE TABLE Formula.dbo.MPS (
+CREATE TABLE dbo.MPS (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -24199,13 +24199,13 @@ CREATE TABLE Formula.dbo.MPS (
 );
 
 
--- Formula.dbo.MPSB1 definition
+-- dbo.MPSB1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MPSB1;
+-- DROP TABLE dbo.MPSB1;
 
-CREATE TABLE Formula.dbo.MPSB1 (
+CREATE TABLE dbo.MPSB1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -24254,13 +24254,13 @@ CREATE TABLE Formula.dbo.MPSB1 (
 );
 
 
--- Formula.dbo.MPSBF definition
+-- dbo.MPSBF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MPSBF;
+-- DROP TABLE dbo.MPSBF;
 
-CREATE TABLE Formula.dbo.MPSBF (
+CREATE TABLE dbo.MPSBF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -24303,13 +24303,13 @@ CREATE TABLE Formula.dbo.MPSBF (
 );
 
 
--- Formula.dbo.MPSD1 definition
+-- dbo.MPSD1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MPSD1;
+-- DROP TABLE dbo.MPSD1;
 
-CREATE TABLE Formula.dbo.MPSD1 (
+CREATE TABLE dbo.MPSD1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -24359,13 +24359,13 @@ CREATE TABLE Formula.dbo.MPSD1 (
 );
 
 
--- Formula.dbo.MPSD2 definition
+-- dbo.MPSD2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MPSD2;
+-- DROP TABLE dbo.MPSD2;
 
-CREATE TABLE Formula.dbo.MPSD2 (
+CREATE TABLE dbo.MPSD2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -24414,13 +24414,13 @@ CREATE TABLE Formula.dbo.MPSD2 (
 );
 
 
--- Formula.dbo.MPSRM definition
+-- dbo.MPSRM definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MPSRM;
+-- DROP TABLE dbo.MPSRM;
 
-CREATE TABLE Formula.dbo.MPSRM (
+CREATE TABLE dbo.MPSRM (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -24504,13 +24504,13 @@ CREATE TABLE Formula.dbo.MPSRM (
 );
 
 
--- Formula.dbo.MRP definition
+-- dbo.MRP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MRP;
+-- DROP TABLE dbo.MRP;
 
-CREATE TABLE Formula.dbo.MRP (
+CREATE TABLE dbo.MRP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -24556,13 +24556,13 @@ CREATE TABLE Formula.dbo.MRP (
 );
 
 
--- Formula.dbo.MSTOCK definition
+-- dbo.MSTOCK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MSTOCK;
+-- DROP TABLE dbo.MSTOCK;
 
-CREATE TABLE Formula.dbo.MSTOCK (
+CREATE TABLE dbo.MSTOCK (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -24605,13 +24605,13 @@ CREATE TABLE Formula.dbo.MSTOCK (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.MULTIAPV definition
+-- dbo.MULTIAPV definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.MULTIAPV;
+-- DROP TABLE dbo.MULTIAPV;
 
-CREATE TABLE Formula.dbo.MULTIAPV (
+CREATE TABLE dbo.MULTIAPV (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -24692,13 +24692,13 @@ CREATE TABLE Formula.dbo.MULTIAPV (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.NOTE2CUT definition
+-- dbo.NOTE2CUT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.NOTE2CUT;
+-- DROP TABLE dbo.NOTE2CUT;
 
-CREATE TABLE Formula.dbo.NOTE2CUT (
+CREATE TABLE dbo.NOTE2CUT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -24736,13 +24736,13 @@ CREATE TABLE Formula.dbo.NOTE2CUT (
 );
 
 
--- Formula.dbo.NOTE3CUT definition
+-- dbo.NOTE3CUT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.NOTE3CUT;
+-- DROP TABLE dbo.NOTE3CUT;
 
-CREATE TABLE Formula.dbo.NOTE3CUT (
+CREATE TABLE dbo.NOTE3CUT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -24789,13 +24789,13 @@ CREATE TABLE Formula.dbo.NOTE3CUT (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.NOTECUT definition
+-- dbo.NOTECUT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.NOTECUT;
+-- DROP TABLE dbo.NOTECUT;
 
-CREATE TABLE Formula.dbo.NOTECUT (
+CREATE TABLE dbo.NOTECUT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -24851,13 +24851,13 @@ CREATE TABLE Formula.dbo.NOTECUT (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.ONREGDAT definition
+-- dbo.ONREGDAT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ONREGDAT;
+-- DROP TABLE dbo.ONREGDAT;
 
-CREATE TABLE Formula.dbo.ONREGDAT (
+CREATE TABLE dbo.ONREGDAT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -24909,13 +24909,13 @@ CREATE TABLE Formula.dbo.ONREGDAT (
 );
 
 
--- Formula.dbo.ORDER2H definition
+-- dbo.ORDER2H definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ORDER2H;
+-- DROP TABLE dbo.ORDER2H;
 
-CREATE TABLE Formula.dbo.ORDER2H (
+CREATE TABLE dbo.ORDER2H (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -25028,13 +25028,13 @@ CREATE TABLE Formula.dbo.ORDER2H (
 );
 
 
--- Formula.dbo.ORDER2I definition
+-- dbo.ORDER2I definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ORDER2I;
+-- DROP TABLE dbo.ORDER2I;
 
-CREATE TABLE Formula.dbo.ORDER2I (
+CREATE TABLE dbo.ORDER2I (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -25126,13 +25126,13 @@ CREATE TABLE Formula.dbo.ORDER2I (
 );
 
 
--- Formula.dbo.ORDERH definition
+-- dbo.ORDERH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ORDERH;
+-- DROP TABLE dbo.ORDERH;
 
-CREATE TABLE Formula.dbo.ORDERH (
+CREATE TABLE dbo.ORDERH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -25330,13 +25330,13 @@ CREATE TABLE Formula.dbo.ORDERH (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.ORDERHDT definition
+-- dbo.ORDERHDT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ORDERHDT;
+-- DROP TABLE dbo.ORDERHDT;
 
-CREATE TABLE Formula.dbo.ORDERHDT (
+CREATE TABLE dbo.ORDERHDT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -25410,13 +25410,13 @@ CREATE TABLE Formula.dbo.ORDERHDT (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.ORDERHX2 definition
+-- dbo.ORDERHX2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ORDERHX2;
+-- DROP TABLE dbo.ORDERHX2;
 
-CREATE TABLE Formula.dbo.ORDERHX2 (
+CREATE TABLE dbo.ORDERHX2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -25482,13 +25482,13 @@ CREATE TABLE Formula.dbo.ORDERHX2 (
 );
 
 
--- Formula.dbo.ORDERHX3 definition
+-- dbo.ORDERHX3 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ORDERHX3;
+-- DROP TABLE dbo.ORDERHX3;
 
-CREATE TABLE Formula.dbo.ORDERHX3 (
+CREATE TABLE dbo.ORDERHX3 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -25553,13 +25553,13 @@ CREATE TABLE Formula.dbo.ORDERHX3 (
 );
 
 
--- Formula.dbo.ORDERHX5 definition
+-- dbo.ORDERHX5 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ORDERHX5;
+-- DROP TABLE dbo.ORDERHX5;
 
-CREATE TABLE Formula.dbo.ORDERHX5 (
+CREATE TABLE dbo.ORDERHX5 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -25619,13 +25619,13 @@ CREATE TABLE Formula.dbo.ORDERHX5 (
 );
 
 
--- Formula.dbo.ORDERI definition
+-- dbo.ORDERI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ORDERI;
+-- DROP TABLE dbo.ORDERI;
 
-CREATE TABLE Formula.dbo.ORDERI (
+CREATE TABLE dbo.ORDERI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -25780,13 +25780,13 @@ CREATE TABLE Formula.dbo.ORDERI (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.ORDERIDT definition
+-- dbo.ORDERIDT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ORDERIDT;
+-- DROP TABLE dbo.ORDERIDT;
 
-CREATE TABLE Formula.dbo.ORDERIDT (
+CREATE TABLE dbo.ORDERIDT (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -25821,13 +25821,13 @@ CREATE TABLE Formula.dbo.ORDERIDT (
 );
 
 
--- Formula.dbo.ORDERIX4 definition
+-- dbo.ORDERIX4 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ORDERIX4;
+-- DROP TABLE dbo.ORDERIX4;
 
-CREATE TABLE Formula.dbo.ORDERIX4 (
+CREATE TABLE dbo.ORDERIX4 (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCLUPDAPP char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -25880,13 +25880,13 @@ CREATE TABLE Formula.dbo.ORDERIX4 (
 );
 
 
--- Formula.dbo.ORDERIX5 definition
+-- dbo.ORDERIX5 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ORDERIX5;
+-- DROP TABLE dbo.ORDERIX5;
 
-CREATE TABLE Formula.dbo.ORDERIX5 (
+CREATE TABLE dbo.ORDERIX5 (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -25931,13 +25931,13 @@ CREATE TABLE Formula.dbo.ORDERIX5 (
 );
 
 
--- Formula.dbo.ORDERIX6 definition
+-- dbo.ORDERIX6 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ORDERIX6;
+-- DROP TABLE dbo.ORDERIX6;
 
-CREATE TABLE Formula.dbo.ORDERIX6 (
+CREATE TABLE dbo.ORDERIX6 (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -25974,13 +25974,13 @@ CREATE TABLE Formula.dbo.ORDERIX6 (
 );
 
 
--- Formula.dbo.ORDPLANH definition
+-- dbo.ORDPLANH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ORDPLANH;
+-- DROP TABLE dbo.ORDPLANH;
 
-CREATE TABLE Formula.dbo.ORDPLANH (
+CREATE TABLE dbo.ORDPLANH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCBRANCH char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -26058,13 +26058,13 @@ CREATE TABLE Formula.dbo.ORDPLANH (
 );
 
 
--- Formula.dbo.ORDPLANI definition
+-- dbo.ORDPLANI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ORDPLANI;
+-- DROP TABLE dbo.ORDPLANI;
 
-CREATE TABLE Formula.dbo.ORDPLANI (
+CREATE TABLE dbo.ORDPLANI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCBRANCH char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -26119,13 +26119,13 @@ CREATE TABLE Formula.dbo.ORDPLANI (
 );
 
 
--- Formula.dbo.ORDWKR definition
+-- dbo.ORDWKR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ORDWKR;
+-- DROP TABLE dbo.ORDWKR;
 
-CREATE TABLE Formula.dbo.ORDWKR (
+CREATE TABLE dbo.ORDWKR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -26160,13 +26160,13 @@ CREATE TABLE Formula.dbo.ORDWKR (
 );
 
 
--- Formula.dbo.PACKBOM definition
+-- dbo.PACKBOM definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PACKBOM;
+-- DROP TABLE dbo.PACKBOM;
 
-CREATE TABLE Formula.dbo.PACKBOM (
+CREATE TABLE dbo.PACKBOM (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -26202,13 +26202,13 @@ CREATE TABLE Formula.dbo.PACKBOM (
 );
 
 
--- Formula.dbo.PACKH definition
+-- dbo.PACKH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PACKH;
+-- DROP TABLE dbo.PACKH;
 
-CREATE TABLE Formula.dbo.PACKH (
+CREATE TABLE dbo.PACKH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -26330,13 +26330,13 @@ CREATE TABLE Formula.dbo.PACKH (
 );
 
 
--- Formula.dbo.PACKHV01 definition
+-- dbo.PACKHV01 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PACKHV01;
+-- DROP TABLE dbo.PACKHV01;
 
-CREATE TABLE Formula.dbo.PACKHV01 (
+CREATE TABLE dbo.PACKHV01 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -26420,13 +26420,13 @@ CREATE TABLE Formula.dbo.PACKHV01 (
 );
 
 
--- Formula.dbo.PACKHX1 definition
+-- dbo.PACKHX1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PACKHX1;
+-- DROP TABLE dbo.PACKHX1;
 
-CREATE TABLE Formula.dbo.PACKHX1 (
+CREATE TABLE dbo.PACKHX1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -26486,13 +26486,13 @@ CREATE TABLE Formula.dbo.PACKHX1 (
 );
 
 
--- Formula.dbo.PACKI definition
+-- dbo.PACKI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PACKI;
+-- DROP TABLE dbo.PACKI;
 
-CREATE TABLE Formula.dbo.PACKI (
+CREATE TABLE dbo.PACKI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -26599,13 +26599,13 @@ CREATE TABLE Formula.dbo.PACKI (
 );
 
 
--- Formula.dbo.PACKIV01 definition
+-- dbo.PACKIV01 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PACKIV01;
+-- DROP TABLE dbo.PACKIV01;
 
-CREATE TABLE Formula.dbo.PACKIV01 (
+CREATE TABLE dbo.PACKIV01 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -26649,13 +26649,13 @@ CREATE TABLE Formula.dbo.PACKIV01 (
 );
 
 
--- Formula.dbo.PACKPH definition
+-- dbo.PACKPH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PACKPH;
+-- DROP TABLE dbo.PACKPH;
 
-CREATE TABLE Formula.dbo.PACKPH (
+CREATE TABLE dbo.PACKPH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -26764,13 +26764,13 @@ CREATE TABLE Formula.dbo.PACKPH (
 );
 
 
--- Formula.dbo.PACKPI definition
+-- dbo.PACKPI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PACKPI;
+-- DROP TABLE dbo.PACKPI;
 
-CREATE TABLE Formula.dbo.PACKPI (
+CREATE TABLE dbo.PACKPI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -26839,13 +26839,13 @@ CREATE TABLE Formula.dbo.PACKPI (
 );
 
 
--- Formula.dbo.PACKSTYL definition
+-- dbo.PACKSTYL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PACKSTYL;
+-- DROP TABLE dbo.PACKSTYL;
 
-CREATE TABLE Formula.dbo.PACKSTYL (
+CREATE TABLE dbo.PACKSTYL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -26919,13 +26919,13 @@ CREATE TABLE Formula.dbo.PACKSTYL (
 );
 
 
--- Formula.dbo.PAYINH definition
+-- dbo.PAYINH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PAYINH;
+-- DROP TABLE dbo.PAYINH;
 
-CREATE TABLE Formula.dbo.PAYINH (
+CREATE TABLE dbo.PAYINH (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -27028,13 +27028,13 @@ CREATE TABLE Formula.dbo.PAYINH (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.PAYINI definition
+-- dbo.PAYINI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PAYINI;
+-- DROP TABLE dbo.PAYINI;
 
-CREATE TABLE Formula.dbo.PAYINI (
+CREATE TABLE dbo.PAYINI (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCLUPDAPP char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -27071,13 +27071,13 @@ CREATE TABLE Formula.dbo.PAYINI (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.PAYINREF definition
+-- dbo.PAYINREF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PAYINREF;
+-- DROP TABLE dbo.PAYINREF;
 
-CREATE TABLE Formula.dbo.PAYINREF (
+CREATE TABLE dbo.PAYINREF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -27140,13 +27140,13 @@ CREATE TABLE Formula.dbo.PAYINREF (
 );
 
 
--- Formula.dbo.PAYMENT definition
+-- dbo.PAYMENT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PAYMENT;
+-- DROP TABLE dbo.PAYMENT;
 
-CREATE TABLE Formula.dbo.PAYMENT (
+CREATE TABLE dbo.PAYMENT (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -27287,13 +27287,13 @@ CREATE TABLE Formula.dbo.PAYMENT (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.PAYMNTTR definition
+-- dbo.PAYMNTTR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PAYMNTTR;
+-- DROP TABLE dbo.PAYMNTTR;
 
-CREATE TABLE Formula.dbo.PAYMNTTR (
+CREATE TABLE dbo.PAYMNTTR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -27371,13 +27371,13 @@ CREATE TABLE Formula.dbo.PAYMNTTR (
 );
 
 
--- Formula.dbo.PAYTERM definition
+-- dbo.PAYTERM definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PAYTERM;
+-- DROP TABLE dbo.PAYTERM;
 
-CREATE TABLE Formula.dbo.PAYTERM (
+CREATE TABLE dbo.PAYTERM (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -27440,13 +27440,13 @@ CREATE TABLE Formula.dbo.PAYTERM (
 );
 
 
--- Formula.dbo.PAYTYPE definition
+-- dbo.PAYTYPE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PAYTYPE;
+-- DROP TABLE dbo.PAYTYPE;
 
-CREATE TABLE Formula.dbo.PAYTYPE (
+CREATE TABLE dbo.PAYTYPE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCTYPE char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(3) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -27516,13 +27516,13 @@ CREATE TABLE Formula.dbo.PAYTYPE (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.PBRKCOS definition
+-- dbo.PBRKCOS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PBRKCOS;
+-- DROP TABLE dbo.PBRKCOS;
 
-CREATE TABLE Formula.dbo.PBRKCOS (
+CREATE TABLE dbo.PBRKCOS (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -27553,13 +27553,13 @@ CREATE TABLE Formula.dbo.PBRKCOS (
 );
 
 
--- Formula.dbo.PBRKQTY definition
+-- dbo.PBRKQTY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PBRKQTY;
+-- DROP TABLE dbo.PBRKQTY;
 
-CREATE TABLE Formula.dbo.PBRKQTY (
+CREATE TABLE dbo.PBRKQTY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -27593,13 +27593,13 @@ CREATE TABLE Formula.dbo.PBRKQTY (
 );
 
 
--- Formula.dbo.PCNGPCON definition
+-- dbo.PCNGPCON definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PCNGPCON;
+-- DROP TABLE dbo.PCNGPCON;
 
-CREATE TABLE Formula.dbo.PCNGPCON (
+CREATE TABLE dbo.PCNGPCON (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -27667,13 +27667,13 @@ CREATE TABLE Formula.dbo.PCNGPCON (
 );
 
 
--- Formula.dbo.PCONTRAC definition
+-- dbo.PCONTRAC definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PCONTRAC;
+-- DROP TABLE dbo.PCONTRAC;
 
-CREATE TABLE Formula.dbo.PCONTRAC (
+CREATE TABLE dbo.PCONTRAC (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -27767,13 +27767,13 @@ CREATE TABLE Formula.dbo.PCONTRAC (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.PDBR definition
+-- dbo.PDBR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDBR;
+-- DROP TABLE dbo.PDBR;
 
-CREATE TABLE Formula.dbo.PDBR (
+CREATE TABLE dbo.PDBR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -27846,13 +27846,13 @@ CREATE TABLE Formula.dbo.PDBR (
 );
 
 
--- Formula.dbo.PDBR2 definition
+-- dbo.PDBR2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDBR2;
+-- DROP TABLE dbo.PDBR2;
 
-CREATE TABLE Formula.dbo.PDBR2 (
+CREATE TABLE dbo.PDBR2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -27924,13 +27924,13 @@ CREATE TABLE Formula.dbo.PDBR2 (
 );
 
 
--- Formula.dbo.PDBRANC2 definition
+-- dbo.PDBRANC2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDBRANC2;
+-- DROP TABLE dbo.PDBRANC2;
 
-CREATE TABLE Formula.dbo.PDBRANC2 (
+CREATE TABLE dbo.PDBRANC2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -27969,13 +27969,13 @@ CREATE TABLE Formula.dbo.PDBRANC2 (
 );
 
 
--- Formula.dbo.PDBRANCH definition
+-- dbo.PDBRANCH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDBRANCH;
+-- DROP TABLE dbo.PDBRANCH;
 
-CREATE TABLE Formula.dbo.PDBRANCH (
+CREATE TABLE dbo.PDBRANCH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -28063,13 +28063,13 @@ CREATE TABLE Formula.dbo.PDBRANCH (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.PDBRAND definition
+-- dbo.PDBRAND definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDBRAND;
+-- DROP TABLE dbo.PDBRAND;
 
-CREATE TABLE Formula.dbo.PDBRAND (
+CREATE TABLE dbo.PDBRAND (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -28139,13 +28139,13 @@ CREATE TABLE Formula.dbo.PDBRAND (
 );
 
 
--- Formula.dbo.PDCAT definition
+-- dbo.PDCAT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDCAT;
+-- DROP TABLE dbo.PDCAT;
 
-CREATE TABLE Formula.dbo.PDCAT (
+CREATE TABLE dbo.PDCAT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -28211,13 +28211,13 @@ CREATE TABLE Formula.dbo.PDCAT (
 );
 
 
--- Formula.dbo.PDCOLOR definition
+-- dbo.PDCOLOR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDCOLOR;
+-- DROP TABLE dbo.PDCOLOR;
 
-CREATE TABLE Formula.dbo.PDCOLOR (
+CREATE TABLE dbo.PDCOLOR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -28288,13 +28288,13 @@ CREATE TABLE Formula.dbo.PDCOLOR (
 );
 
 
--- Formula.dbo.PDDESIGN definition
+-- dbo.PDDESIGN definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDDESIGN;
+-- DROP TABLE dbo.PDDESIGN;
 
-CREATE TABLE Formula.dbo.PDDESIGN (
+CREATE TABLE dbo.PDDESIGN (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -28361,13 +28361,13 @@ CREATE TABLE Formula.dbo.PDDESIGN (
 );
 
 
--- Formula.dbo.PDGRADE definition
+-- dbo.PDGRADE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDGRADE;
+-- DROP TABLE dbo.PDGRADE;
 
-CREATE TABLE Formula.dbo.PDGRADE (
+CREATE TABLE dbo.PDGRADE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -28434,13 +28434,13 @@ CREATE TABLE Formula.dbo.PDGRADE (
 );
 
 
--- Formula.dbo.PDGRP definition
+-- dbo.PDGRP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDGRP;
+-- DROP TABLE dbo.PDGRP;
 
-CREATE TABLE Formula.dbo.PDGRP (
+CREATE TABLE dbo.PDGRP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -28529,13 +28529,13 @@ CREATE TABLE Formula.dbo.PDGRP (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.PDINSTD definition
+-- dbo.PDINSTD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDINSTD;
+-- DROP TABLE dbo.PDINSTD;
 
-CREATE TABLE Formula.dbo.PDINSTD (
+CREATE TABLE dbo.PDINSTD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -28568,13 +28568,13 @@ CREATE TABLE Formula.dbo.PDINSTD (
 );
 
 
--- Formula.dbo.PDLOT definition
+-- dbo.PDLOT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDLOT;
+-- DROP TABLE dbo.PDLOT;
 
-CREATE TABLE Formula.dbo.PDLOT (
+CREATE TABLE dbo.PDLOT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -28614,13 +28614,13 @@ CREATE TABLE Formula.dbo.PDLOT (
 );
 
 
--- Formula.dbo.PDMODEL definition
+-- dbo.PDMODEL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDMODEL;
+-- DROP TABLE dbo.PDMODEL;
 
-CREATE TABLE Formula.dbo.PDMODEL (
+CREATE TABLE dbo.PDMODEL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -28690,13 +28690,13 @@ CREATE TABLE Formula.dbo.PDMODEL (
 );
 
 
--- Formula.dbo.PDPATERN definition
+-- dbo.PDPATERN definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDPATERN;
+-- DROP TABLE dbo.PDPATERN;
 
-CREATE TABLE Formula.dbo.PDPATERN (
+CREATE TABLE dbo.PDPATERN (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -28766,13 +28766,13 @@ CREATE TABLE Formula.dbo.PDPATERN (
 );
 
 
--- Formula.dbo.PDSER definition
+-- dbo.PDSER definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDSER;
+-- DROP TABLE dbo.PDSER;
 
-CREATE TABLE Formula.dbo.PDSER (
+CREATE TABLE dbo.PDSER (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -28859,13 +28859,13 @@ CREATE TABLE Formula.dbo.PDSER (
 );
 
 
--- Formula.dbo.PDSER2 definition
+-- dbo.PDSER2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDSER2;
+-- DROP TABLE dbo.PDSER2;
 
-CREATE TABLE Formula.dbo.PDSER2 (
+CREATE TABLE dbo.PDSER2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -28953,13 +28953,13 @@ CREATE TABLE Formula.dbo.PDSER2 (
 );
 
 
--- Formula.dbo.PDSIZE definition
+-- dbo.PDSIZE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDSIZE;
+-- DROP TABLE dbo.PDSIZE;
 
-CREATE TABLE Formula.dbo.PDSIZE (
+CREATE TABLE dbo.PDSIZE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -29026,13 +29026,13 @@ CREATE TABLE Formula.dbo.PDSIZE (
 );
 
 
--- Formula.dbo.PDSTH definition
+-- dbo.PDSTH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDSTH;
+-- DROP TABLE dbo.PDSTH;
 
-CREATE TABLE Formula.dbo.PDSTH (
+CREATE TABLE dbo.PDSTH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -29151,13 +29151,13 @@ CREATE TABLE Formula.dbo.PDSTH (
 );
 
 
--- Formula.dbo.PDSTHX1 definition
+-- dbo.PDSTHX1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDSTHX1;
+-- DROP TABLE dbo.PDSTHX1;
 
-CREATE TABLE Formula.dbo.PDSTHX1 (
+CREATE TABLE dbo.PDSTHX1 (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -29242,13 +29242,13 @@ CREATE TABLE Formula.dbo.PDSTHX1 (
 );
 
 
--- Formula.dbo.PDSTI definition
+-- dbo.PDSTI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDSTI;
+-- DROP TABLE dbo.PDSTI;
 
-CREATE TABLE Formula.dbo.PDSTI (
+CREATE TABLE dbo.PDSTI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -29325,13 +29325,13 @@ CREATE TABLE Formula.dbo.PDSTI (
 );
 
 
--- Formula.dbo.PDSTOP definition
+-- dbo.PDSTOP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDSTOP;
+-- DROP TABLE dbo.PDSTOP;
 
-CREATE TABLE Formula.dbo.PDSTOP (
+CREATE TABLE dbo.PDSTOP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -29381,13 +29381,13 @@ CREATE TABLE Formula.dbo.PDSTOP (
 );
 
 
--- Formula.dbo.PDSTRUCT definition
+-- dbo.PDSTRUCT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDSTRUCT;
+-- DROP TABLE dbo.PDSTRUCT;
 
-CREATE TABLE Formula.dbo.PDSTRUCT (
+CREATE TABLE dbo.PDSTRUCT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -29483,13 +29483,13 @@ CREATE TABLE Formula.dbo.PDSTRUCT (
 );
 
 
--- Formula.dbo.PDSTWC definition
+-- dbo.PDSTWC definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDSTWC;
+-- DROP TABLE dbo.PDSTWC;
 
-CREATE TABLE Formula.dbo.PDSTWC (
+CREATE TABLE dbo.PDSTWC (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -29568,13 +29568,13 @@ CREATE TABLE Formula.dbo.PDSTWC (
 );
 
 
--- Formula.dbo.PDSUPP definition
+-- dbo.PDSUPP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PDSUPP;
+-- DROP TABLE dbo.PDSUPP;
 
-CREATE TABLE Formula.dbo.PDSUPP (
+CREATE TABLE dbo.PDSUPP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -29638,13 +29638,13 @@ CREATE TABLE Formula.dbo.PDSUPP (
 );
 
 
--- Formula.dbo.PERIODS definition
+-- dbo.PERIODS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PERIODS;
+-- DROP TABLE dbo.PERIODS;
 
-CREATE TABLE Formula.dbo.PERIODS (
+CREATE TABLE dbo.PERIODS (
 	FCBAKYRHIS char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -29712,13 +29712,13 @@ CREATE TABLE Formula.dbo.PERIODS (
 );
 
 
--- Formula.dbo.PERSON definition
+-- dbo.PERSON definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PERSON;
+-- DROP TABLE dbo.PERSON;
 
-CREATE TABLE Formula.dbo.PERSON (
+CREATE TABLE dbo.PERSON (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -29792,13 +29792,13 @@ CREATE TABLE Formula.dbo.PERSON (
 );
 
 
--- Formula.dbo.PERSON01 definition
+-- dbo.PERSON01 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PERSON01;
+-- DROP TABLE dbo.PERSON01;
 
-CREATE TABLE Formula.dbo.PERSON01 (
+CREATE TABLE dbo.PERSON01 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -29870,13 +29870,13 @@ CREATE TABLE Formula.dbo.PERSON01 (
 );
 
 
--- Formula.dbo.PERSON02 definition
+-- dbo.PERSON02 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PERSON02;
+-- DROP TABLE dbo.PERSON02;
 
-CREATE TABLE Formula.dbo.PERSON02 (
+CREATE TABLE dbo.PERSON02 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -29947,13 +29947,13 @@ CREATE TABLE Formula.dbo.PERSON02 (
 );
 
 
--- Formula.dbo.PERSON03 definition
+-- dbo.PERSON03 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PERSON03;
+-- DROP TABLE dbo.PERSON03;
 
-CREATE TABLE Formula.dbo.PERSON03 (
+CREATE TABLE dbo.PERSON03 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -30016,13 +30016,13 @@ CREATE TABLE Formula.dbo.PERSON03 (
 );
 
 
--- Formula.dbo.PERSON04 definition
+-- dbo.PERSON04 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PERSON04;
+-- DROP TABLE dbo.PERSON04;
 
-CREATE TABLE Formula.dbo.PERSON04 (
+CREATE TABLE dbo.PERSON04 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -30085,13 +30085,13 @@ CREATE TABLE Formula.dbo.PERSON04 (
 );
 
 
--- Formula.dbo.PERSONKY definition
+-- dbo.PERSONKY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PERSONKY;
+-- DROP TABLE dbo.PERSONKY;
 
-CREATE TABLE Formula.dbo.PERSONKY (
+CREATE TABLE dbo.PERSONKY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -30155,13 +30155,13 @@ CREATE TABLE Formula.dbo.PERSONKY (
 );
 
 
--- Formula.dbo.PETADVH definition
+-- dbo.PETADVH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PETADVH;
+-- DROP TABLE dbo.PETADVH;
 
-CREATE TABLE Formula.dbo.PETADVH (
+CREATE TABLE dbo.PETADVH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -30245,13 +30245,13 @@ CREATE TABLE Formula.dbo.PETADVH (
 );
 
 
--- Formula.dbo.PETADVI definition
+-- dbo.PETADVI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PETADVI;
+-- DROP TABLE dbo.PETADVI;
 
-CREATE TABLE Formula.dbo.PETADVI (
+CREATE TABLE dbo.PETADVI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -30289,13 +30289,13 @@ CREATE TABLE Formula.dbo.PETADVI (
 );
 
 
--- Formula.dbo.PETREQH definition
+-- dbo.PETREQH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PETREQH;
+-- DROP TABLE dbo.PETREQH;
 
-CREATE TABLE Formula.dbo.PETREQH (
+CREATE TABLE dbo.PETREQH (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -30373,13 +30373,13 @@ CREATE TABLE Formula.dbo.PETREQH (
 );
 
 
--- Formula.dbo.PETREQI definition
+-- dbo.PETREQI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PETREQI;
+-- DROP TABLE dbo.PETREQI;
 
-CREATE TABLE Formula.dbo.PETREQI (
+CREATE TABLE dbo.PETREQI (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -30436,13 +30436,13 @@ CREATE TABLE Formula.dbo.PETREQI (
 );
 
 
--- Formula.dbo.PETRETH definition
+-- dbo.PETRETH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PETRETH;
+-- DROP TABLE dbo.PETRETH;
 
-CREATE TABLE Formula.dbo.PETRETH (
+CREATE TABLE dbo.PETRETH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -30523,13 +30523,13 @@ CREATE TABLE Formula.dbo.PETRETH (
 );
 
 
--- Formula.dbo.PETRETI definition
+-- dbo.PETRETI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PETRETI;
+-- DROP TABLE dbo.PETRETI;
 
-CREATE TABLE Formula.dbo.PETRETI (
+CREATE TABLE dbo.PETRETI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -30586,13 +30586,13 @@ CREATE TABLE Formula.dbo.PETRETI (
 );
 
 
--- Formula.dbo.PETTYSET definition
+-- dbo.PETTYSET definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PETTYSET;
+-- DROP TABLE dbo.PETTYSET;
 
-CREATE TABLE Formula.dbo.PETTYSET (
+CREATE TABLE dbo.PETTYSET (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -30675,13 +30675,13 @@ CREATE TABLE Formula.dbo.PETTYSET (
 );
 
 
--- Formula.dbo.PETTYWD definition
+-- dbo.PETTYWD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PETTYWD;
+-- DROP TABLE dbo.PETTYWD;
 
-CREATE TABLE Formula.dbo.PETTYWD (
+CREATE TABLE dbo.PETTYWD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -30770,13 +30770,13 @@ CREATE TABLE Formula.dbo.PETTYWD (
 );
 
 
--- Formula.dbo.PFGRADE definition
+-- dbo.PFGRADE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PFGRADE;
+-- DROP TABLE dbo.PFGRADE;
 
-CREATE TABLE Formula.dbo.PFGRADE (
+CREATE TABLE dbo.PFGRADE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -30851,13 +30851,13 @@ CREATE TABLE Formula.dbo.PFGRADE (
 );
 
 
--- Formula.dbo.PFMAH definition
+-- dbo.PFMAH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PFMAH;
+-- DROP TABLE dbo.PFMAH;
 
-CREATE TABLE Formula.dbo.PFMAH (
+CREATE TABLE dbo.PFMAH (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -30991,13 +30991,13 @@ CREATE TABLE Formula.dbo.PFMAH (
 );
 
 
--- Formula.dbo.PFMAI definition
+-- dbo.PFMAI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PFMAI;
+-- DROP TABLE dbo.PFMAI;
 
-CREATE TABLE Formula.dbo.PFMAI (
+CREATE TABLE dbo.PFMAI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -31090,13 +31090,13 @@ CREATE TABLE Formula.dbo.PFMAI (
 );
 
 
--- Formula.dbo.PFMCON definition
+-- dbo.PFMCON definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PFMCON;
+-- DROP TABLE dbo.PFMCON;
 
-CREATE TABLE Formula.dbo.PFMCON (
+CREATE TABLE dbo.PFMCON (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -31157,13 +31157,13 @@ CREATE TABLE Formula.dbo.PFMCON (
 );
 
 
--- Formula.dbo.PHOLIDAY definition
+-- dbo.PHOLIDAY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PHOLIDAY;
+-- DROP TABLE dbo.PHOLIDAY;
 
-CREATE TABLE Formula.dbo.PHOLIDAY (
+CREATE TABLE dbo.PHOLIDAY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -31221,13 +31221,13 @@ CREATE TABLE Formula.dbo.PHOLIDAY (
 );
 
 
--- Formula.dbo.PICKLOCA definition
+-- dbo.PICKLOCA definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PICKLOCA;
+-- DROP TABLE dbo.PICKLOCA;
 
-CREATE TABLE Formula.dbo.PICKLOCA (
+CREATE TABLE dbo.PICKLOCA (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCBANK char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -31254,13 +31254,13 @@ CREATE TABLE Formula.dbo.PICKLOCA (
 );
 
 
--- Formula.dbo.PKSREF definition
+-- dbo.PKSREF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PKSREF;
+-- DROP TABLE dbo.PKSREF;
 
-CREATE TABLE Formula.dbo.PKSREF (
+CREATE TABLE dbo.PKSREF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -31291,13 +31291,13 @@ CREATE TABLE Formula.dbo.PKSREF (
 );
 
 
--- Formula.dbo.PLACE definition
+-- dbo.PLACE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PLACE;
+-- DROP TABLE dbo.PLACE;
 
-CREATE TABLE Formula.dbo.PLACE (
+CREATE TABLE dbo.PLACE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -31365,13 +31365,13 @@ CREATE TABLE Formula.dbo.PLACE (
 );
 
 
--- Formula.dbo.PLANHOUR definition
+-- dbo.PLANHOUR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PLANHOUR;
+-- DROP TABLE dbo.PLANHOUR;
 
-CREATE TABLE Formula.dbo.PLANHOUR (
+CREATE TABLE dbo.PLANHOUR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -31448,13 +31448,13 @@ CREATE TABLE Formula.dbo.PLANHOUR (
 );
 
 
--- Formula.dbo.PLANMOH definition
+-- dbo.PLANMOH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PLANMOH;
+-- DROP TABLE dbo.PLANMOH;
 
-CREATE TABLE Formula.dbo.PLANMOH (
+CREATE TABLE dbo.PLANMOH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -31578,13 +31578,13 @@ CREATE TABLE Formula.dbo.PLANMOH (
 );
 
 
--- Formula.dbo.PLANMOI definition
+-- dbo.PLANMOI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PLANMOI;
+-- DROP TABLE dbo.PLANMOI;
 
-CREATE TABLE Formula.dbo.PLANMOI (
+CREATE TABLE dbo.PLANMOI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -31658,13 +31658,13 @@ CREATE TABLE Formula.dbo.PLANMOI (
 );
 
 
--- Formula.dbo.PLANMOOP definition
+-- dbo.PLANMOOP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PLANMOOP;
+-- DROP TABLE dbo.PLANMOOP;
 
-CREATE TABLE Formula.dbo.PLANMOOP (
+CREATE TABLE dbo.PLANMOOP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -31722,13 +31722,13 @@ CREATE TABLE Formula.dbo.PLANMOOP (
 );
 
 
--- Formula.dbo.PLANMOWC definition
+-- dbo.PLANMOWC definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PLANMOWC;
+-- DROP TABLE dbo.PLANMOWC;
 
-CREATE TABLE Formula.dbo.PLANMOWC (
+CREATE TABLE dbo.PLANMOWC (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -31819,13 +31819,13 @@ CREATE TABLE Formula.dbo.PLANMOWC (
 );
 
 
--- Formula.dbo.PLANPRH definition
+-- dbo.PLANPRH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PLANPRH;
+-- DROP TABLE dbo.PLANPRH;
 
-CREATE TABLE Formula.dbo.PLANPRH (
+CREATE TABLE dbo.PLANPRH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -31943,13 +31943,13 @@ CREATE TABLE Formula.dbo.PLANPRH (
 );
 
 
--- Formula.dbo.PLANPRI definition
+-- dbo.PLANPRI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PLANPRI;
+-- DROP TABLE dbo.PLANPRI;
 
-CREATE TABLE Formula.dbo.PLANPRI (
+CREATE TABLE dbo.PLANPRI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -32050,13 +32050,13 @@ CREATE TABLE Formula.dbo.PLANPRI (
 );
 
 
--- Formula.dbo.PLANT definition
+-- dbo.PLANT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PLANT;
+-- DROP TABLE dbo.PLANT;
 
-CREATE TABLE Formula.dbo.PLANT (
+CREATE TABLE dbo.PLANT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -32137,13 +32137,13 @@ CREATE TABLE Formula.dbo.PLANT (
 );
 
 
--- Formula.dbo.POSCASH definition
+-- dbo.POSCASH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.POSCASH;
+-- DROP TABLE dbo.POSCASH;
 
-CREATE TABLE Formula.dbo.POSCASH (
+CREATE TABLE dbo.POSCASH (
 	FCBAKYRHIS char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -32228,13 +32228,13 @@ CREATE TABLE Formula.dbo.POSCASH (
 );
 
 
--- Formula.dbo.POST definition
+-- dbo.POST definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.POST;
+-- DROP TABLE dbo.POST;
 
-CREATE TABLE Formula.dbo.POST (
+CREATE TABLE dbo.POST (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -32308,13 +32308,13 @@ CREATE TABLE Formula.dbo.POST (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.PPOLICY definition
+-- dbo.PPOLICY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PPOLICY;
+-- DROP TABLE dbo.PPOLICY;
 
-CREATE TABLE Formula.dbo.PPOLICY (
+CREATE TABLE dbo.PPOLICY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -32395,13 +32395,13 @@ CREATE TABLE Formula.dbo.PPOLICY (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.PRCVH definition
+-- dbo.PRCVH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PRCVH;
+-- DROP TABLE dbo.PRCVH;
 
-CREATE TABLE Formula.dbo.PRCVH (
+CREATE TABLE dbo.PRCVH (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -32550,13 +32550,13 @@ CREATE TABLE Formula.dbo.PRCVH (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.PRCVI definition
+-- dbo.PRCVI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PRCVI;
+-- DROP TABLE dbo.PRCVI;
 
-CREATE TABLE Formula.dbo.PRCVI (
+CREATE TABLE dbo.PRCVI (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -32616,13 +32616,13 @@ CREATE TABLE Formula.dbo.PRCVI (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.PRCVPAY definition
+-- dbo.PRCVPAY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PRCVPAY;
+-- DROP TABLE dbo.PRCVPAY;
 
-CREATE TABLE Formula.dbo.PRCVPAY (
+CREATE TABLE dbo.PRCVPAY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -32658,13 +32658,13 @@ CREATE TABLE Formula.dbo.PRCVPAY (
 );
 
 
--- Formula.dbo.PRICE definition
+-- dbo.PRICE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PRICE;
+-- DROP TABLE dbo.PRICE;
 
-CREATE TABLE Formula.dbo.PRICE (
+CREATE TABLE dbo.PRICE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -32782,13 +32782,13 @@ CREATE TABLE Formula.dbo.PRICE (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.PRNCTRL definition
+-- dbo.PRNCTRL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PRNCTRL;
+-- DROP TABLE dbo.PRNCTRL;
 
-CREATE TABLE Formula.dbo.PRNCTRL (
+CREATE TABLE dbo.PRNCTRL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCREFTYPE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -32853,13 +32853,13 @@ CREATE TABLE Formula.dbo.PRNCTRL (
 );
 
 
--- Formula.dbo.PROD definition
+-- dbo.PROD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PROD;
+-- DROP TABLE dbo.PROD;
 
-CREATE TABLE Formula.dbo.PROD (
+CREATE TABLE dbo.PROD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -33109,13 +33109,13 @@ CREATE TABLE Formula.dbo.PROD (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.PRODMRP definition
+-- dbo.PRODMRP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PRODMRP;
+-- DROP TABLE dbo.PRODMRP;
 
-CREATE TABLE Formula.dbo.PRODMRP (
+CREATE TABLE dbo.PRODMRP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -33176,13 +33176,13 @@ CREATE TABLE Formula.dbo.PRODMRP (
 );
 
 
--- Formula.dbo.PRODTYPE definition
+-- dbo.PRODTYPE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PRODTYPE;
+-- DROP TABLE dbo.PRODTYPE;
 
-CREATE TABLE Formula.dbo.PRODTYPE (
+CREATE TABLE dbo.PRODTYPE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCODE char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCNAME char(20) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -33248,13 +33248,13 @@ CREATE TABLE Formula.dbo.PRODTYPE (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.PRODX3 definition
+-- dbo.PRODX3 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PRODX3;
+-- DROP TABLE dbo.PRODX3;
 
-CREATE TABLE Formula.dbo.PRODX3 (
+CREATE TABLE dbo.PRODX3 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -33321,13 +33321,13 @@ CREATE TABLE Formula.dbo.PRODX3 (
 );
 
 
--- Formula.dbo.PRODX4 definition
+-- dbo.PRODX4 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PRODX4;
+-- DROP TABLE dbo.PRODX4;
 
-CREATE TABLE Formula.dbo.PRODX4 (
+CREATE TABLE dbo.PRODX4 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -33397,13 +33397,13 @@ CREATE TABLE Formula.dbo.PRODX4 (
 );
 
 
--- Formula.dbo.PRODX5 definition
+-- dbo.PRODX5 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PRODX5;
+-- DROP TABLE dbo.PRODX5;
 
-CREATE TABLE Formula.dbo.PRODX5 (
+CREATE TABLE dbo.PRODX5 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -33466,13 +33466,13 @@ CREATE TABLE Formula.dbo.PRODX5 (
 );
 
 
--- Formula.dbo.PRODX6 definition
+-- dbo.PRODX6 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PRODX6;
+-- DROP TABLE dbo.PRODX6;
 
-CREATE TABLE Formula.dbo.PRODX6 (
+CREATE TABLE dbo.PRODX6 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -33547,13 +33547,13 @@ CREATE TABLE Formula.dbo.PRODX6 (
 );
 
 
--- Formula.dbo.PRODX7 definition
+-- dbo.PRODX7 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PRODX7;
+-- DROP TABLE dbo.PRODX7;
 
-CREATE TABLE Formula.dbo.PRODX7 (
+CREATE TABLE dbo.PRODX7 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -33638,13 +33638,13 @@ CREATE TABLE Formula.dbo.PRODX7 (
 );
 
 
--- Formula.dbo.PRODX8 definition
+-- dbo.PRODX8 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PRODX8;
+-- DROP TABLE dbo.PRODX8;
 
-CREATE TABLE Formula.dbo.PRODX8 (
+CREATE TABLE dbo.PRODX8 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -33746,13 +33746,13 @@ CREATE TABLE Formula.dbo.PRODX8 (
 );
 
 
--- Formula.dbo.PRODX9 definition
+-- dbo.PRODX9 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PRODX9;
+-- DROP TABLE dbo.PRODX9;
 
-CREATE TABLE Formula.dbo.PRODX9 (
+CREATE TABLE dbo.PRODX9 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -33822,13 +33822,13 @@ CREATE TABLE Formula.dbo.PRODX9 (
 );
 
 
--- Formula.dbo.PRODXA definition
+-- dbo.PRODXA definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PRODXA;
+-- DROP TABLE dbo.PRODXA;
 
-CREATE TABLE Formula.dbo.PRODXA (
+CREATE TABLE dbo.PRODXA (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -33879,13 +33879,13 @@ CREATE TABLE Formula.dbo.PRODXA (
 );
 
 
--- Formula.dbo.PRODXB definition
+-- dbo.PRODXB definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PRODXB;
+-- DROP TABLE dbo.PRODXB;
 
-CREATE TABLE Formula.dbo.PRODXB (
+CREATE TABLE dbo.PRODXB (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -33917,13 +33917,13 @@ CREATE TABLE Formula.dbo.PRODXB (
 );
 
 
--- Formula.dbo.PROGRESS definition
+-- dbo.PROGRESS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PROGRESS;
+-- DROP TABLE dbo.PROGRESS;
 
-CREATE TABLE Formula.dbo.PROGRESS (
+CREATE TABLE dbo.PROGRESS (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -33957,13 +33957,13 @@ CREATE TABLE Formula.dbo.PROGRESS (
 );
 
 
--- Formula.dbo.PROJ definition
+-- dbo.PROJ definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PROJ;
+-- DROP TABLE dbo.PROJ;
 
-CREATE TABLE Formula.dbo.PROJ (
+CREATE TABLE dbo.PROJ (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -34042,13 +34042,13 @@ CREATE TABLE Formula.dbo.PROJ (
 );
 
 
--- Formula.dbo.PROMOTH definition
+-- dbo.PROMOTH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PROMOTH;
+-- DROP TABLE dbo.PROMOTH;
 
-CREATE TABLE Formula.dbo.PROMOTH (
+CREATE TABLE dbo.PROMOTH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -34135,13 +34135,13 @@ CREATE TABLE Formula.dbo.PROMOTH (
 );
 
 
--- Formula.dbo.PROMOTI definition
+-- dbo.PROMOTI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PROMOTI;
+-- DROP TABLE dbo.PROMOTI;
 
-CREATE TABLE Formula.dbo.PROMOTI (
+CREATE TABLE dbo.PROMOTI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -34194,13 +34194,13 @@ CREATE TABLE Formula.dbo.PROMOTI (
 );
 
 
--- Formula.dbo.PROVINCE definition
+-- dbo.PROVINCE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PROVINCE;
+-- DROP TABLE dbo.PROVINCE;
 
-CREATE TABLE Formula.dbo.PROVINCE (
+CREATE TABLE dbo.PROVINCE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCODE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -34253,13 +34253,13 @@ CREATE TABLE Formula.dbo.PROVINCE (
 );
 
 
--- Formula.dbo.PTRUST definition
+-- dbo.PTRUST definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PTRUST;
+-- DROP TABLE dbo.PTRUST;
 
-CREATE TABLE Formula.dbo.PTRUST (
+CREATE TABLE dbo.PTRUST (
 	FCPOST char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSYSOBJ char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FNRIGSETRI decimal(12,0) DEFAULT 0 NOT NULL,
@@ -34326,13 +34326,13 @@ CREATE TABLE Formula.dbo.PTRUST (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.PTRUSTX1 definition
+-- dbo.PTRUSTX1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.PTRUSTX1;
+-- DROP TABLE dbo.PTRUSTX1;
 
-CREATE TABLE Formula.dbo.PTRUSTX1 (
+CREATE TABLE dbo.PTRUSTX1 (
 	FCPOST char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSYSOBJ char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCROSS char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -34358,13 +34358,13 @@ CREATE TABLE Formula.dbo.PTRUSTX1 (
 );
 
 
--- Formula.dbo.QREPCFG definition
+-- dbo.QREPCFG definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.QREPCFG;
+-- DROP TABLE dbo.QREPCFG;
 
-CREATE TABLE Formula.dbo.QREPCFG (
+CREATE TABLE dbo.QREPCFG (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -34431,13 +34431,13 @@ CREATE TABLE Formula.dbo.QREPCFG (
 );
 
 
--- Formula.dbo.QREPORT definition
+-- dbo.QREPORT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.QREPORT;
+-- DROP TABLE dbo.QREPORT;
 
-CREATE TABLE Formula.dbo.QREPORT (
+CREATE TABLE dbo.QREPORT (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSID char(36) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSOURCE char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -34509,13 +34509,13 @@ CREATE TABLE Formula.dbo.QREPORT (
 );
 
 
--- Formula.dbo.RADIO definition
+-- dbo.RADIO definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.RADIO;
+-- DROP TABLE dbo.RADIO;
 
-CREATE TABLE Formula.dbo.RADIO (
+CREATE TABLE dbo.RADIO (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -34582,13 +34582,13 @@ CREATE TABLE Formula.dbo.RADIO (
 );
 
 
--- Formula.dbo.[RANK] definition
+-- dbo.[RANK] definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.[RANK];
+-- DROP TABLE dbo.[RANK];
 
-CREATE TABLE Formula.dbo.[RANK] (
+CREATE TABLE dbo.[RANK] (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -34650,13 +34650,13 @@ CREATE TABLE Formula.dbo.[RANK] (
 );
 
 
--- Formula.dbo.RANKRF definition
+-- dbo.RANKRF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.RANKRF;
+-- DROP TABLE dbo.RANKRF;
 
-CREATE TABLE Formula.dbo.RANKRF (
+CREATE TABLE dbo.RANKRF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -34715,13 +34715,13 @@ CREATE TABLE Formula.dbo.RANKRF (
 );
 
 
--- Formula.dbo.RDALLOW definition
+-- dbo.RDALLOW definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.RDALLOW;
+-- DROP TABLE dbo.RDALLOW;
 
-CREATE TABLE Formula.dbo.RDALLOW (
+CREATE TABLE dbo.RDALLOW (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -34750,13 +34750,13 @@ CREATE TABLE Formula.dbo.RDALLOW (
 );
 
 
--- Formula.dbo.RDCURR definition
+-- dbo.RDCURR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.RDCURR;
+-- DROP TABLE dbo.RDCURR;
 
-CREATE TABLE Formula.dbo.RDCURR (
+CREATE TABLE dbo.RDCURR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -34789,13 +34789,13 @@ CREATE TABLE Formula.dbo.RDCURR (
 );
 
 
--- Formula.dbo.RDDOCREF definition
+-- dbo.RDDOCREF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.RDDOCREF;
+-- DROP TABLE dbo.RDDOCREF;
 
-CREATE TABLE Formula.dbo.RDDOCREF (
+CREATE TABLE dbo.RDDOCREF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -34826,13 +34826,13 @@ CREATE TABLE Formula.dbo.RDDOCREF (
 );
 
 
--- Formula.dbo.RDDOCRSN definition
+-- dbo.RDDOCRSN definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.RDDOCRSN;
+-- DROP TABLE dbo.RDDOCRSN;
 
-CREATE TABLE Formula.dbo.RDDOCRSN (
+CREATE TABLE dbo.RDDOCRSN (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -34862,13 +34862,13 @@ CREATE TABLE Formula.dbo.RDDOCRSN (
 );
 
 
--- Formula.dbo.RDDOCTYP definition
+-- dbo.RDDOCTYP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.RDDOCTYP;
+-- DROP TABLE dbo.RDDOCTYP;
 
-CREATE TABLE Formula.dbo.RDDOCTYP (
+CREATE TABLE dbo.RDDOCTYP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -34897,13 +34897,13 @@ CREATE TABLE Formula.dbo.RDDOCTYP (
 );
 
 
--- Formula.dbo.RDTAXCFG definition
+-- dbo.RDTAXCFG definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.RDTAXCFG;
+-- DROP TABLE dbo.RDTAXCFG;
 
-CREATE TABLE Formula.dbo.RDTAXCFG (
+CREATE TABLE dbo.RDTAXCFG (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -34969,13 +34969,13 @@ CREATE TABLE Formula.dbo.RDTAXCFG (
 );
 
 
--- Formula.dbo.RDTAXHIS definition
+-- dbo.RDTAXHIS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.RDTAXHIS;
+-- DROP TABLE dbo.RDTAXHIS;
 
-CREATE TABLE Formula.dbo.RDTAXHIS (
+CREATE TABLE dbo.RDTAXHIS (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -35040,13 +35040,13 @@ CREATE TABLE Formula.dbo.RDTAXHIS (
 );
 
 
--- Formula.dbo.RDTAXLOG definition
+-- dbo.RDTAXLOG definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.RDTAXLOG;
+-- DROP TABLE dbo.RDTAXLOG;
 
-CREATE TABLE Formula.dbo.RDTAXLOG (
+CREATE TABLE dbo.RDTAXLOG (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -35115,13 +35115,13 @@ CREATE TABLE Formula.dbo.RDTAXLOG (
 );
 
 
--- Formula.dbo.RDUNIT definition
+-- dbo.RDUNIT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.RDUNIT;
+-- DROP TABLE dbo.RDUNIT;
 
-CREATE TABLE Formula.dbo.RDUNIT (
+CREATE TABLE dbo.RDUNIT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -35150,13 +35150,13 @@ CREATE TABLE Formula.dbo.RDUNIT (
 );
 
 
--- Formula.dbo.REFCTRL definition
+-- dbo.REFCTRL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFCTRL;
+-- DROP TABLE dbo.REFCTRL;
 
-CREATE TABLE Formula.dbo.REFCTRL (
+CREATE TABLE dbo.REFCTRL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -35193,13 +35193,13 @@ CREATE TABLE Formula.dbo.REFCTRL (
 );
 
 
--- Formula.dbo.REFPAY definition
+-- dbo.REFPAY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFPAY;
+-- DROP TABLE dbo.REFPAY;
 
-CREATE TABLE Formula.dbo.REFPAY (
+CREATE TABLE dbo.REFPAY (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCLUPDAPP char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -35269,13 +35269,13 @@ CREATE TABLE Formula.dbo.REFPAY (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.REFPAYCT definition
+-- dbo.REFPAYCT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFPAYCT;
+-- DROP TABLE dbo.REFPAYCT;
 
-CREATE TABLE Formula.dbo.REFPAYCT (
+CREATE TABLE dbo.REFPAYCT (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCLUPDAPP char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -35326,13 +35326,13 @@ CREATE TABLE Formula.dbo.REFPAYCT (
 );
 
 
--- Formula.dbo.REFPAYI definition
+-- dbo.REFPAYI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFPAYI;
+-- DROP TABLE dbo.REFPAYI;
 
-CREATE TABLE Formula.dbo.REFPAYI (
+CREATE TABLE dbo.REFPAYI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -35369,13 +35369,13 @@ CREATE TABLE Formula.dbo.REFPAYI (
 );
 
 
--- Formula.dbo.REFPD2 definition
+-- dbo.REFPD2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFPD2;
+-- DROP TABLE dbo.REFPD2;
 
-CREATE TABLE Formula.dbo.REFPD2 (
+CREATE TABLE dbo.REFPD2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -35482,13 +35482,13 @@ CREATE TABLE Formula.dbo.REFPD2 (
 );
 
 
--- Formula.dbo.REFPDCON definition
+-- dbo.REFPDCON definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFPDCON;
+-- DROP TABLE dbo.REFPDCON;
 
-CREATE TABLE Formula.dbo.REFPDCON (
+CREATE TABLE dbo.REFPDCON (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -35528,13 +35528,13 @@ CREATE TABLE Formula.dbo.REFPDCON (
 );
 
 
--- Formula.dbo.REFPDPAY definition
+-- dbo.REFPDPAY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFPDPAY;
+-- DROP TABLE dbo.REFPDPAY;
 
-CREATE TABLE Formula.dbo.REFPDPAY (
+CREATE TABLE dbo.REFPDPAY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -35571,13 +35571,13 @@ CREATE TABLE Formula.dbo.REFPDPAY (
 );
 
 
--- Formula.dbo.REFPDPL definition
+-- dbo.REFPDPL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFPDPL;
+-- DROP TABLE dbo.REFPDPL;
 
-CREATE TABLE Formula.dbo.REFPDPL (
+CREATE TABLE dbo.REFPDPL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -35722,13 +35722,13 @@ CREATE TABLE Formula.dbo.REFPDPL (
 );
 
 
--- Formula.dbo.REFPDSE2 definition
+-- dbo.REFPDSE2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFPDSE2;
+-- DROP TABLE dbo.REFPDSE2;
 
-CREATE TABLE Formula.dbo.REFPDSE2 (
+CREATE TABLE dbo.REFPDSE2 (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCLUPDAPP char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -35762,13 +35762,13 @@ CREATE TABLE Formula.dbo.REFPDSE2 (
 );
 
 
--- Formula.dbo.REFPDX1 definition
+-- dbo.REFPDX1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFPDX1;
+-- DROP TABLE dbo.REFPDX1;
 
-CREATE TABLE Formula.dbo.REFPDX1 (
+CREATE TABLE dbo.REFPDX1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -35807,13 +35807,13 @@ CREATE TABLE Formula.dbo.REFPDX1 (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.REFPDX3 definition
+-- dbo.REFPDX3 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFPDX3;
+-- DROP TABLE dbo.REFPDX3;
 
-CREATE TABLE Formula.dbo.REFPDX3 (
+CREATE TABLE dbo.REFPDX3 (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCLUPDAPP char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -35846,13 +35846,13 @@ CREATE TABLE Formula.dbo.REFPDX3 (
 );
 
 
--- Formula.dbo.REFPDX4 definition
+-- dbo.REFPDX4 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFPDX4;
+-- DROP TABLE dbo.REFPDX4;
 
-CREATE TABLE Formula.dbo.REFPDX4 (
+CREATE TABLE dbo.REFPDX4 (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCLUPDAPP char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -35914,13 +35914,13 @@ CREATE TABLE Formula.dbo.REFPDX4 (
 );
 
 
--- Formula.dbo.REFPDX5 definition
+-- dbo.REFPDX5 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFPDX5;
+-- DROP TABLE dbo.REFPDX5;
 
-CREATE TABLE Formula.dbo.REFPDX5 (
+CREATE TABLE dbo.REFPDX5 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -35954,13 +35954,13 @@ CREATE TABLE Formula.dbo.REFPDX5 (
 );
 
 
--- Formula.dbo.REFPDX6 definition
+-- dbo.REFPDX6 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFPDX6;
+-- DROP TABLE dbo.REFPDX6;
 
-CREATE TABLE Formula.dbo.REFPDX6 (
+CREATE TABLE dbo.REFPDX6 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -35995,13 +35995,13 @@ CREATE TABLE Formula.dbo.REFPDX6 (
 );
 
 
--- Formula.dbo.REFPETTY definition
+-- dbo.REFPETTY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFPETTY;
+-- DROP TABLE dbo.REFPETTY;
 
-CREATE TABLE Formula.dbo.REFPETTY (
+CREATE TABLE dbo.REFPETTY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -36039,13 +36039,13 @@ CREATE TABLE Formula.dbo.REFPETTY (
 );
 
 
--- Formula.dbo.REFPROD definition
+-- dbo.REFPROD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFPROD;
+-- DROP TABLE dbo.REFPROD;
 
-CREATE TABLE Formula.dbo.REFPROD (
+CREATE TABLE dbo.REFPROD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -36240,13 +36240,13 @@ CREATE TABLE Formula.dbo.REFPROD (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.REFSTR definition
+-- dbo.REFSTR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFSTR;
+-- DROP TABLE dbo.REFSTR;
 
-CREATE TABLE Formula.dbo.REFSTR (
+CREATE TABLE dbo.REFSTR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -36316,13 +36316,13 @@ CREATE TABLE Formula.dbo.REFSTR (
 );
 
 
--- Formula.dbo.REFTYPE definition
+-- dbo.REFTYPE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REFTYPE;
+-- DROP TABLE dbo.REFTYPE;
 
-CREATE TABLE Formula.dbo.REFTYPE (
+CREATE TABLE dbo.REFTYPE (
 	FCDATASERF char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -36409,13 +36409,13 @@ CREATE TABLE Formula.dbo.REFTYPE (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.RELATERF definition
+-- dbo.RELATERF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.RELATERF;
+-- DROP TABLE dbo.RELATERF;
 
-CREATE TABLE Formula.dbo.RELATERF (
+CREATE TABLE dbo.RELATERF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -36477,13 +36477,13 @@ CREATE TABLE Formula.dbo.RELATERF (
 );
 
 
--- Formula.dbo.RELATION definition
+-- dbo.RELATION definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.RELATION;
+-- DROP TABLE dbo.RELATION;
 
-CREATE TABLE Formula.dbo.RELATION (
+CREATE TABLE dbo.RELATION (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -36542,13 +36542,13 @@ CREATE TABLE Formula.dbo.RELATION (
 );
 
 
--- Formula.dbo.REPAIRH definition
+-- dbo.REPAIRH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REPAIRH;
+-- DROP TABLE dbo.REPAIRH;
 
-CREATE TABLE Formula.dbo.REPAIRH (
+CREATE TABLE dbo.REPAIRH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -36645,13 +36645,13 @@ CREATE TABLE Formula.dbo.REPAIRH (
 );
 
 
--- Formula.dbo.REPAIRI definition
+-- dbo.REPAIRI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REPAIRI;
+-- DROP TABLE dbo.REPAIRI;
 
-CREATE TABLE Formula.dbo.REPAIRI (
+CREATE TABLE dbo.REPAIRI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -36733,13 +36733,13 @@ CREATE TABLE Formula.dbo.REPAIRI (
 );
 
 
--- Formula.dbo.REPAYMNT definition
+-- dbo.REPAYMNT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REPAYMNT;
+-- DROP TABLE dbo.REPAYMNT;
 
-CREATE TABLE Formula.dbo.REPAYMNT (
+CREATE TABLE dbo.REPAYMNT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -36775,13 +36775,13 @@ CREATE TABLE Formula.dbo.REPAYMNT (
 );
 
 
--- Formula.dbo.REPCFG definition
+-- dbo.REPCFG definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REPCFG;
+-- DROP TABLE dbo.REPCFG;
 
-CREATE TABLE Formula.dbo.REPCFG (
+CREATE TABLE dbo.REPCFG (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCREPCODE char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -36862,13 +36862,13 @@ CREATE TABLE Formula.dbo.REPCFG (
 );
 
 
--- Formula.dbo.REPFILE definition
+-- dbo.REPFILE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REPFILE;
+-- DROP TABLE dbo.REPFILE;
 
-CREATE TABLE Formula.dbo.REPFILE (
+CREATE TABLE dbo.REPFILE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -36983,13 +36983,13 @@ CREATE TABLE Formula.dbo.REPFILE (
 );
 
 
--- Formula.dbo.REPSET definition
+-- dbo.REPSET definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REPSET;
+-- DROP TABLE dbo.REPSET;
 
-CREATE TABLE Formula.dbo.REPSET (
+CREATE TABLE dbo.REPSET (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -37062,13 +37062,13 @@ CREATE TABLE Formula.dbo.REPSET (
 );
 
 
--- Formula.dbo.REPVAR definition
+-- dbo.REPVAR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REPVAR;
+-- DROP TABLE dbo.REPVAR;
 
-CREATE TABLE Formula.dbo.REPVAR (
+CREATE TABLE dbo.REPVAR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -37133,13 +37133,13 @@ CREATE TABLE Formula.dbo.REPVAR (
 );
 
 
--- Formula.dbo.REQ2H definition
+-- dbo.REQ2H definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REQ2H;
+-- DROP TABLE dbo.REQ2H;
 
-CREATE TABLE Formula.dbo.REQ2H (
+CREATE TABLE dbo.REQ2H (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -37267,13 +37267,13 @@ CREATE TABLE Formula.dbo.REQ2H (
 );
 
 
--- Formula.dbo.REQ2I definition
+-- dbo.REQ2I definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.REQ2I;
+-- DROP TABLE dbo.REQ2I;
 
-CREATE TABLE Formula.dbo.REQ2I (
+CREATE TABLE dbo.REQ2I (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -37411,13 +37411,13 @@ CREATE TABLE Formula.dbo.REQ2I (
 );
 
 
--- Formula.dbo.RESOLIST definition
+-- dbo.RESOLIST definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.RESOLIST;
+-- DROP TABLE dbo.RESOLIST;
 
-CREATE TABLE Formula.dbo.RESOLIST (
+CREATE TABLE dbo.RESOLIST (
 	FCSELTAG char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -37490,13 +37490,13 @@ CREATE TABLE Formula.dbo.RESOLIST (
 );
 
 
--- Formula.dbo.ROUTEDEL definition
+-- dbo.ROUTEDEL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ROUTEDEL;
+-- DROP TABLE dbo.ROUTEDEL;
 
-CREATE TABLE Formula.dbo.ROUTEDEL (
+CREATE TABLE dbo.ROUTEDEL (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCODE char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -37565,13 +37565,13 @@ CREATE TABLE Formula.dbo.ROUTEDEL (
 );
 
 
--- Formula.dbo.ROUTEWAY definition
+-- dbo.ROUTEWAY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.ROUTEWAY;
+-- DROP TABLE dbo.ROUTEWAY;
 
-CREATE TABLE Formula.dbo.ROUTEWAY (
+CREATE TABLE dbo.ROUTEWAY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -37634,13 +37634,13 @@ CREATE TABLE Formula.dbo.ROUTEWAY (
 );
 
 
--- Formula.dbo.RPTRACK definition
+-- dbo.RPTRACK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.RPTRACK;
+-- DROP TABLE dbo.RPTRACK;
 
-CREATE TABLE Formula.dbo.RPTRACK (
+CREATE TABLE dbo.RPTRACK (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -37684,13 +37684,13 @@ CREATE TABLE Formula.dbo.RPTRACK (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.RUBBIN definition
+-- dbo.RUBBIN definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.RUBBIN;
+-- DROP TABLE dbo.RUBBIN;
 
-CREATE TABLE Formula.dbo.RUBBIN (
+CREATE TABLE dbo.RUBBIN (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -37784,13 +37784,13 @@ CREATE TABLE Formula.dbo.RUBBIN (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.SALADJ definition
+-- dbo.SALADJ definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SALADJ;
+-- DROP TABLE dbo.SALADJ;
 
-CREATE TABLE Formula.dbo.SALADJ (
+CREATE TABLE dbo.SALADJ (
 	FCDATASER char(10) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -37874,13 +37874,13 @@ CREATE TABLE Formula.dbo.SALADJ (
 );
 
 
--- Formula.dbo.SALADJDF definition
+-- dbo.SALADJDF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SALADJDF;
+-- DROP TABLE dbo.SALADJDF;
 
-CREATE TABLE Formula.dbo.SALADJDF (
+CREATE TABLE dbo.SALADJDF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -37947,13 +37947,13 @@ CREATE TABLE Formula.dbo.SALADJDF (
 );
 
 
--- Formula.dbo.SALADJRF definition
+-- dbo.SALADJRF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SALADJRF;
+-- DROP TABLE dbo.SALADJRF;
 
-CREATE TABLE Formula.dbo.SALADJRF (
+CREATE TABLE dbo.SALADJRF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -38005,13 +38005,13 @@ CREATE TABLE Formula.dbo.SALADJRF (
 );
 
 
--- Formula.dbo.SALADJTS definition
+-- dbo.SALADJTS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SALADJTS;
+-- DROP TABLE dbo.SALADJTS;
 
-CREATE TABLE Formula.dbo.SALADJTS (
+CREATE TABLE dbo.SALADJTS (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -38071,13 +38071,13 @@ CREATE TABLE Formula.dbo.SALADJTS (
 );
 
 
--- Formula.dbo.SDREFH definition
+-- dbo.SDREFH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SDREFH;
+-- DROP TABLE dbo.SDREFH;
 
-CREATE TABLE Formula.dbo.SDREFH (
+CREATE TABLE dbo.SDREFH (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -38146,13 +38146,13 @@ CREATE TABLE Formula.dbo.SDREFH (
 );
 
 
--- Formula.dbo.SDREFI definition
+-- dbo.SDREFI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SDREFI;
+-- DROP TABLE dbo.SDREFI;
 
-CREATE TABLE Formula.dbo.SDREFI (
+CREATE TABLE dbo.SDREFI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -38198,13 +38198,13 @@ CREATE TABLE Formula.dbo.SDREFI (
 );
 
 
--- Formula.dbo.SECT definition
+-- dbo.SECT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SECT;
+-- DROP TABLE dbo.SECT;
 
-CREATE TABLE Formula.dbo.SECT (
+CREATE TABLE dbo.SECT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -38283,13 +38283,13 @@ CREATE TABLE Formula.dbo.SECT (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.SELLTRG definition
+-- dbo.SELLTRG definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SELLTRG;
+-- DROP TABLE dbo.SELLTRG;
 
-CREATE TABLE Formula.dbo.SELLTRG (
+CREATE TABLE dbo.SELLTRG (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -38365,13 +38365,13 @@ CREATE TABLE Formula.dbo.SELLTRG (
 );
 
 
--- Formula.dbo.SEMA definition
+-- dbo.SEMA definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SEMA;
+-- DROP TABLE dbo.SEMA;
 
-CREATE TABLE Formula.dbo.SEMA (
+CREATE TABLE dbo.SEMA (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUSET char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSEQ char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -38406,13 +38406,13 @@ CREATE TABLE Formula.dbo.SEMA (
 );
 
 
--- Formula.dbo.SEMIDS definition
+-- dbo.SEMIDS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SEMIDS;
+-- DROP TABLE dbo.SEMIDS;
 
-CREATE TABLE Formula.dbo.SEMIDS (
+CREATE TABLE dbo.SEMIDS (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -38503,13 +38503,13 @@ CREATE TABLE Formula.dbo.SEMIDS (
 );
 
 
--- Formula.dbo.SENDH definition
+-- dbo.SENDH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SENDH;
+-- DROP TABLE dbo.SENDH;
 
-CREATE TABLE Formula.dbo.SENDH (
+CREATE TABLE dbo.SENDH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -38594,13 +38594,13 @@ CREATE TABLE Formula.dbo.SENDH (
 );
 
 
--- Formula.dbo.SENDI definition
+-- dbo.SENDI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SENDI;
+-- DROP TABLE dbo.SENDI;
 
-CREATE TABLE Formula.dbo.SENDI (
+CREATE TABLE dbo.SENDI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -38652,13 +38652,13 @@ CREATE TABLE Formula.dbo.SENDI (
 );
 
 
--- Formula.dbo.SGLHEAD definition
+-- dbo.SGLHEAD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SGLHEAD;
+-- DROP TABLE dbo.SGLHEAD;
 
-CREATE TABLE Formula.dbo.SGLHEAD (
+CREATE TABLE dbo.SGLHEAD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -38721,13 +38721,13 @@ CREATE TABLE Formula.dbo.SGLHEAD (
 );
 
 
--- Formula.dbo.SGLREF definition
+-- dbo.SGLREF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SGLREF;
+-- DROP TABLE dbo.SGLREF;
 
-CREATE TABLE Formula.dbo.SGLREF (
+CREATE TABLE dbo.SGLREF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -38790,13 +38790,13 @@ CREATE TABLE Formula.dbo.SGLREF (
 );
 
 
--- Formula.dbo.SHIFT definition
+-- dbo.SHIFT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SHIFT;
+-- DROP TABLE dbo.SHIFT;
 
-CREATE TABLE Formula.dbo.SHIFT (
+CREATE TABLE dbo.SHIFT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -38934,13 +38934,13 @@ CREATE TABLE Formula.dbo.SHIFT (
 );
 
 
--- Formula.dbo.SHIFTRF definition
+-- dbo.SHIFTRF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SHIFTRF;
+-- DROP TABLE dbo.SHIFTRF;
 
-CREATE TABLE Formula.dbo.SHIFTRF (
+CREATE TABLE dbo.SHIFTRF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -39006,13 +39006,13 @@ CREATE TABLE Formula.dbo.SHIFTRF (
 );
 
 
--- Formula.dbo.SNOTEH definition
+-- dbo.SNOTEH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SNOTEH;
+-- DROP TABLE dbo.SNOTEH;
 
-CREATE TABLE Formula.dbo.SNOTEH (
+CREATE TABLE dbo.SNOTEH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -39136,13 +39136,13 @@ CREATE TABLE Formula.dbo.SNOTEH (
 );
 
 
--- Formula.dbo.SNOTEI definition
+-- dbo.SNOTEI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SNOTEI;
+-- DROP TABLE dbo.SNOTEI;
 
-CREATE TABLE Formula.dbo.SNOTEI (
+CREATE TABLE dbo.SNOTEI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -39240,13 +39240,13 @@ CREATE TABLE Formula.dbo.SNOTEI (
 );
 
 
--- Formula.dbo.SPLAND definition
+-- dbo.SPLAND definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SPLAND;
+-- DROP TABLE dbo.SPLAND;
 
-CREATE TABLE Formula.dbo.SPLAND (
+CREATE TABLE dbo.SPLAND (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -39305,13 +39305,13 @@ CREATE TABLE Formula.dbo.SPLAND (
 );
 
 
--- Formula.dbo.SPLANH definition
+-- dbo.SPLANH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SPLANH;
+-- DROP TABLE dbo.SPLANH;
 
-CREATE TABLE Formula.dbo.SPLANH (
+CREATE TABLE dbo.SPLANH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -39403,13 +39403,13 @@ CREATE TABLE Formula.dbo.SPLANH (
 );
 
 
--- Formula.dbo.SPLANI definition
+-- dbo.SPLANI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SPLANI;
+-- DROP TABLE dbo.SPLANI;
 
-CREATE TABLE Formula.dbo.SPLANI (
+CREATE TABLE dbo.SPLANI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -39471,13 +39471,13 @@ CREATE TABLE Formula.dbo.SPLANI (
 );
 
 
--- Formula.dbo.SRCDOCH definition
+-- dbo.SRCDOCH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SRCDOCH;
+-- DROP TABLE dbo.SRCDOCH;
 
-CREATE TABLE Formula.dbo.SRCDOCH (
+CREATE TABLE dbo.SRCDOCH (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -39595,13 +39595,13 @@ CREATE TABLE Formula.dbo.SRCDOCH (
 );
 
 
--- Formula.dbo.SRCDOCI definition
+-- dbo.SRCDOCI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SRCDOCI;
+-- DROP TABLE dbo.SRCDOCI;
 
-CREATE TABLE Formula.dbo.SRCDOCI (
+CREATE TABLE dbo.SRCDOCI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -39717,13 +39717,13 @@ CREATE TABLE Formula.dbo.SRCDOCI (
 );
 
 
--- Formula.dbo.SRCMO definition
+-- dbo.SRCMO definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SRCMO;
+-- DROP TABLE dbo.SRCMO;
 
-CREATE TABLE Formula.dbo.SRCMO (
+CREATE TABLE dbo.SRCMO (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -39797,13 +39797,13 @@ CREATE TABLE Formula.dbo.SRCMO (
 );
 
 
--- Formula.dbo.SRCREF1 definition
+-- dbo.SRCREF1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SRCREF1;
+-- DROP TABLE dbo.SRCREF1;
 
-CREATE TABLE Formula.dbo.SRCREF1 (
+CREATE TABLE dbo.SRCREF1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -39841,13 +39841,13 @@ CREATE TABLE Formula.dbo.SRCREF1 (
 );
 
 
--- Formula.dbo.SSRCDOCH definition
+-- dbo.SSRCDOCH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SSRCDOCH;
+-- DROP TABLE dbo.SSRCDOCH;
 
-CREATE TABLE Formula.dbo.SSRCDOCH (
+CREATE TABLE dbo.SSRCDOCH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -39873,13 +39873,13 @@ CREATE TABLE Formula.dbo.SSRCDOCH (
 );
 
 
--- Formula.dbo.STDHOUR definition
+-- dbo.STDHOUR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.STDHOUR;
+-- DROP TABLE dbo.STDHOUR;
 
-CREATE TABLE Formula.dbo.STDHOUR (
+CREATE TABLE dbo.STDHOUR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -39977,13 +39977,13 @@ CREATE TABLE Formula.dbo.STDHOUR (
 );
 
 
--- Formula.dbo.STOCK definition
+-- dbo.STOCK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.STOCK;
+-- DROP TABLE dbo.STOCK;
 
-CREATE TABLE Formula.dbo.STOCK (
+CREATE TABLE dbo.STOCK (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -40073,13 +40073,13 @@ CREATE TABLE Formula.dbo.STOCK (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.STOCK2 definition
+-- dbo.STOCK2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.STOCK2;
+-- DROP TABLE dbo.STOCK2;
 
-CREATE TABLE Formula.dbo.STOCK2 (
+CREATE TABLE dbo.STOCK2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -40120,13 +40120,13 @@ CREATE TABLE Formula.dbo.STOCK2 (
 );
 
 
--- Formula.dbo.STORE definition
+-- dbo.STORE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.STORE;
+-- DROP TABLE dbo.STORE;
 
-CREATE TABLE Formula.dbo.STORE (
+CREATE TABLE dbo.STORE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -40201,13 +40201,13 @@ CREATE TABLE Formula.dbo.STORE (
 );
 
 
--- Formula.dbo.SUBBR definition
+-- dbo.SUBBR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SUBBR;
+-- DROP TABLE dbo.SUBBR;
 
-CREATE TABLE Formula.dbo.SUBBR (
+CREATE TABLE dbo.SUBBR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -40284,13 +40284,13 @@ CREATE TABLE Formula.dbo.SUBBR (
 );
 
 
--- Formula.dbo.SUBJOBH definition
+-- dbo.SUBJOBH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SUBJOBH;
+-- DROP TABLE dbo.SUBJOBH;
 
-CREATE TABLE Formula.dbo.SUBJOBH (
+CREATE TABLE dbo.SUBJOBH (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCODE char(20) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -40353,13 +40353,13 @@ CREATE TABLE Formula.dbo.SUBJOBH (
 );
 
 
--- Formula.dbo.SUBJOBI definition
+-- dbo.SUBJOBI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SUBJOBI;
+-- DROP TABLE dbo.SUBJOBI;
 
-CREATE TABLE Formula.dbo.SUBJOBI (
+CREATE TABLE dbo.SUBJOBI (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSUBJOBH char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -40403,13 +40403,13 @@ CREATE TABLE Formula.dbo.SUBJOBI (
 );
 
 
--- Formula.dbo.SYSINDEX definition
+-- dbo.SYSINDEX definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SYSINDEX;
+-- DROP TABLE dbo.SYSINDEX;
 
-CREATE TABLE Formula.dbo.SYSINDEX (
+CREATE TABLE dbo.SYSINDEX (
 	FCGROUP char(3) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDBFFILE char(12) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCNAME char(30) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -40447,13 +40447,13 @@ CREATE TABLE Formula.dbo.SYSINDEX (
 );
 
 
--- Formula.dbo.SYSLINK definition
+-- dbo.SYSLINK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SYSLINK;
+-- DROP TABLE dbo.SYSLINK;
 
-CREATE TABLE Formula.dbo.SYSLINK (
+CREATE TABLE dbo.SYSLINK (
 	FCSKID char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCODE char(6) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCNAME char(40) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -40476,13 +40476,13 @@ CREATE TABLE Formula.dbo.SYSLINK (
 );
 
 
--- Formula.dbo.SYSOBJR definition
+-- dbo.SYSOBJR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.SYSOBJR;
+-- DROP TABLE dbo.SYSOBJR;
 
-CREATE TABLE Formula.dbo.SYSOBJR (
+CREATE TABLE dbo.SYSOBJR (
 	FCSYSOBJ char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSTAT char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCPROMPT1 char(120) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -40616,13 +40616,13 @@ CREATE TABLE Formula.dbo.SYSOBJR (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.TABFLDX definition
+-- dbo.TABFLDX definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TABFLDX;
+-- DROP TABLE dbo.TABFLDX;
 
-CREATE TABLE Formula.dbo.TABFLDX (
+CREATE TABLE dbo.TABFLDX (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -40691,13 +40691,13 @@ CREATE TABLE Formula.dbo.TABFLDX (
 );
 
 
--- Formula.dbo.TABLIST definition
+-- dbo.TABLIST definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TABLIST;
+-- DROP TABLE dbo.TABLIST;
 
-CREATE TABLE Formula.dbo.TABLIST (
+CREATE TABLE dbo.TABLIST (
 	FCNAME char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCTYPE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCIDTYPE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -40728,13 +40728,13 @@ CREATE TABLE Formula.dbo.TABLIST (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.TAEMP definition
+-- dbo.TAEMP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TAEMP;
+-- DROP TABLE dbo.TAEMP;
 
-CREATE TABLE Formula.dbo.TAEMP (
+CREATE TABLE dbo.TAEMP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -40800,13 +40800,13 @@ CREATE TABLE Formula.dbo.TAEMP (
 );
 
 
--- Formula.dbo.TAMBON definition
+-- dbo.TAMBON definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TAMBON;
+-- DROP TABLE dbo.TAMBON;
 
-CREATE TABLE Formula.dbo.TAMBON (
+CREATE TABLE dbo.TAMBON (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -40837,13 +40837,13 @@ CREATE TABLE Formula.dbo.TAMBON (
 );
 
 
--- Formula.dbo.TASKQUEU definition
+-- dbo.TASKQUEU definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TASKQUEU;
+-- DROP TABLE dbo.TASKQUEU;
 
-CREATE TABLE Formula.dbo.TASKQUEU (
+CREATE TABLE dbo.TASKQUEU (
 	FCSKID char(20) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSTATUS char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCREQJOB char(20) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -40869,13 +40869,13 @@ CREATE TABLE Formula.dbo.TASKQUEU (
 );
 
 
--- Formula.dbo.TAX1RATE definition
+-- dbo.TAX1RATE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TAX1RATE;
+-- DROP TABLE dbo.TAX1RATE;
 
-CREATE TABLE Formula.dbo.TAX1RATE (
+CREATE TABLE dbo.TAX1RATE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FNBEG1 decimal(14,2) DEFAULT 0 NOT NULL,
@@ -40943,13 +40943,13 @@ CREATE TABLE Formula.dbo.TAX1RATE (
 );
 
 
--- Formula.dbo.TAX50 definition
+-- dbo.TAX50 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TAX50;
+-- DROP TABLE dbo.TAX50;
 
-CREATE TABLE Formula.dbo.TAX50 (
+CREATE TABLE dbo.TAX50 (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCRDCODE char(20) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCTAXGRP char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -41033,13 +41033,13 @@ CREATE TABLE Formula.dbo.TAX50 (
 );
 
 
--- Formula.dbo.TAXCOACC definition
+-- dbo.TAXCOACC definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TAXCOACC;
+-- DROP TABLE dbo.TAXCOACC;
 
-CREATE TABLE Formula.dbo.TAXCOACC (
+CREATE TABLE dbo.TAXCOACC (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORPCHAR char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCTAXTYPE char(10) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -41106,13 +41106,13 @@ CREATE TABLE Formula.dbo.TAXCOACC (
 );
 
 
--- Formula.dbo.TAXCODET definition
+-- dbo.TAXCODET definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TAXCODET;
+-- DROP TABLE dbo.TAXCODET;
 
-CREATE TABLE Formula.dbo.TAXCODET (
+CREATE TABLE dbo.TAXCODET (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCTAXTYPE char(10) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -41181,13 +41181,13 @@ CREATE TABLE Formula.dbo.TAXCODET (
 );
 
 
--- Formula.dbo.TAXCOND definition
+-- dbo.TAXCOND definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TAXCOND;
+-- DROP TABLE dbo.TAXCOND;
 
-CREATE TABLE Formula.dbo.TAXCOND (
+CREATE TABLE dbo.TAXCOND (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FNPCTEXP decimal(12,1) DEFAULT 0 NOT NULL,
@@ -41287,13 +41287,13 @@ CREATE TABLE Formula.dbo.TAXCOND (
 );
 
 
--- Formula.dbo.TAXOP definition
+-- dbo.TAXOP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TAXOP;
+-- DROP TABLE dbo.TAXOP;
 
-CREATE TABLE Formula.dbo.TAXOP (
+CREATE TABLE dbo.TAXOP (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCBRANCH char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -41363,13 +41363,13 @@ CREATE TABLE Formula.dbo.TAXOP (
 );
 
 
--- Formula.dbo.TAXTRG definition
+-- dbo.TAXTRG definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TAXTRG;
+-- DROP TABLE dbo.TAXTRG;
 
-CREATE TABLE Formula.dbo.TAXTRG (
+CREATE TABLE dbo.TAXTRG (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCBRANCH char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -41446,13 +41446,13 @@ CREATE TABLE Formula.dbo.TAXTRG (
 );
 
 
--- Formula.dbo.TAXTYPE definition
+-- dbo.TAXTYPE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TAXTYPE;
+-- DROP TABLE dbo.TAXTYPE;
 
-CREATE TABLE Formula.dbo.TAXTYPE (
+CREATE TABLE dbo.TAXTYPE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -41517,13 +41517,13 @@ CREATE TABLE Formula.dbo.TAXTYPE (
 );
 
 
--- Formula.dbo.THRDPTY definition
+-- dbo.THRDPTY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.THRDPTY;
+-- DROP TABLE dbo.THRDPTY;
 
-CREATE TABLE Formula.dbo.THRDPTY (
+CREATE TABLE dbo.THRDPTY (
 	FCSELTAG char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCODE char(20) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCNAME char(70) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -41640,13 +41640,13 @@ CREATE TABLE Formula.dbo.THRDPTY (
 );
 
 
--- Formula.dbo.TIMEFORM definition
+-- dbo.TIMEFORM definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TIMEFORM;
+-- DROP TABLE dbo.TIMEFORM;
 
-CREATE TABLE Formula.dbo.TIMEFORM (
+CREATE TABLE dbo.TIMEFORM (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -41705,13 +41705,13 @@ CREATE TABLE Formula.dbo.TIMEFORM (
 );
 
 
--- Formula.dbo.TIMEMARK definition
+-- dbo.TIMEMARK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TIMEMARK;
+-- DROP TABLE dbo.TIMEMARK;
 
-CREATE TABLE Formula.dbo.TIMEMARK (
+CREATE TABLE dbo.TIMEMARK (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -41778,13 +41778,13 @@ CREATE TABLE Formula.dbo.TIMEMARK (
 );
 
 
--- Formula.dbo.TIMEREC definition
+-- dbo.TIMEREC definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TIMEREC;
+-- DROP TABLE dbo.TIMEREC;
 
-CREATE TABLE Formula.dbo.TIMEREC (
+CREATE TABLE dbo.TIMEREC (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -41849,13 +41849,13 @@ CREATE TABLE Formula.dbo.TIMEREC (
 );
 
 
--- Formula.dbo.TMGRCFG definition
+-- dbo.TMGRCFG definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TMGRCFG;
+-- DROP TABLE dbo.TMGRCFG;
 
-CREATE TABLE Formula.dbo.TMGRCFG (
+CREATE TABLE dbo.TMGRCFG (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -41882,13 +41882,13 @@ CREATE TABLE Formula.dbo.TMGRCFG (
 );
 
 
--- Formula.dbo.TMGRSTAT definition
+-- dbo.TMGRSTAT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TMGRSTAT;
+-- DROP TABLE dbo.TMGRSTAT;
 
-CREATE TABLE Formula.dbo.TMGRSTAT (
+CREATE TABLE dbo.TMGRSTAT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -41920,13 +41920,13 @@ CREATE TABLE Formula.dbo.TMGRSTAT (
 );
 
 
--- Formula.dbo.TNEVALH definition
+-- dbo.TNEVALH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TNEVALH;
+-- DROP TABLE dbo.TNEVALH;
 
-CREATE TABLE Formula.dbo.TNEVALH (
+CREATE TABLE dbo.TNEVALH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -41985,13 +41985,13 @@ CREATE TABLE Formula.dbo.TNEVALH (
 );
 
 
--- Formula.dbo.TNEVALI definition
+-- dbo.TNEVALI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TNEVALI;
+-- DROP TABLE dbo.TNEVALI;
 
-CREATE TABLE Formula.dbo.TNEVALI (
+CREATE TABLE dbo.TNEVALI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -42053,13 +42053,13 @@ CREATE TABLE Formula.dbo.TNEVALI (
 );
 
 
--- Formula.dbo.TOOLS definition
+-- dbo.TOOLS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TOOLS;
+-- DROP TABLE dbo.TOOLS;
 
-CREATE TABLE Formula.dbo.TOOLS (
+CREATE TABLE dbo.TOOLS (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -42154,13 +42154,13 @@ CREATE TABLE Formula.dbo.TOOLS (
 );
 
 
--- Formula.dbo.TOOLUSE definition
+-- dbo.TOOLUSE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TOOLUSE;
+-- DROP TABLE dbo.TOOLUSE;
 
-CREATE TABLE Formula.dbo.TOOLUSE (
+CREATE TABLE dbo.TOOLUSE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -42236,13 +42236,13 @@ CREATE TABLE Formula.dbo.TOOLUSE (
 );
 
 
--- Formula.dbo.TOTBUD definition
+-- dbo.TOTBUD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TOTBUD;
+-- DROP TABLE dbo.TOTBUD;
 
-CREATE TABLE Formula.dbo.TOTBUD (
+CREATE TABLE dbo.TOTBUD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -42289,13 +42289,13 @@ CREATE TABLE Formula.dbo.TOTBUD (
 );
 
 
--- Formula.dbo.TR2YREM definition
+-- dbo.TR2YREM definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TR2YREM;
+-- DROP TABLE dbo.TR2YREM;
 
-CREATE TABLE Formula.dbo.TR2YREM (
+CREATE TABLE dbo.TR2YREM (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -42374,13 +42374,13 @@ CREATE TABLE Formula.dbo.TR2YREM (
 );
 
 
--- Formula.dbo.TRADETRM definition
+-- dbo.TRADETRM definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TRADETRM;
+-- DROP TABLE dbo.TRADETRM;
 
-CREATE TABLE Formula.dbo.TRADETRM (
+CREATE TABLE dbo.TRADETRM (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -42443,13 +42443,13 @@ CREATE TABLE Formula.dbo.TRADETRM (
 );
 
 
--- Formula.dbo.TRAINEMP definition
+-- dbo.TRAINEMP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TRAINEMP;
+-- DROP TABLE dbo.TRAINEMP;
 
-CREATE TABLE Formula.dbo.TRAINEMP (
+CREATE TABLE dbo.TRAINEMP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -42520,13 +42520,13 @@ CREATE TABLE Formula.dbo.TRAINEMP (
 );
 
 
--- Formula.dbo.TRAINEXP definition
+-- dbo.TRAINEXP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TRAINEXP;
+-- DROP TABLE dbo.TRAINEXP;
 
-CREATE TABLE Formula.dbo.TRAINEXP (
+CREATE TABLE dbo.TRAINEXP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -42595,13 +42595,13 @@ CREATE TABLE Formula.dbo.TRAINEXP (
 );
 
 
--- Formula.dbo.TRAINSCH definition
+-- dbo.TRAINSCH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TRAINSCH;
+-- DROP TABLE dbo.TRAINSCH;
 
-CREATE TABLE Formula.dbo.TRAINSCH (
+CREATE TABLE dbo.TRAINSCH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -42670,13 +42670,13 @@ CREATE TABLE Formula.dbo.TRAINSCH (
 );
 
 
--- Formula.dbo.TRAN2WHY definition
+-- dbo.TRAN2WHY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TRAN2WHY;
+-- DROP TABLE dbo.TRAN2WHY;
 
-CREATE TABLE Formula.dbo.TRAN2WHY (
+CREATE TABLE dbo.TRAN2WHY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -42748,13 +42748,13 @@ CREATE TABLE Formula.dbo.TRAN2WHY (
 );
 
 
--- Formula.dbo.TRANI definition
+-- dbo.TRANI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TRANI;
+-- DROP TABLE dbo.TRANI;
 
-CREATE TABLE Formula.dbo.TRANI (
+CREATE TABLE dbo.TRANI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -42806,13 +42806,13 @@ CREATE TABLE Formula.dbo.TRANI (
 );
 
 
--- Formula.dbo.TRANSDT1 definition
+-- dbo.TRANSDT1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TRANSDT1;
+-- DROP TABLE dbo.TRANSDT1;
 
-CREATE TABLE Formula.dbo.TRANSDT1 (
+CREATE TABLE dbo.TRANSDT1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -42858,13 +42858,13 @@ CREATE TABLE Formula.dbo.TRANSDT1 (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.TRANTYPE definition
+-- dbo.TRANTYPE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TRANTYPE;
+-- DROP TABLE dbo.TRANTYPE;
 
-CREATE TABLE Formula.dbo.TRANTYPE (
+CREATE TABLE dbo.TRANTYPE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -42934,13 +42934,13 @@ CREATE TABLE Formula.dbo.TRANTYPE (
 );
 
 
--- Formula.dbo.TRANWHY definition
+-- dbo.TRANWHY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TRANWHY;
+-- DROP TABLE dbo.TRANWHY;
 
-CREATE TABLE Formula.dbo.TRANWHY (
+CREATE TABLE dbo.TRANWHY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCTYPE char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -43007,13 +43007,13 @@ CREATE TABLE Formula.dbo.TRANWHY (
 );
 
 
--- Formula.dbo.TRES5LOG definition
+-- dbo.TRES5LOG definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TRES5LOG;
+-- DROP TABLE dbo.TRES5LOG;
 
-CREATE TABLE Formula.dbo.TRES5LOG (
+CREATE TABLE dbo.TRES5LOG (
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCBRANCH char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCTABLE char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -43040,13 +43040,13 @@ CREATE TABLE Formula.dbo.TRES5LOG (
 );
 
 
--- Formula.dbo.TXCHARTH definition
+-- dbo.TXCHARTH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TXCHARTH;
+-- DROP TABLE dbo.TXCHARTH;
 
-CREATE TABLE Formula.dbo.TXCHARTH (
+CREATE TABLE dbo.TXCHARTH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -43115,13 +43115,13 @@ CREATE TABLE Formula.dbo.TXCHARTH (
 );
 
 
--- Formula.dbo.TXCHARTI definition
+-- dbo.TXCHARTI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.TXCHARTI;
+-- DROP TABLE dbo.TXCHARTI;
 
-CREATE TABLE Formula.dbo.TXCHARTI (
+CREATE TABLE dbo.TXCHARTI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -43152,13 +43152,13 @@ CREATE TABLE Formula.dbo.TXCHARTI (
 );
 
 
--- Formula.dbo.UALLOC definition
+-- dbo.UALLOC definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.UALLOC;
+-- DROP TABLE dbo.UALLOC;
 
-CREATE TABLE Formula.dbo.UALLOC (
+CREATE TABLE dbo.UALLOC (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSERIAL char(80) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCHALLOC char(20) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -43182,13 +43182,13 @@ CREATE TABLE Formula.dbo.UALLOC (
 );
 
 
--- Formula.dbo.UM definition
+-- dbo.UM definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.UM;
+-- DROP TABLE dbo.UM;
 
-CREATE TABLE Formula.dbo.UM (
+CREATE TABLE dbo.UM (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -43267,13 +43267,13 @@ CREATE TABLE Formula.dbo.UM (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.USERDAT definition
+-- dbo.USERDAT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.USERDAT;
+-- DROP TABLE dbo.USERDAT;
 
-CREATE TABLE Formula.dbo.USERDAT (
+CREATE TABLE dbo.USERDAT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -43341,13 +43341,13 @@ CREATE TABLE Formula.dbo.USERDAT (
 );
 
 
--- Formula.dbo.USERMENU definition
+-- dbo.USERMENU definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.USERMENU;
+-- DROP TABLE dbo.USERMENU;
 
-CREATE TABLE Formula.dbo.USERMENU (
+CREATE TABLE dbo.USERMENU (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSYSTEM char(10) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCPRSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -43376,13 +43376,13 @@ CREATE TABLE Formula.dbo.USERMENU (
 );
 
 
--- Formula.dbo.V01PDSER definition
+-- dbo.V01PDSER definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.V01PDSER;
+-- DROP TABLE dbo.V01PDSER;
 
-CREATE TABLE Formula.dbo.V01PDSER (
+CREATE TABLE dbo.V01PDSER (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -43464,13 +43464,13 @@ CREATE TABLE Formula.dbo.V01PDSER (
 );
 
 
--- Formula.dbo.V01PROD definition
+-- dbo.V01PROD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.V01PROD;
+-- DROP TABLE dbo.V01PROD;
 
-CREATE TABLE Formula.dbo.V01PROD (
+CREATE TABLE dbo.V01PROD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -43532,13 +43532,13 @@ CREATE TABLE Formula.dbo.V01PROD (
 );
 
 
--- Formula.dbo.VAPVPOL definition
+-- dbo.VAPVPOL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VAPVPOL;
+-- DROP TABLE dbo.VAPVPOL;
 
-CREATE TABLE Formula.dbo.VAPVPOL (
+CREATE TABLE dbo.VAPVPOL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -43597,13 +43597,13 @@ CREATE TABLE Formula.dbo.VAPVPOL (
 );
 
 
--- Formula.dbo.VATSUEPY definition
+-- dbo.VATSUEPY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VATSUEPY;
+-- DROP TABLE dbo.VATSUEPY;
 
-CREATE TABLE Formula.dbo.VATSUEPY (
+CREATE TABLE dbo.VATSUEPY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -43674,13 +43674,13 @@ CREATE TABLE Formula.dbo.VATSUEPY (
 );
 
 
--- Formula.dbo.VATTYPE definition
+-- dbo.VATTYPE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VATTYPE;
+-- DROP TABLE dbo.VATTYPE;
 
-CREATE TABLE Formula.dbo.VATTYPE (
+CREATE TABLE dbo.VATTYPE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -43748,13 +43748,13 @@ CREATE TABLE Formula.dbo.VATTYPE (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.VBCICOOR definition
+-- dbo.VBCICOOR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBCICOOR;
+-- DROP TABLE dbo.VBCICOOR;
 
-CREATE TABLE Formula.dbo.VBCICOOR (
+CREATE TABLE dbo.VBCICOOR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -43812,13 +43812,13 @@ CREATE TABLE Formula.dbo.VBCICOOR (
 );
 
 
--- Formula.dbo.VBCIGLRF definition
+-- dbo.VBCIGLRF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBCIGLRF;
+-- DROP TABLE dbo.VBCIGLRF;
 
-CREATE TABLE Formula.dbo.VBCIGLRF (
+CREATE TABLE dbo.VBCIGLRF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -43877,13 +43877,13 @@ CREATE TABLE Formula.dbo.VBCIGLRF (
 );
 
 
--- Formula.dbo.VBCIORDH definition
+-- dbo.VBCIORDH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBCIORDH;
+-- DROP TABLE dbo.VBCIORDH;
 
-CREATE TABLE Formula.dbo.VBCIORDH (
+CREATE TABLE dbo.VBCIORDH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -43942,13 +43942,13 @@ CREATE TABLE Formula.dbo.VBCIORDH (
 );
 
 
--- Formula.dbo.VBCIORDI definition
+-- dbo.VBCIORDI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBCIORDI;
+-- DROP TABLE dbo.VBCIORDI;
 
-CREATE TABLE Formula.dbo.VBCIORDI (
+CREATE TABLE dbo.VBCIORDI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -43984,13 +43984,13 @@ CREATE TABLE Formula.dbo.VBCIORDI (
 );
 
 
--- Formula.dbo.VBCIPAYM definition
+-- dbo.VBCIPAYM definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBCIPAYM;
+-- DROP TABLE dbo.VBCIPAYM;
 
-CREATE TABLE Formula.dbo.VBCIPAYM (
+CREATE TABLE dbo.VBCIPAYM (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -44020,13 +44020,13 @@ CREATE TABLE Formula.dbo.VBCIPAYM (
 );
 
 
--- Formula.dbo.VBCIPRI2 definition
+-- dbo.VBCIPRI2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBCIPRI2;
+-- DROP TABLE dbo.VBCIPRI2;
 
-CREATE TABLE Formula.dbo.VBCIPRI2 (
+CREATE TABLE dbo.VBCIPRI2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -44059,13 +44059,13 @@ CREATE TABLE Formula.dbo.VBCIPRI2 (
 );
 
 
--- Formula.dbo.VBCIPRIC definition
+-- dbo.VBCIPRIC definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBCIPRIC;
+-- DROP TABLE dbo.VBCIPRIC;
 
-CREATE TABLE Formula.dbo.VBCIPRIC (
+CREATE TABLE dbo.VBCIPRIC (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -44097,13 +44097,13 @@ CREATE TABLE Formula.dbo.VBCIPRIC (
 );
 
 
--- Formula.dbo.VBCIPRIH definition
+-- dbo.VBCIPRIH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBCIPRIH;
+-- DROP TABLE dbo.VBCIPRIH;
 
-CREATE TABLE Formula.dbo.VBCIPRIH (
+CREATE TABLE dbo.VBCIPRIH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -44191,13 +44191,13 @@ CREATE TABLE Formula.dbo.VBCIPRIH (
 );
 
 
--- Formula.dbo.VBCIPRII definition
+-- dbo.VBCIPRII definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBCIPRII;
+-- DROP TABLE dbo.VBCIPRII;
 
-CREATE TABLE Formula.dbo.VBCIPRII (
+CREATE TABLE dbo.VBCIPRII (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -44241,13 +44241,13 @@ CREATE TABLE Formula.dbo.VBCIPRII (
 );
 
 
--- Formula.dbo.VBCIPROD definition
+-- dbo.VBCIPROD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBCIPROD;
+-- DROP TABLE dbo.VBCIPROD;
 
-CREATE TABLE Formula.dbo.VBCIPROD (
+CREATE TABLE dbo.VBCIPROD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -44305,13 +44305,13 @@ CREATE TABLE Formula.dbo.VBCIPROD (
 );
 
 
--- Formula.dbo.VBCITRAN definition
+-- dbo.VBCITRAN definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBCITRAN;
+-- DROP TABLE dbo.VBCITRAN;
 
-CREATE TABLE Formula.dbo.VBCITRAN (
+CREATE TABLE dbo.VBCITRAN (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -44347,13 +44347,13 @@ CREATE TABLE Formula.dbo.VBCITRAN (
 );
 
 
--- Formula.dbo.VBSMPSRM definition
+-- dbo.VBSMPSRM definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBSMPSRM;
+-- DROP TABLE dbo.VBSMPSRM;
 
-CREATE TABLE Formula.dbo.VBSMPSRM (
+CREATE TABLE dbo.VBSMPSRM (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -44412,13 +44412,13 @@ CREATE TABLE Formula.dbo.VBSMPSRM (
 );
 
 
--- Formula.dbo.VBSNMPS1 definition
+-- dbo.VBSNMPS1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBSNMPS1;
+-- DROP TABLE dbo.VBSNMPS1;
 
-CREATE TABLE Formula.dbo.VBSNMPS1 (
+CREATE TABLE dbo.VBSNMPS1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -44460,13 +44460,13 @@ CREATE TABLE Formula.dbo.VBSNMPS1 (
 );
 
 
--- Formula.dbo.VBSNPD definition
+-- dbo.VBSNPD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBSNPD;
+-- DROP TABLE dbo.VBSNPD;
 
-CREATE TABLE Formula.dbo.VBSNPD (
+CREATE TABLE dbo.VBSNPD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -44542,13 +44542,13 @@ CREATE TABLE Formula.dbo.VBSNPD (
 );
 
 
--- Formula.dbo.VBUDAJH definition
+-- dbo.VBUDAJH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBUDAJH;
+-- DROP TABLE dbo.VBUDAJH;
 
-CREATE TABLE Formula.dbo.VBUDAJH (
+CREATE TABLE dbo.VBUDAJH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -44617,13 +44617,13 @@ CREATE TABLE Formula.dbo.VBUDAJH (
 );
 
 
--- Formula.dbo.VBUDAJI definition
+-- dbo.VBUDAJI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBUDAJI;
+-- DROP TABLE dbo.VBUDAJI;
 
-CREATE TABLE Formula.dbo.VBUDAJI (
+CREATE TABLE dbo.VBUDAJI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -44665,13 +44665,13 @@ CREATE TABLE Formula.dbo.VBUDAJI (
 );
 
 
--- Formula.dbo.VBUDH definition
+-- dbo.VBUDH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBUDH;
+-- DROP TABLE dbo.VBUDH;
 
-CREATE TABLE Formula.dbo.VBUDH (
+CREATE TABLE dbo.VBUDH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -44748,13 +44748,13 @@ CREATE TABLE Formula.dbo.VBUDH (
 );
 
 
--- Formula.dbo.VBUDI definition
+-- dbo.VBUDI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBUDI;
+-- DROP TABLE dbo.VBUDI;
 
-CREATE TABLE Formula.dbo.VBUDI (
+CREATE TABLE dbo.VBUDI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -44799,13 +44799,13 @@ CREATE TABLE Formula.dbo.VBUDI (
 );
 
 
--- Formula.dbo.VBUDKPI definition
+-- dbo.VBUDKPI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBUDKPI;
+-- DROP TABLE dbo.VBUDKPI;
 
-CREATE TABLE Formula.dbo.VBUDKPI (
+CREATE TABLE dbo.VBUDKPI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -44871,13 +44871,13 @@ CREATE TABLE Formula.dbo.VBUDKPI (
 );
 
 
--- Formula.dbo.VBUDRQH definition
+-- dbo.VBUDRQH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBUDRQH;
+-- DROP TABLE dbo.VBUDRQH;
 
-CREATE TABLE Formula.dbo.VBUDRQH (
+CREATE TABLE dbo.VBUDRQH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -44951,13 +44951,13 @@ CREATE TABLE Formula.dbo.VBUDRQH (
 );
 
 
--- Formula.dbo.VBUDRQI definition
+-- dbo.VBUDRQI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VBUDRQI;
+-- DROP TABLE dbo.VBUDRQI;
 
-CREATE TABLE Formula.dbo.VBUDRQI (
+CREATE TABLE dbo.VBUDRQI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -45036,13 +45036,13 @@ CREATE TABLE Formula.dbo.VBUDRQI (
 );
 
 
--- Formula.dbo.VCLINK definition
+-- dbo.VCLINK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCLINK;
+-- DROP TABLE dbo.VCLINK;
 
-CREATE TABLE Formula.dbo.VCLINK (
+CREATE TABLE dbo.VCLINK (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -45102,13 +45102,13 @@ CREATE TABLE Formula.dbo.VCLINK (
 );
 
 
--- Formula.dbo.VCMMEMPL definition
+-- dbo.VCMMEMPL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCMMEMPL;
+-- DROP TABLE dbo.VCMMEMPL;
 
-CREATE TABLE Formula.dbo.VCMMEMPL (
+CREATE TABLE dbo.VCMMEMPL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -45173,13 +45173,13 @@ CREATE TABLE Formula.dbo.VCMMEMPL (
 );
 
 
--- Formula.dbo.VCMMPDEH definition
+-- dbo.VCMMPDEH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCMMPDEH;
+-- DROP TABLE dbo.VCMMPDEH;
 
-CREATE TABLE Formula.dbo.VCMMPDEH (
+CREATE TABLE dbo.VCMMPDEH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -45241,13 +45241,13 @@ CREATE TABLE Formula.dbo.VCMMPDEH (
 );
 
 
--- Formula.dbo.VCMMPDEI definition
+-- dbo.VCMMPDEI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCMMPDEI;
+-- DROP TABLE dbo.VCMMPDEI;
 
-CREATE TABLE Formula.dbo.VCMMPDEI (
+CREATE TABLE dbo.VCMMPDEI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -45282,13 +45282,13 @@ CREATE TABLE Formula.dbo.VCMMPDEI (
 );
 
 
--- Formula.dbo.VCOMM01 definition
+-- dbo.VCOMM01 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCOMM01;
+-- DROP TABLE dbo.VCOMM01;
 
-CREATE TABLE Formula.dbo.VCOMM01 (
+CREATE TABLE dbo.VCOMM01 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -45357,13 +45357,13 @@ CREATE TABLE Formula.dbo.VCOMM01 (
 );
 
 
--- Formula.dbo.VCOMM02 definition
+-- dbo.VCOMM02 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCOMM02;
+-- DROP TABLE dbo.VCOMM02;
 
-CREATE TABLE Formula.dbo.VCOMM02 (
+CREATE TABLE dbo.VCOMM02 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -45431,13 +45431,13 @@ CREATE TABLE Formula.dbo.VCOMM02 (
 );
 
 
--- Formula.dbo.VCOMMINV definition
+-- dbo.VCOMMINV definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCOMMINV;
+-- DROP TABLE dbo.VCOMMINV;
 
-CREATE TABLE Formula.dbo.VCOMMINV (
+CREATE TABLE dbo.VCOMMINV (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -45472,13 +45472,13 @@ CREATE TABLE Formula.dbo.VCOMMINV (
 );
 
 
--- Formula.dbo.VCOMRATH definition
+-- dbo.VCOMRATH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCOMRATH;
+-- DROP TABLE dbo.VCOMRATH;
 
-CREATE TABLE Formula.dbo.VCOMRATH (
+CREATE TABLE dbo.VCOMRATH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -45541,13 +45541,13 @@ CREATE TABLE Formula.dbo.VCOMRATH (
 );
 
 
--- Formula.dbo.VCOMRATI definition
+-- dbo.VCOMRATI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCOMRATI;
+-- DROP TABLE dbo.VCOMRATI;
 
-CREATE TABLE Formula.dbo.VCOMRATI (
+CREATE TABLE dbo.VCOMRATI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -45580,13 +45580,13 @@ CREATE TABLE Formula.dbo.VCOMRATI (
 );
 
 
--- Formula.dbo.VCOUPON definition
+-- dbo.VCOUPON definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCOUPON;
+-- DROP TABLE dbo.VCOUPON;
 
-CREATE TABLE Formula.dbo.VCOUPON (
+CREATE TABLE dbo.VCOUPON (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -45657,13 +45657,13 @@ CREATE TABLE Formula.dbo.VCOUPON (
 );
 
 
--- Formula.dbo.VCREM definition
+-- dbo.VCREM definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCREM;
+-- DROP TABLE dbo.VCREM;
 
-CREATE TABLE Formula.dbo.VCREM (
+CREATE TABLE dbo.VCREM (
 	FCSELTAG char(1) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCREMARK char(100) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -45726,13 +45726,13 @@ CREATE TABLE Formula.dbo.VCREM (
 );
 
 
--- Formula.dbo.VCRGVAT definition
+-- dbo.VCRGVAT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCRGVAT;
+-- DROP TABLE dbo.VCRGVAT;
 
-CREATE TABLE Formula.dbo.VCRGVAT (
+CREATE TABLE dbo.VCRGVAT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -45796,13 +45796,13 @@ CREATE TABLE Formula.dbo.VCRGVAT (
 );
 
 
--- Formula.dbo.VCSRO definition
+-- dbo.VCSRO definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCSRO;
+-- DROP TABLE dbo.VCSRO;
 
-CREATE TABLE Formula.dbo.VCSRO (
+CREATE TABLE dbo.VCSRO (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -45866,13 +45866,13 @@ CREATE TABLE Formula.dbo.VCSRO (
 );
 
 
--- Formula.dbo.VCSRQ definition
+-- dbo.VCSRQ definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCSRQ;
+-- DROP TABLE dbo.VCSRQ;
 
-CREATE TABLE Formula.dbo.VCSRQ (
+CREATE TABLE dbo.VCSRQ (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -45936,13 +45936,13 @@ CREATE TABLE Formula.dbo.VCSRQ (
 );
 
 
--- Formula.dbo.VCTWBUY definition
+-- dbo.VCTWBUY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCTWBUY;
+-- DROP TABLE dbo.VCTWBUY;
 
-CREATE TABLE Formula.dbo.VCTWBUY (
+CREATE TABLE dbo.VCTWBUY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -46010,13 +46010,13 @@ CREATE TABLE Formula.dbo.VCTWBUY (
 );
 
 
--- Formula.dbo.VCUCONDH definition
+-- dbo.VCUCONDH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCUCONDH;
+-- DROP TABLE dbo.VCUCONDH;
 
-CREATE TABLE Formula.dbo.VCUCONDH (
+CREATE TABLE dbo.VCUCONDH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -46076,13 +46076,13 @@ CREATE TABLE Formula.dbo.VCUCONDH (
 );
 
 
--- Formula.dbo.VCUCONDI definition
+-- dbo.VCUCONDI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCUCONDI;
+-- DROP TABLE dbo.VCUCONDI;
 
-CREATE TABLE Formula.dbo.VCUCONDI (
+CREATE TABLE dbo.VCUCONDI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -46114,13 +46114,13 @@ CREATE TABLE Formula.dbo.VCUCONDI (
 );
 
 
--- Formula.dbo.VCUMULEM definition
+-- dbo.VCUMULEM definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCUMULEM;
+-- DROP TABLE dbo.VCUMULEM;
 
-CREATE TABLE Formula.dbo.VCUMULEM (
+CREATE TABLE dbo.VCUMULEM (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -46190,13 +46190,13 @@ CREATE TABLE Formula.dbo.VCUMULEM (
 );
 
 
--- Formula.dbo.VCUPDCOM definition
+-- dbo.VCUPDCOM definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCUPDCOM;
+-- DROP TABLE dbo.VCUPDCOM;
 
-CREATE TABLE Formula.dbo.VCUPDCOM (
+CREATE TABLE dbo.VCUPDCOM (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -46257,13 +46257,13 @@ CREATE TABLE Formula.dbo.VCUPDCOM (
 );
 
 
--- Formula.dbo.VCUPOINT definition
+-- dbo.VCUPOINT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCUPOINT;
+-- DROP TABLE dbo.VCUPOINT;
 
-CREATE TABLE Formula.dbo.VCUPOINT (
+CREATE TABLE dbo.VCUPOINT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -46324,13 +46324,13 @@ CREATE TABLE Formula.dbo.VCUPOINT (
 );
 
 
--- Formula.dbo.VCUTIME definition
+-- dbo.VCUTIME definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCUTIME;
+-- DROP TABLE dbo.VCUTIME;
 
-CREATE TABLE Formula.dbo.VCUTIME (
+CREATE TABLE dbo.VCUTIME (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -46400,13 +46400,13 @@ CREATE TABLE Formula.dbo.VCUTIME (
 );
 
 
--- Formula.dbo.VCVNPCON definition
+-- dbo.VCVNPCON definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCVNPCON;
+-- DROP TABLE dbo.VCVNPCON;
 
-CREATE TABLE Formula.dbo.VCVNPCON (
+CREATE TABLE dbo.VCVNPCON (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -46466,13 +46466,13 @@ CREATE TABLE Formula.dbo.VCVNPCON (
 );
 
 
--- Formula.dbo.VCVNPRI definition
+-- dbo.VCVNPRI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCVNPRI;
+-- DROP TABLE dbo.VCVNPRI;
 
-CREATE TABLE Formula.dbo.VCVNPRI (
+CREATE TABLE dbo.VCVNPRI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -46503,13 +46503,13 @@ CREATE TABLE Formula.dbo.VCVNPRI (
 );
 
 
--- Formula.dbo.VCVNQSH definition
+-- dbo.VCVNQSH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCVNQSH;
+-- DROP TABLE dbo.VCVNQSH;
 
-CREATE TABLE Formula.dbo.VCVNQSH (
+CREATE TABLE dbo.VCVNQSH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -46577,13 +46577,13 @@ CREATE TABLE Formula.dbo.VCVNQSH (
 );
 
 
--- Formula.dbo.VCVNWHOU definition
+-- dbo.VCVNWHOU definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCVNWHOU;
+-- DROP TABLE dbo.VCVNWHOU;
 
-CREATE TABLE Formula.dbo.VCVNWHOU (
+CREATE TABLE dbo.VCVNWHOU (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -46646,13 +46646,13 @@ CREATE TABLE Formula.dbo.VCVNWHOU (
 );
 
 
--- Formula.dbo.VCWNCOOR definition
+-- dbo.VCWNCOOR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VCWNCOOR;
+-- DROP TABLE dbo.VCWNCOOR;
 
-CREATE TABLE Formula.dbo.VCWNCOOR (
+CREATE TABLE dbo.VCWNCOOR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -46713,13 +46713,13 @@ CREATE TABLE Formula.dbo.VCWNCOOR (
 );
 
 
--- Formula.dbo.VDBDTRNH definition
+-- dbo.VDBDTRNH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VDBDTRNH;
+-- DROP TABLE dbo.VDBDTRNH;
 
-CREATE TABLE Formula.dbo.VDBDTRNH (
+CREATE TABLE dbo.VDBDTRNH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -46801,13 +46801,13 @@ CREATE TABLE Formula.dbo.VDBDTRNH (
 );
 
 
--- Formula.dbo.VDBDTRNI definition
+-- dbo.VDBDTRNI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VDBDTRNI;
+-- DROP TABLE dbo.VDBDTRNI;
 
-CREATE TABLE Formula.dbo.VDBDTRNI (
+CREATE TABLE dbo.VDBDTRNI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -46851,13 +46851,13 @@ CREATE TABLE Formula.dbo.VDBDTRNI (
 );
 
 
--- Formula.dbo.VDNG03 definition
+-- dbo.VDNG03 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VDNG03;
+-- DROP TABLE dbo.VDNG03;
 
-CREATE TABLE Formula.dbo.VDNG03 (
+CREATE TABLE dbo.VDNG03 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -46898,13 +46898,13 @@ CREATE TABLE Formula.dbo.VDNG03 (
 );
 
 
--- Formula.dbo.VDNG03I definition
+-- dbo.VDNG03I definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VDNG03I;
+-- DROP TABLE dbo.VDNG03I;
 
-CREATE TABLE Formula.dbo.VDNG03I (
+CREATE TABLE dbo.VDNG03I (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -46943,13 +46943,13 @@ CREATE TABLE Formula.dbo.VDNG03I (
 );
 
 
--- Formula.dbo.VDRIVER definition
+-- dbo.VDRIVER definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VDRIVER;
+-- DROP TABLE dbo.VDRIVER;
 
-CREATE TABLE Formula.dbo.VDRIVER (
+CREATE TABLE dbo.VDRIVER (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -47018,13 +47018,13 @@ CREATE TABLE Formula.dbo.VDRIVER (
 );
 
 
--- Formula.dbo.VDSPROH definition
+-- dbo.VDSPROH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VDSPROH;
+-- DROP TABLE dbo.VDSPROH;
 
-CREATE TABLE Formula.dbo.VDSPROH (
+CREATE TABLE dbo.VDSPROH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -47091,13 +47091,13 @@ CREATE TABLE Formula.dbo.VDSPROH (
 );
 
 
--- Formula.dbo.VDSPROI definition
+-- dbo.VDSPROI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VDSPROI;
+-- DROP TABLE dbo.VDSPROI;
 
-CREATE TABLE Formula.dbo.VDSPROI (
+CREATE TABLE dbo.VDSPROI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -47133,13 +47133,13 @@ CREATE TABLE Formula.dbo.VDSPROI (
 );
 
 
--- Formula.dbo.VDTMVSTK definition
+-- dbo.VDTMVSTK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VDTMVSTK;
+-- DROP TABLE dbo.VDTMVSTK;
 
-CREATE TABLE Formula.dbo.VDTMVSTK (
+CREATE TABLE dbo.VDTMVSTK (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -47195,13 +47195,13 @@ CREATE TABLE Formula.dbo.VDTMVSTK (
 );
 
 
--- Formula.dbo.VDTM_PAY definition
+-- dbo.VDTM_PAY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VDTM_PAY;
+-- DROP TABLE dbo.VDTM_PAY;
 
-CREATE TABLE Formula.dbo.VDTM_PAY (
+CREATE TABLE dbo.VDTM_PAY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -47235,13 +47235,13 @@ CREATE TABLE Formula.dbo.VDTM_PAY (
 );
 
 
--- Formula.dbo.VEDINO definition
+-- dbo.VEDINO definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VEDINO;
+-- DROP TABLE dbo.VEDINO;
 
-CREATE TABLE Formula.dbo.VEDINO (
+CREATE TABLE dbo.VEDINO (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -47305,13 +47305,13 @@ CREATE TABLE Formula.dbo.VEDINO (
 );
 
 
--- Formula.dbo.VEDIPRI2 definition
+-- dbo.VEDIPRI2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VEDIPRI2;
+-- DROP TABLE dbo.VEDIPRI2;
 
-CREATE TABLE Formula.dbo.VEDIPRI2 (
+CREATE TABLE dbo.VEDIPRI2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -47373,13 +47373,13 @@ CREATE TABLE Formula.dbo.VEDIPRI2 (
 );
 
 
--- Formula.dbo.VEDIPRIC definition
+-- dbo.VEDIPRIC definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VEDIPRIC;
+-- DROP TABLE dbo.VEDIPRIC;
 
-CREATE TABLE Formula.dbo.VEDIPRIC (
+CREATE TABLE dbo.VEDIPRIC (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -47445,13 +47445,13 @@ CREATE TABLE Formula.dbo.VEDIPRIC (
 );
 
 
--- Formula.dbo.VEHBQSH definition
+-- dbo.VEHBQSH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VEHBQSH;
+-- DROP TABLE dbo.VEHBQSH;
 
-CREATE TABLE Formula.dbo.VEHBQSH (
+CREATE TABLE dbo.VEHBQSH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -47518,13 +47518,13 @@ CREATE TABLE Formula.dbo.VEHBQSH (
 );
 
 
--- Formula.dbo.VGBUDGET definition
+-- dbo.VGBUDGET definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VGBUDGET;
+-- DROP TABLE dbo.VGBUDGET;
 
-CREATE TABLE Formula.dbo.VGBUDGET (
+CREATE TABLE dbo.VGBUDGET (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -47618,13 +47618,13 @@ CREATE TABLE Formula.dbo.VGBUDGET (
 );
 
 
--- Formula.dbo.VGECHUB definition
+-- dbo.VGECHUB definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VGECHUB;
+-- DROP TABLE dbo.VGECHUB;
 
-CREATE TABLE Formula.dbo.VGECHUB (
+CREATE TABLE dbo.VGECHUB (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -47694,13 +47694,13 @@ CREATE TABLE Formula.dbo.VGECHUB (
 );
 
 
--- Formula.dbo.VGECMETE definition
+-- dbo.VGECMETE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VGECMETE;
+-- DROP TABLE dbo.VGECMETE;
 
-CREATE TABLE Formula.dbo.VGECMETE (
+CREATE TABLE dbo.VGECMETE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -47770,13 +47770,13 @@ CREATE TABLE Formula.dbo.VGECMETE (
 );
 
 
--- Formula.dbo.VGECPRI2 definition
+-- dbo.VGECPRI2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VGECPRI2;
+-- DROP TABLE dbo.VGECPRI2;
 
-CREATE TABLE Formula.dbo.VGECPRI2 (
+CREATE TABLE dbo.VGECPRI2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -47838,13 +47838,13 @@ CREATE TABLE Formula.dbo.VGECPRI2 (
 );
 
 
--- Formula.dbo.VGECPRIC definition
+-- dbo.VGECPRIC definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VGECPRIC;
+-- DROP TABLE dbo.VGECPRIC;
 
-CREATE TABLE Formula.dbo.VGECPRIC (
+CREATE TABLE dbo.VGECPRIC (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -47918,13 +47918,13 @@ CREATE TABLE Formula.dbo.VGECPRIC (
 );
 
 
--- Formula.dbo.VGLR4JTW definition
+-- dbo.VGLR4JTW definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VGLR4JTW;
+-- DROP TABLE dbo.VGLR4JTW;
 
-CREATE TABLE Formula.dbo.VGLR4JTW (
+CREATE TABLE dbo.VGLR4JTW (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -48002,13 +48002,13 @@ CREATE TABLE Formula.dbo.VGLR4JTW (
 );
 
 
--- Formula.dbo.VINACCES definition
+-- dbo.VINACCES definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VINACCES;
+-- DROP TABLE dbo.VINACCES;
 
-CREATE TABLE Formula.dbo.VINACCES (
+CREATE TABLE dbo.VINACCES (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -48078,13 +48078,13 @@ CREATE TABLE Formula.dbo.VINACCES (
 );
 
 
--- Formula.dbo.VINDVASG definition
+-- dbo.VINDVASG definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VINDVASG;
+-- DROP TABLE dbo.VINDVASG;
 
-CREATE TABLE Formula.dbo.VINDVASG (
+CREATE TABLE dbo.VINDVASG (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -48127,13 +48127,13 @@ CREATE TABLE Formula.dbo.VINDVASG (
 );
 
 
--- Formula.dbo.VINEXP definition
+-- dbo.VINEXP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VINEXP;
+-- DROP TABLE dbo.VINEXP;
 
-CREATE TABLE Formula.dbo.VINEXP (
+CREATE TABLE dbo.VINEXP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -48201,13 +48201,13 @@ CREATE TABLE Formula.dbo.VINEXP (
 );
 
 
--- Formula.dbo.VINNO definition
+-- dbo.VINNO definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VINNO;
+-- DROP TABLE dbo.VINNO;
 
-CREATE TABLE Formula.dbo.VINNO (
+CREATE TABLE dbo.VINNO (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -48308,13 +48308,13 @@ CREATE TABLE Formula.dbo.VINNO (
 );
 
 
--- Formula.dbo.VINREF definition
+-- dbo.VINREF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VINREF;
+-- DROP TABLE dbo.VINREF;
 
-CREATE TABLE Formula.dbo.VINREF (
+CREATE TABLE dbo.VINREF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -48376,13 +48376,13 @@ CREATE TABLE Formula.dbo.VINREF (
 );
 
 
--- Formula.dbo.VJOBALOW definition
+-- dbo.VJOBALOW definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VJOBALOW;
+-- DROP TABLE dbo.VJOBALOW;
 
-CREATE TABLE Formula.dbo.VJOBALOW (
+CREATE TABLE dbo.VJOBALOW (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -48444,13 +48444,13 @@ CREATE TABLE Formula.dbo.VJOBALOW (
 );
 
 
--- Formula.dbo.VKNITINV definition
+-- dbo.VKNITINV definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VKNITINV;
+-- DROP TABLE dbo.VKNITINV;
 
-CREATE TABLE Formula.dbo.VKNITINV (
+CREATE TABLE dbo.VKNITINV (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -48483,13 +48483,13 @@ CREATE TABLE Formula.dbo.VKNITINV (
 );
 
 
--- Formula.dbo.VKNITMRP definition
+-- dbo.VKNITMRP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VKNITMRP;
+-- DROP TABLE dbo.VKNITMRP;
 
-CREATE TABLE Formula.dbo.VKNITMRP (
+CREATE TABLE dbo.VKNITMRP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -48557,13 +48557,13 @@ CREATE TABLE Formula.dbo.VKNITMRP (
 );
 
 
--- Formula.dbo.VMAINOP definition
+-- dbo.VMAINOP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VMAINOP;
+-- DROP TABLE dbo.VMAINOP;
 
-CREATE TABLE Formula.dbo.VMAINOP (
+CREATE TABLE dbo.VMAINOP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -48629,13 +48629,13 @@ CREATE TABLE Formula.dbo.VMAINOP (
 );
 
 
--- Formula.dbo.VMAPBOOK definition
+-- dbo.VMAPBOOK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VMAPBOOK;
+-- DROP TABLE dbo.VMAPBOOK;
 
-CREATE TABLE Formula.dbo.VMAPBOOK (
+CREATE TABLE dbo.VMAPBOOK (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -48698,13 +48698,13 @@ CREATE TABLE Formula.dbo.VMAPBOOK (
 );
 
 
--- Formula.dbo.VMCSTOPH definition
+-- dbo.VMCSTOPH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VMCSTOPH;
+-- DROP TABLE dbo.VMCSTOPH;
 
-CREATE TABLE Formula.dbo.VMCSTOPH (
+CREATE TABLE dbo.VMCSTOPH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -48749,13 +48749,13 @@ CREATE TABLE Formula.dbo.VMCSTOPH (
 );
 
 
--- Formula.dbo.VMCSTOPI definition
+-- dbo.VMCSTOPI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VMCSTOPI;
+-- DROP TABLE dbo.VMCSTOPI;
 
-CREATE TABLE Formula.dbo.VMCSTOPI (
+CREATE TABLE dbo.VMCSTOPI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -48808,13 +48808,13 @@ CREATE TABLE Formula.dbo.VMCSTOPI (
 );
 
 
--- Formula.dbo.VMKPRICH definition
+-- dbo.VMKPRICH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VMKPRICH;
+-- DROP TABLE dbo.VMKPRICH;
 
-CREATE TABLE Formula.dbo.VMKPRICH (
+CREATE TABLE dbo.VMKPRICH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -48874,13 +48874,13 @@ CREATE TABLE Formula.dbo.VMKPRICH (
 );
 
 
--- Formula.dbo.VMKPRICI definition
+-- dbo.VMKPRICI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VMKPRICI;
+-- DROP TABLE dbo.VMKPRICI;
 
-CREATE TABLE Formula.dbo.VMKPRICI (
+CREATE TABLE dbo.VMKPRICI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -48910,13 +48910,13 @@ CREATE TABLE Formula.dbo.VMKPRICI (
 );
 
 
--- Formula.dbo.VMOOP1H definition
+-- dbo.VMOOP1H definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VMOOP1H;
+-- DROP TABLE dbo.VMOOP1H;
 
-CREATE TABLE Formula.dbo.VMOOP1H (
+CREATE TABLE dbo.VMOOP1H (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -48989,13 +48989,13 @@ CREATE TABLE Formula.dbo.VMOOP1H (
 );
 
 
--- Formula.dbo.VMOOP1I definition
+-- dbo.VMOOP1I definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VMOOP1I;
+-- DROP TABLE dbo.VMOOP1I;
 
-CREATE TABLE Formula.dbo.VMOOP1I (
+CREATE TABLE dbo.VMOOP1I (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -49050,13 +49050,13 @@ CREATE TABLE Formula.dbo.VMOOP1I (
 );
 
 
--- Formula.dbo.VMOWK1 definition
+-- dbo.VMOWK1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VMOWK1;
+-- DROP TABLE dbo.VMOWK1;
 
-CREATE TABLE Formula.dbo.VMOWK1 (
+CREATE TABLE dbo.VMOWK1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -49128,13 +49128,13 @@ CREATE TABLE Formula.dbo.VMOWK1 (
 );
 
 
--- Formula.dbo.VMOWKTY1 definition
+-- dbo.VMOWKTY1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VMOWKTY1;
+-- DROP TABLE dbo.VMOWKTY1;
 
-CREATE TABLE Formula.dbo.VMOWKTY1 (
+CREATE TABLE dbo.VMOWKTY1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -49206,13 +49206,13 @@ CREATE TABLE Formula.dbo.VMOWKTY1 (
 );
 
 
--- Formula.dbo.VNIMTAS1 definition
+-- dbo.VNIMTAS1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VNIMTAS1;
+-- DROP TABLE dbo.VNIMTAS1;
 
-CREATE TABLE Formula.dbo.VNIMTAS1 (
+CREATE TABLE dbo.VNIMTAS1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -49244,13 +49244,13 @@ CREATE TABLE Formula.dbo.VNIMTAS1 (
 );
 
 
--- Formula.dbo.VNIMTAS2 definition
+-- dbo.VNIMTAS2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VNIMTAS2;
+-- DROP TABLE dbo.VNIMTAS2;
 
-CREATE TABLE Formula.dbo.VNIMTAS2 (
+CREATE TABLE dbo.VNIMTAS2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -49283,13 +49283,13 @@ CREATE TABLE Formula.dbo.VNIMTAS2 (
 );
 
 
--- Formula.dbo.VNIMTAS3 definition
+-- dbo.VNIMTAS3 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VNIMTAS3;
+-- DROP TABLE dbo.VNIMTAS3;
 
-CREATE TABLE Formula.dbo.VNIMTAS3 (
+CREATE TABLE dbo.VNIMTAS3 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -49322,13 +49322,13 @@ CREATE TABLE Formula.dbo.VNIMTAS3 (
 );
 
 
--- Formula.dbo.VORDH01 definition
+-- dbo.VORDH01 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VORDH01;
+-- DROP TABLE dbo.VORDH01;
 
-CREATE TABLE Formula.dbo.VORDH01 (
+CREATE TABLE dbo.VORDH01 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -49407,13 +49407,13 @@ CREATE TABLE Formula.dbo.VORDH01 (
 );
 
 
--- Formula.dbo.VORDH02 definition
+-- dbo.VORDH02 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VORDH02;
+-- DROP TABLE dbo.VORDH02;
 
-CREATE TABLE Formula.dbo.VORDH02 (
+CREATE TABLE dbo.VORDH02 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -49507,13 +49507,13 @@ CREATE TABLE Formula.dbo.VORDH02 (
 );
 
 
--- Formula.dbo.VORDI01 definition
+-- dbo.VORDI01 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VORDI01;
+-- DROP TABLE dbo.VORDI01;
 
-CREATE TABLE Formula.dbo.VORDI01 (
+CREATE TABLE dbo.VORDI01 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -49558,13 +49558,13 @@ CREATE TABLE Formula.dbo.VORDI01 (
 );
 
 
--- Formula.dbo.VORDI02 definition
+-- dbo.VORDI02 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VORDI02;
+-- DROP TABLE dbo.VORDI02;
 
-CREATE TABLE Formula.dbo.VORDI02 (
+CREATE TABLE dbo.VORDI02 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -49632,13 +49632,13 @@ CREATE TABLE Formula.dbo.VORDI02 (
 );
 
 
--- Formula.dbo.VORDIX1 definition
+-- dbo.VORDIX1 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VORDIX1;
+-- DROP TABLE dbo.VORDIX1;
 
-CREATE TABLE Formula.dbo.VORDIX1 (
+CREATE TABLE dbo.VORDIX1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -49672,13 +49672,13 @@ CREATE TABLE Formula.dbo.VORDIX1 (
 );
 
 
--- Formula.dbo.VORNDSTR definition
+-- dbo.VORNDSTR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VORNDSTR;
+-- DROP TABLE dbo.VORNDSTR;
 
-CREATE TABLE Formula.dbo.VORNDSTR (
+CREATE TABLE dbo.VORNDSTR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -49711,13 +49711,13 @@ CREATE TABLE Formula.dbo.VORNDSTR (
 );
 
 
--- Formula.dbo.VORNPRIC definition
+-- dbo.VORNPRIC definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VORNPRIC;
+-- DROP TABLE dbo.VORNPRIC;
 
-CREATE TABLE Formula.dbo.VORNPRIC (
+CREATE TABLE dbo.VORNPRIC (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -49747,13 +49747,13 @@ CREATE TABLE Formula.dbo.VORNPRIC (
 );
 
 
--- Formula.dbo.VORNWHOU definition
+-- dbo.VORNWHOU definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VORNWHOU;
+-- DROP TABLE dbo.VORNWHOU;
 
-CREATE TABLE Formula.dbo.VORNWHOU (
+CREATE TABLE dbo.VORNWHOU (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -49785,13 +49785,13 @@ CREATE TABLE Formula.dbo.VORNWHOU (
 );
 
 
--- Formula.dbo.VPACKH01 definition
+-- dbo.VPACKH01 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VPACKH01;
+-- DROP TABLE dbo.VPACKH01;
 
-CREATE TABLE Formula.dbo.VPACKH01 (
+CREATE TABLE dbo.VPACKH01 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -49995,13 +49995,13 @@ CREATE TABLE Formula.dbo.VPACKH01 (
 );
 
 
--- Formula.dbo.VPACKI01 definition
+-- dbo.VPACKI01 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VPACKI01;
+-- DROP TABLE dbo.VPACKI01;
 
-CREATE TABLE Formula.dbo.VPACKI01 (
+CREATE TABLE dbo.VPACKI01 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -50126,13 +50126,13 @@ CREATE TABLE Formula.dbo.VPACKI01 (
 );
 
 
--- Formula.dbo.VPALLETH definition
+-- dbo.VPALLETH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VPALLETH;
+-- DROP TABLE dbo.VPALLETH;
 
-CREATE TABLE Formula.dbo.VPALLETH (
+CREATE TABLE dbo.VPALLETH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -50212,13 +50212,13 @@ CREATE TABLE Formula.dbo.VPALLETH (
 );
 
 
--- Formula.dbo.VPALLETI definition
+-- dbo.VPALLETI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VPALLETI;
+-- DROP TABLE dbo.VPALLETI;
 
-CREATE TABLE Formula.dbo.VPALLETI (
+CREATE TABLE dbo.VPALLETI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -50291,13 +50291,13 @@ CREATE TABLE Formula.dbo.VPALLETI (
 );
 
 
--- Formula.dbo.VPDSTWC definition
+-- dbo.VPDSTWC definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VPDSTWC;
+-- DROP TABLE dbo.VPDSTWC;
 
-CREATE TABLE Formula.dbo.VPDSTWC (
+CREATE TABLE dbo.VPDSTWC (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -50335,13 +50335,13 @@ CREATE TABLE Formula.dbo.VPDSTWC (
 );
 
 
--- Formula.dbo.VPDTEST definition
+-- dbo.VPDTEST definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VPDTEST;
+-- DROP TABLE dbo.VPDTEST;
 
-CREATE TABLE Formula.dbo.VPDTEST (
+CREATE TABLE dbo.VPDTEST (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -50404,13 +50404,13 @@ CREATE TABLE Formula.dbo.VPDTEST (
 );
 
 
--- Formula.dbo.VPERDREF definition
+-- dbo.VPERDREF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VPERDREF;
+-- DROP TABLE dbo.VPERDREF;
 
-CREATE TABLE Formula.dbo.VPERDREF (
+CREATE TABLE dbo.VPERDREF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -50447,13 +50447,13 @@ CREATE TABLE Formula.dbo.VPERDREF (
 );
 
 
--- Formula.dbo.VPERIOD definition
+-- dbo.VPERIOD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VPERIOD;
+-- DROP TABLE dbo.VPERIOD;
 
-CREATE TABLE Formula.dbo.VPERIOD (
+CREATE TABLE dbo.VPERIOD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -50491,13 +50491,13 @@ CREATE TABLE Formula.dbo.VPERIOD (
 );
 
 
--- Formula.dbo.VPNEORDI definition
+-- dbo.VPNEORDI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VPNEORDI;
+-- DROP TABLE dbo.VPNEORDI;
 
-CREATE TABLE Formula.dbo.VPNEORDI (
+CREATE TABLE dbo.VPNEORDI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -50529,13 +50529,13 @@ CREATE TABLE Formula.dbo.VPNEORDI (
 );
 
 
--- Formula.dbo.VPROHREF definition
+-- dbo.VPROHREF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VPROHREF;
+-- DROP TABLE dbo.VPROHREF;
 
-CREATE TABLE Formula.dbo.VPROHREF (
+CREATE TABLE dbo.VPROHREF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -50615,13 +50615,13 @@ CREATE TABLE Formula.dbo.VPROHREF (
 );
 
 
--- Formula.dbo.VPROIREF definition
+-- dbo.VPROIREF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VPROIREF;
+-- DROP TABLE dbo.VPROIREF;
 
-CREATE TABLE Formula.dbo.VPROIREF (
+CREATE TABLE dbo.VPROIREF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -50700,13 +50700,13 @@ CREATE TABLE Formula.dbo.VPROIREF (
 );
 
 
--- Formula.dbo.VPTCPDBR definition
+-- dbo.VPTCPDBR definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VPTCPDBR;
+-- DROP TABLE dbo.VPTCPDBR;
 
-CREATE TABLE Formula.dbo.VPTCPDBR (
+CREATE TABLE dbo.VPTCPDBR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -50769,13 +50769,13 @@ CREATE TABLE Formula.dbo.VPTCPDBR (
 );
 
 
--- Formula.dbo.VPVSTRAN definition
+-- dbo.VPVSTRAN definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VPVSTRAN;
+-- DROP TABLE dbo.VPVSTRAN;
 
-CREATE TABLE Formula.dbo.VPVSTRAN (
+CREATE TABLE dbo.VPVSTRAN (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -50843,13 +50843,13 @@ CREATE TABLE Formula.dbo.VPVSTRAN (
 );
 
 
--- Formula.dbo.VREFBUD definition
+-- dbo.VREFBUD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VREFBUD;
+-- DROP TABLE dbo.VREFBUD;
 
-CREATE TABLE Formula.dbo.VREFBUD (
+CREATE TABLE dbo.VREFBUD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -50890,13 +50890,13 @@ CREATE TABLE Formula.dbo.VREFBUD (
 );
 
 
--- Formula.dbo.VREMARK definition
+-- dbo.VREMARK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VREMARK;
+-- DROP TABLE dbo.VREMARK;
 
-CREATE TABLE Formula.dbo.VREMARK (
+CREATE TABLE dbo.VREMARK (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -50938,13 +50938,13 @@ CREATE TABLE Formula.dbo.VREMARK (
 );
 
 
--- Formula.dbo.VRETBUDH definition
+-- dbo.VRETBUDH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VRETBUDH;
+-- DROP TABLE dbo.VRETBUDH;
 
-CREATE TABLE Formula.dbo.VRETBUDH (
+CREATE TABLE dbo.VRETBUDH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -51010,13 +51010,13 @@ CREATE TABLE Formula.dbo.VRETBUDH (
 );
 
 
--- Formula.dbo.VRETBUDI definition
+-- dbo.VRETBUDI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VRETBUDI;
+-- DROP TABLE dbo.VRETBUDI;
 
-CREATE TABLE Formula.dbo.VRETBUDI (
+CREATE TABLE dbo.VRETBUDI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -51055,13 +51055,13 @@ CREATE TABLE Formula.dbo.VRETBUDI (
 );
 
 
--- Formula.dbo.VREVIHIS definition
+-- dbo.VREVIHIS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VREVIHIS;
+-- DROP TABLE dbo.VREVIHIS;
 
-CREATE TABLE Formula.dbo.VREVIHIS (
+CREATE TABLE dbo.VREVIHIS (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -51125,13 +51125,13 @@ CREATE TABLE Formula.dbo.VREVIHIS (
 );
 
 
--- Formula.dbo.VSCMDCST definition
+-- dbo.VSCMDCST definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VSCMDCST;
+-- DROP TABLE dbo.VSCMDCST;
 
-CREATE TABLE Formula.dbo.VSCMDCST (
+CREATE TABLE dbo.VSCMDCST (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -51198,13 +51198,13 @@ CREATE TABLE Formula.dbo.VSCMDCST (
 );
 
 
--- Formula.dbo.VSCMGLRF definition
+-- dbo.VSCMGLRF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VSCMGLRF;
+-- DROP TABLE dbo.VSCMGLRF;
 
-CREATE TABLE Formula.dbo.VSCMGLRF (
+CREATE TABLE dbo.VSCMGLRF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -51269,13 +51269,13 @@ CREATE TABLE Formula.dbo.VSCMGLRF (
 );
 
 
--- Formula.dbo.VSCMNTCT definition
+-- dbo.VSCMNTCT definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VSCMNTCT;
+-- DROP TABLE dbo.VSCMNTCT;
 
-CREATE TABLE Formula.dbo.VSCMNTCT (
+CREATE TABLE dbo.VSCMNTCT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -51311,13 +51311,13 @@ CREATE TABLE Formula.dbo.VSCMNTCT (
 );
 
 
--- Formula.dbo.VSCMSTEP definition
+-- dbo.VSCMSTEP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VSCMSTEP;
+-- DROP TABLE dbo.VSCMSTEP;
 
-CREATE TABLE Formula.dbo.VSCMSTEP (
+CREATE TABLE dbo.VSCMSTEP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -51351,13 +51351,13 @@ CREATE TABLE Formula.dbo.VSCMSTEP (
 );
 
 
--- Formula.dbo.VSKSCTDH definition
+-- dbo.VSKSCTDH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VSKSCTDH;
+-- DROP TABLE dbo.VSKSCTDH;
 
-CREATE TABLE Formula.dbo.VSKSCTDH (
+CREATE TABLE dbo.VSKSCTDH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -51424,13 +51424,13 @@ CREATE TABLE Formula.dbo.VSKSCTDH (
 );
 
 
--- Formula.dbo.VSKSCTDI definition
+-- dbo.VSKSCTDI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VSKSCTDI;
+-- DROP TABLE dbo.VSKSCTDI;
 
-CREATE TABLE Formula.dbo.VSKSCTDI (
+CREATE TABLE dbo.VSKSCTDI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -51477,13 +51477,13 @@ CREATE TABLE Formula.dbo.VSKSCTDI (
 );
 
 
--- Formula.dbo.VSOPTXH definition
+-- dbo.VSOPTXH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VSOPTXH;
+-- DROP TABLE dbo.VSOPTXH;
 
-CREATE TABLE Formula.dbo.VSOPTXH (
+CREATE TABLE dbo.VSOPTXH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -51555,13 +51555,13 @@ CREATE TABLE Formula.dbo.VSOPTXH (
 );
 
 
--- Formula.dbo.VSOPTXI definition
+-- dbo.VSOPTXI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VSOPTXI;
+-- DROP TABLE dbo.VSOPTXI;
 
-CREATE TABLE Formula.dbo.VSOPTXI (
+CREATE TABLE dbo.VSOPTXI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -51610,13 +51610,13 @@ CREATE TABLE Formula.dbo.VSOPTXI (
 );
 
 
--- Formula.dbo.VSRCX1I definition
+-- dbo.VSRCX1I definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VSRCX1I;
+-- DROP TABLE dbo.VSRCX1I;
 
-CREATE TABLE Formula.dbo.VSRCX1I (
+CREATE TABLE dbo.VSRCX1I (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -51684,13 +51684,13 @@ CREATE TABLE Formula.dbo.VSRCX1I (
 );
 
 
--- Formula.dbo.VSTOCKBF definition
+-- dbo.VSTOCKBF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VSTOCKBF;
+-- DROP TABLE dbo.VSTOCKBF;
 
-CREATE TABLE Formula.dbo.VSTOCKBF (
+CREATE TABLE dbo.VSTOCKBF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -51751,13 +51751,13 @@ CREATE TABLE Formula.dbo.VSTOCKBF (
 );
 
 
--- Formula.dbo.VSTRG01 definition
+-- dbo.VSTRG01 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VSTRG01;
+-- DROP TABLE dbo.VSTRG01;
 
-CREATE TABLE Formula.dbo.VSTRG01 (
+CREATE TABLE dbo.VSTRG01 (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -51825,13 +51825,13 @@ CREATE TABLE Formula.dbo.VSTRG01 (
 );
 
 
--- Formula.dbo.VTARIF definition
+-- dbo.VTARIF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VTARIF;
+-- DROP TABLE dbo.VTARIF;
 
-CREATE TABLE Formula.dbo.VTARIF (
+CREATE TABLE dbo.VTARIF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -51890,13 +51890,13 @@ CREATE TABLE Formula.dbo.VTARIF (
 );
 
 
--- Formula.dbo.VTIWDET definition
+-- dbo.VTIWDET definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VTIWDET;
+-- DROP TABLE dbo.VTIWDET;
 
-CREATE TABLE Formula.dbo.VTIWDET (
+CREATE TABLE dbo.VTIWDET (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -51981,13 +51981,13 @@ CREATE TABLE Formula.dbo.VTIWDET (
 );
 
 
--- Formula.dbo.VTKMEXP definition
+-- dbo.VTKMEXP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VTKMEXP;
+-- DROP TABLE dbo.VTKMEXP;
 
-CREATE TABLE Formula.dbo.VTKMEXP (
+CREATE TABLE dbo.VTKMEXP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -52050,13 +52050,13 @@ CREATE TABLE Formula.dbo.VTKMEXP (
 );
 
 
--- Formula.dbo.VTKMPDS definition
+-- dbo.VTKMPDS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VTKMPDS;
+-- DROP TABLE dbo.VTKMPDS;
 
-CREATE TABLE Formula.dbo.VTKMPDS (
+CREATE TABLE dbo.VTKMPDS (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -52122,13 +52122,13 @@ CREATE TABLE Formula.dbo.VTKMPDS (
 );
 
 
--- Formula.dbo.VTONPRCH definition
+-- dbo.VTONPRCH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VTONPRCH;
+-- DROP TABLE dbo.VTONPRCH;
 
-CREATE TABLE Formula.dbo.VTONPRCH (
+CREATE TABLE dbo.VTONPRCH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -52215,13 +52215,13 @@ CREATE TABLE Formula.dbo.VTONPRCH (
 );
 
 
--- Formula.dbo.VTOPGNCN definition
+-- dbo.VTOPGNCN definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VTOPGNCN;
+-- DROP TABLE dbo.VTOPGNCN;
 
-CREATE TABLE Formula.dbo.VTOPGNCN (
+CREATE TABLE dbo.VTOPGNCN (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -52283,13 +52283,13 @@ CREATE TABLE Formula.dbo.VTOPGNCN (
 );
 
 
--- Formula.dbo.VTRFPD definition
+-- dbo.VTRFPD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VTRFPD;
+-- DROP TABLE dbo.VTRFPD;
 
-CREATE TABLE Formula.dbo.VTRFPD (
+CREATE TABLE dbo.VTRFPD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -52346,13 +52346,13 @@ CREATE TABLE Formula.dbo.VTRFPD (
 );
 
 
--- Formula.dbo.VTSLADJP definition
+-- dbo.VTSLADJP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VTSLADJP;
+-- DROP TABLE dbo.VTSLADJP;
 
-CREATE TABLE Formula.dbo.VTSLADJP (
+CREATE TABLE dbo.VTSLADJP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -52418,13 +52418,13 @@ CREATE TABLE Formula.dbo.VTSLADJP (
 );
 
 
--- Formula.dbo.VTUFALLC definition
+-- dbo.VTUFALLC definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VTUFALLC;
+-- DROP TABLE dbo.VTUFALLC;
 
-CREATE TABLE Formula.dbo.VTUFALLC (
+CREATE TABLE dbo.VTUFALLC (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -52495,13 +52495,13 @@ CREATE TABLE Formula.dbo.VTUFALLC (
 );
 
 
--- Formula.dbo.VTUFHIS definition
+-- dbo.VTUFHIS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VTUFHIS;
+-- DROP TABLE dbo.VTUFHIS;
 
-CREATE TABLE Formula.dbo.VTUFHIS (
+CREATE TABLE dbo.VTUFHIS (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -52527,13 +52527,13 @@ CREATE TABLE Formula.dbo.VTUFHIS (
 );
 
 
--- Formula.dbo.VTUFMACH definition
+-- dbo.VTUFMACH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VTUFMACH;
+-- DROP TABLE dbo.VTUFMACH;
 
-CREATE TABLE Formula.dbo.VTUFMACH (
+CREATE TABLE dbo.VTUFMACH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -52602,13 +52602,13 @@ CREATE TABLE Formula.dbo.VTUFMACH (
 );
 
 
--- Formula.dbo.VTUFMPS definition
+-- dbo.VTUFMPS definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VTUFMPS;
+-- DROP TABLE dbo.VTUFMPS;
 
-CREATE TABLE Formula.dbo.VTUFMPS (
+CREATE TABLE dbo.VTUFMPS (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -52715,13 +52715,13 @@ CREATE TABLE Formula.dbo.VTUFMPS (
 );
 
 
--- Formula.dbo.VTUFPROD definition
+-- dbo.VTUFPROD definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VTUFPROD;
+-- DROP TABLE dbo.VTUFPROD;
 
-CREATE TABLE Formula.dbo.VTUFPROD (
+CREATE TABLE dbo.VTUFPROD (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -52797,13 +52797,13 @@ CREATE TABLE Formula.dbo.VTUFPROD (
 );
 
 
--- Formula.dbo.VTUMPSOP definition
+-- dbo.VTUMPSOP definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VTUMPSOP;
+-- DROP TABLE dbo.VTUMPSOP;
 
-CREATE TABLE Formula.dbo.VTUMPSOP (
+CREATE TABLE dbo.VTUMPSOP (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -52879,13 +52879,13 @@ CREATE TABLE Formula.dbo.VTUMPSOP (
 );
 
 
--- Formula.dbo.VTWCTXH definition
+-- dbo.VTWCTXH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VTWCTXH;
+-- DROP TABLE dbo.VTWCTXH;
 
-CREATE TABLE Formula.dbo.VTWCTXH (
+CREATE TABLE dbo.VTWCTXH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -52965,13 +52965,13 @@ CREATE TABLE Formula.dbo.VTWCTXH (
 );
 
 
--- Formula.dbo.VTWCTXI definition
+-- dbo.VTWCTXI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VTWCTXI;
+-- DROP TABLE dbo.VTWCTXI;
 
-CREATE TABLE Formula.dbo.VTWCTXI (
+CREATE TABLE dbo.VTWCTXI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -53075,13 +53075,13 @@ CREATE TABLE Formula.dbo.VTWCTXI (
 );
 
 
--- Formula.dbo.VYSTGLRF definition
+-- dbo.VYSTGLRF definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.VYSTGLRF;
+-- DROP TABLE dbo.VYSTGLRF;
 
-CREATE TABLE Formula.dbo.VYSTGLRF (
+CREATE TABLE dbo.VYSTGLRF (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -53165,13 +53165,13 @@ CREATE TABLE Formula.dbo.VYSTGLRF (
 );
 
 
--- Formula.dbo.WAGEDL definition
+-- dbo.WAGEDL definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.WAGEDL;
+-- DROP TABLE dbo.WAGEDL;
 
-CREATE TABLE Formula.dbo.WAGEDL (
+CREATE TABLE dbo.WAGEDL (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -53245,13 +53245,13 @@ CREATE TABLE Formula.dbo.WAGEDL (
 );
 
 
--- Formula.dbo.WARRTX definition
+-- dbo.WARRTX definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.WARRTX;
+-- DROP TABLE dbo.WARRTX;
 
-CREATE TABLE Formula.dbo.WARRTX (
+CREATE TABLE dbo.WARRTX (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -53326,13 +53326,13 @@ CREATE TABLE Formula.dbo.WARRTX (
 );
 
 
--- Formula.dbo.WBOOK definition
+-- dbo.WBOOK definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.WBOOK;
+-- DROP TABLE dbo.WBOOK;
 
-CREATE TABLE Formula.dbo.WBOOK (
+CREATE TABLE dbo.WBOOK (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -53411,13 +53411,13 @@ CREATE TABLE Formula.dbo.WBOOK (
 	 ON [PRIMARY ] ;
 
 
--- Formula.dbo.WCTRANH definition
+-- dbo.WCTRANH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.WCTRANH;
+-- DROP TABLE dbo.WCTRANH;
 
-CREATE TABLE Formula.dbo.WCTRANH (
+CREATE TABLE dbo.WCTRANH (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -53509,13 +53509,13 @@ CREATE TABLE Formula.dbo.WCTRANH (
 );
 
 
--- Formula.dbo.WCTRANI definition
+-- dbo.WCTRANI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.WCTRANI;
+-- DROP TABLE dbo.WCTRANI;
 
-CREATE TABLE Formula.dbo.WCTRANI (
+CREATE TABLE dbo.WCTRANI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -53595,13 +53595,13 @@ CREATE TABLE Formula.dbo.WCTRANI (
 );
 
 
--- Formula.dbo.WCTXH definition
+-- dbo.WCTXH definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.WCTXH;
+-- DROP TABLE dbo.WCTXH;
 
-CREATE TABLE Formula.dbo.WCTXH (
+CREATE TABLE dbo.WCTXH (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -53690,13 +53690,13 @@ CREATE TABLE Formula.dbo.WCTXH (
 );
 
 
--- Formula.dbo.WCTXH2 definition
+-- dbo.WCTXH2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.WCTXH2;
+-- DROP TABLE dbo.WCTXH2;
 
-CREATE TABLE Formula.dbo.WCTXH2 (
+CREATE TABLE dbo.WCTXH2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -53785,13 +53785,13 @@ CREATE TABLE Formula.dbo.WCTXH2 (
 );
 
 
--- Formula.dbo.WCTXI definition
+-- dbo.WCTXI definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.WCTXI;
+-- DROP TABLE dbo.WCTXI;
 
-CREATE TABLE Formula.dbo.WCTXI (
+CREATE TABLE dbo.WCTXI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -53866,13 +53866,13 @@ CREATE TABLE Formula.dbo.WCTXI (
 );
 
 
--- Formula.dbo.WCTXI2 definition
+-- dbo.WCTXI2 definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.WCTXI2;
+-- DROP TABLE dbo.WCTXI2;
 
-CREATE TABLE Formula.dbo.WCTXI2 (
+CREATE TABLE dbo.WCTXI2 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -53941,13 +53941,13 @@ CREATE TABLE Formula.dbo.WCTXI2 (
 );
 
 
--- Formula.dbo.WCTXTY definition
+-- dbo.WCTXTY definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.WCTXTY;
+-- DROP TABLE dbo.WCTXTY;
 
-CREATE TABLE Formula.dbo.WCTXTY (
+CREATE TABLE dbo.WCTXTY (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -54029,13 +54029,13 @@ CREATE TABLE Formula.dbo.WCTXTY (
 );
 
 
--- Formula.dbo.WELFARE definition
+-- dbo.WELFARE definition
 
 -- Drop table
 
--- DROP TABLE Formula.dbo.WELFARE;
+-- DROP TABLE dbo.WELFARE;
 
-CREATE TABLE Formula.dbo.WELFARE (
+CREATE TABLE dbo.WELFARE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -54121,7 +54121,7 @@ CREATE TABLE Formula.dbo.WELFARE (
 	CONSTRAINT PK__WELFARE__8771A646E3BA4951 PRIMARY KEY (FCSKID)
 );
 
-CREATE TABLE Formula.dbo.WELFARRF (
+CREATE TABLE dbo.WELFARRF (
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -54192,7 +54192,7 @@ CREATE TABLE Formula.dbo.WELFARRF (
 );
 
 
-CREATE TABLE Formula.dbo.WHOUSE (
+CREATE TABLE dbo.WHOUSE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -54287,7 +54287,7 @@ CREATE TABLE Formula.dbo.WHOUSE (
 	 WITH (  PAD_INDEX = OFF ,FILLFACTOR = 100  ,SORT_IN_TEMPDB = OFF , IGNORE_DUP_KEY = OFF , STATISTICS_NORECOMPUTE = OFF , ONLINE = OFF , ALLOW_ROW_LOCKS = ON , ALLOW_PAGE_LOCKS = ON  )
 	 ON [PRIMARY ] ;
 
-CREATE TABLE Formula.dbo.WHTFORM (
+CREATE TABLE dbo.WHTFORM (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -54348,7 +54348,7 @@ CREATE TABLE Formula.dbo.WHTFORM (
 	CONSTRAINT PK__WHTFORM__8771A6462CE44810 PRIMARY KEY (FCSKID)
 );
 
-CREATE TABLE Formula.dbo.WHTINT (
+CREATE TABLE dbo.WHTINT (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(20) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -54411,7 +54411,7 @@ CREATE TABLE Formula.dbo.WHTINT (
 	CONSTRAINT PK__WHTINT__8771A6461C26FA38 PRIMARY KEY (FCSKID)
 );
 
-CREATE TABLE Formula.dbo.WHTREV (
+CREATE TABLE dbo.WHTREV (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCCORP char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -54479,7 +54479,7 @@ CREATE TABLE Formula.dbo.WHTREV (
 	CONSTRAINT PK__WHTREV__8771A6460A097288 PRIMARY KEY (FCSKID)
 );
 
-CREATE TABLE Formula.dbo.WKCTRH (
+CREATE TABLE dbo.WKCTRH (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -54562,7 +54562,7 @@ CREATE TABLE Formula.dbo.WKCTRH (
 	CONSTRAINT PK__WKCTRH__8771A646335CAD3B PRIMARY KEY (FCSKID)
 );
 
-CREATE TABLE Formula.dbo.WKCTRI (
+CREATE TABLE dbo.WKCTRI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -54640,7 +54640,7 @@ CREATE TABLE Formula.dbo.WKCTRI (
 	CONSTRAINT PK__WKCTRI__8771A64676294278 PRIMARY KEY (FCSKID)
 );
 
-CREATE TABLE Formula.dbo.WORKHOUR (
+CREATE TABLE dbo.WORKHOUR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -54725,7 +54725,7 @@ CREATE TABLE Formula.dbo.WORKHOUR (
 	CONSTRAINT PK__WORKHOUR__8771A6467DF6C864 PRIMARY KEY (FCSKID)
 );
 
-CREATE TABLE Formula.dbo.WORKREG (
+CREATE TABLE dbo.WORKREG (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -54793,7 +54793,7 @@ CREATE TABLE Formula.dbo.WORKREG (
 	CONSTRAINT PK__WORKREG__8771A646379D8CB8 PRIMARY KEY (FCSKID)
 );
 
-CREATE TABLE Formula.dbo.WORKTAB (
+CREATE TABLE dbo.WORKTAB (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -54896,7 +54896,7 @@ CREATE TABLE Formula.dbo.WORKTAB (
 	CONSTRAINT PK__WORKTAB__8771A6464B49D774 PRIMARY KEY (FCSKID)
 );
 
-CREATE TABLE Formula.dbo.WTNOTE (
+CREATE TABLE dbo.WTNOTE (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -55003,7 +55003,7 @@ CREATE TABLE Formula.dbo.WTNOTE (
 	CONSTRAINT PK__WTNOTE__8771A6465C3B4303 PRIMARY KEY (FCSKID)
 );
 
-CREATE TABLE Formula.dbo.XCHGRATE (
+CREATE TABLE dbo.XCHGRATE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -55065,7 +55065,7 @@ CREATE TABLE Formula.dbo.XCHGRATE (
 );
 
 
-CREATE TABLE Formula.dbo.XFERR2H (
+CREATE TABLE dbo.XFERR2H (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -55160,7 +55160,7 @@ CREATE TABLE Formula.dbo.XFERR2H (
 );
 
 
-CREATE TABLE Formula.dbo.XFERR2I (
+CREATE TABLE dbo.XFERR2I (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -55251,7 +55251,7 @@ CREATE TABLE Formula.dbo.XFERR2I (
 
 
 
-CREATE TABLE Formula.dbo.XFERRH (
+CREATE TABLE dbo.XFERRH (
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -55359,7 +55359,7 @@ CREATE TABLE Formula.dbo.XFERRH (
 	 ON [PRIMARY ] ;
 
 
-CREATE TABLE Formula.dbo.XFERRHX1 (
+CREATE TABLE dbo.XFERRHX1 (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -55427,7 +55427,7 @@ CREATE TABLE Formula.dbo.XFERRHX1 (
 	CONSTRAINT PK__XFERRHX1__8771A646358E9543 PRIMARY KEY (FCSKID)
 );
 
-CREATE TABLE Formula.dbo.XFERRI (
+CREATE TABLE dbo.XFERRI (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -55522,7 +55522,7 @@ CREATE TABLE Formula.dbo.XFERRI (
 	 WITH (  PAD_INDEX = OFF ,FILLFACTOR = 100  ,SORT_IN_TEMPDB = OFF , IGNORE_DUP_KEY = OFF , STATISTICS_NORECOMPUTE = OFF , ONLINE = OFF , ALLOW_ROW_LOCKS = ON , ALLOW_PAGE_LOCKS = ON  )
 	 ON [PRIMARY ] ;
 
-CREATE TABLE Formula.dbo.YRCOOR (
+CREATE TABLE dbo.YRCOOR (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUTIME char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
@@ -55589,7 +55589,7 @@ CREATE TABLE Formula.dbo.YRCOOR (
 	 ON [PRIMARY ] ;
 
 
-CREATE TABLE Formula.dbo.ZIPCODE (
+CREATE TABLE dbo.ZIPCODE (
 	FCDATASER char(4) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCSKID char(8) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
 	FCUDATE char(2) COLLATE Thai_BIN DEFAULT ' ' NOT NULL,
