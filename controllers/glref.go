@@ -163,19 +163,15 @@ func GlrefPostController(c *fiber.Ctx) error {
 				refProd.FCPRODTYPE = prod.FCTYPE
 				refProd.FNUMQTY = 1
 				refProd.FNQTY = i.Qty
-				// refProd.FNPRICE = i.Price
-				refProd.FNPRICE = 0
+				refProd.FNPRICE = prod.FNPRICE
 				refProd.FCUM = prod.FCUM
 				refProd.FCUMSTD = prod.FCUM
 				refProd.FCSTUM = prod.FCUM
 				refProd.FCSTUMSTD = prod.FCUM
 				refProd.FNSTUMQTY = 1
-				// refProd.FNCOSTAMT = i.Price * i.Qty
-				// refProd.FNVATAMT = (i.Price * i.Qty) * 0.07
-				// refProd.FNPRICEKE = i.Price
-				refProd.FNCOSTAMT = 0
-				refProd.FNVATAMT = 0
-				refProd.FNPRICEKE = 0
+				refProd.FNCOSTAMT = prod.FNPRICE * i.Qty
+				refProd.FNVATAMT = (prod.FNPRICE * i.Qty) * 0.07
+				refProd.FNPRICEKE = prod.FNPRICE
 				refProd.FCCREATEBY = empID
 
 				if err := tx.Create(&refProd).Error; err != nil {
@@ -184,13 +180,21 @@ func GlrefPostController(c *fiber.Ctx) error {
 					return c.Status(fiber.StatusInternalServerError).JSON(&r)
 				}
 
+				stockWhs := ""
+				switch typeName {
+				case "I":
+					stockWhs = frm.ToWhs
+				default:
+					stockWhs = frm.FromWhs
+				}
+
 				var stock models.Stock
-				tx.First(&stock, &models.Stock{FCPROD: prod.FCSKID, FCWHOUSE: frm.ToWhs})
+				tx.First(&stock, &models.Stock{FCPROD: prod.FCSKID, FCWHOUSE: stockWhs})
 				stock.FCCORP = frm.Corp
 				stock.FCBRANCH = frm.Branch
-				stock.FCWHOUSE = frm.ToWhs
 				stock.FCPROD = prod.FCSKID
 				stock.FDDATE = glref.FDDATE
+				stock.FCWHOUSE = stockWhs
 				switch typeName {
 				case "I":
 					stock.FNQTY = stock.FNQTY + i.Qty
@@ -312,6 +316,7 @@ func GlrefPostController(c *fiber.Ctx) error {
 	for _, q := range frm.Items {
 		fnQty += int(q.Qty)
 	}
+
 	msg := fmt.Sprintf("\nบันทึก%s\nเลขที่: %s \nสินค้า: %d รายการ\nจำนวน: %d %s\nเรียบร้อยแล้ว\n%s", book.FCNAME, glref.FCREFNO, len(frm.Items), int(fnQty), "ชิ้น", time.Now().Format("2006-01-02 15:04:05"))
 	go services.LineNotify(configs.APP_LINE_TOKEN, msg)
 
