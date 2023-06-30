@@ -123,7 +123,81 @@ func GlrefPostController(c *fiber.Ctx) error {
 	}
 
 	switch frm.Prefix {
-	case "PVF1":
+	case "ADJ":
+		var seq int64 = 1
+		for _, i := range frm.Items {
+			var prod models.Product
+			if err := tx.Where("FCSKID", i.Product).First(&prod).Error; err != nil {
+				tx.Rollback()
+				r.Message = err.Error()
+				return c.Status(fiber.StatusInternalServerError).JSON(&r)
+			}
+
+			var refProd models.Refprod
+			refProd.FCSEQ = fmt.Sprintf("%03d", seq)
+			refProd.FCGLREF = glref.FCSKID
+			refProd.FDDATE = glref.FDDATE
+			refProd.FCIOTYPE = frm.Step
+			refProd.FCRFTYPE = book.REFTYPE.FCRFTYPE
+			refProd.FCREFTYPE = book.FCREFTYPE
+			refProd.FCCOOR = frm.Coor
+			refProd.FCCORP = frm.Corp
+			refProd.FCBRANCH = frm.Branch
+			refProd.FCWHOUSE = frm.ToWhs
+			refProd.FCPROJ = frm.Proj
+			refProd.FCJOB = frm.Job
+			refProd.FCSECT = sect.FCSKID
+			refProd.FCDEPT = sect.FCDEPT
+			refProd.FCPROD = i.Product
+			refProd.FCPRODTYPE = prod.FCTYPE
+			refProd.FNUMQTY = 1
+			refProd.FNQTY = i.Qty
+			refProd.FNPRICE = i.Price
+			refProd.FCUM = i.Unit
+			refProd.FCUMSTD = i.Unit
+			refProd.FCSTUM = i.Unit
+			refProd.FCSTUMSTD = i.Unit
+			refProd.FNSTUMQTY = 1
+			refProd.FNCOSTAMT = i.Price * i.Qty
+			refProd.FNVATAMT = (i.Price * i.Qty) * 0.07
+			refProd.FNPRICEKE = i.Price
+			refProd.FCCREATEBY = empID
+
+			if err := tx.Create(&refProd).Error; err != nil {
+				tx.Rollback()
+				r.Message = err.Error()
+				return c.Status(fiber.StatusInternalServerError).JSON(&r)
+			}
+
+			var stock models.Stock
+			tx.First(&stock, &models.Stock{FCPROD: prod.FCSKID, FCWHOUSE: frm.ToWhs})
+			stock.FCCORP = frm.Corp
+			stock.FCBRANCH = frm.Branch
+			stock.FCWHOUSE = frm.ToWhs
+			stock.FCPROD = prod.FCSKID
+			stock.FDDATE = glref.FDDATE
+			switch frm.Step {
+			case "I":
+				stock.FNQTY = stock.FNQTY + i.Qty
+			default:
+				if stock.FNQTY > 0 {
+					stock.FNQTY = stock.FNQTY - i.Qty
+				}
+			}
+
+			if stock.FCSKID == "" {
+				stock.FTDATETIME = time.Now()
+			}
+			stock.FTLASTUPD = time.Now()
+			stock.FTLASTEDIT = time.Now()
+			if err := tx.Save(&stock).Error; err != nil {
+				tx.Rollback()
+				r.Message = fmt.Sprintf("Failed transection on Stock: %v", err.Error())
+				return c.Status(fiber.StatusInternalServerError).JSON(&r)
+			}
+			seq++
+		}
+	default:
 		//start refprod
 		numRun := 1
 		for _, typeName := range [2]string{"O", "I"} {
@@ -216,81 +290,6 @@ func GlrefPostController(c *fiber.Ctx) error {
 				seq++
 			}
 			numRun++
-		}
-
-	case "ADJ":
-		var seq int64 = 1
-		for _, i := range frm.Items {
-			var prod models.Product
-			if err := tx.Where("FCSKID", i.Product).First(&prod).Error; err != nil {
-				tx.Rollback()
-				r.Message = err.Error()
-				return c.Status(fiber.StatusInternalServerError).JSON(&r)
-			}
-
-			var refProd models.Refprod
-			refProd.FCSEQ = fmt.Sprintf("%03d", seq)
-			refProd.FCGLREF = glref.FCSKID
-			refProd.FDDATE = glref.FDDATE
-			refProd.FCIOTYPE = frm.Step
-			refProd.FCRFTYPE = book.REFTYPE.FCRFTYPE
-			refProd.FCREFTYPE = book.FCREFTYPE
-			refProd.FCCOOR = frm.Coor
-			refProd.FCCORP = frm.Corp
-			refProd.FCBRANCH = frm.Branch
-			refProd.FCWHOUSE = frm.ToWhs
-			refProd.FCPROJ = frm.Proj
-			refProd.FCJOB = frm.Job
-			refProd.FCSECT = sect.FCSKID
-			refProd.FCDEPT = sect.FCDEPT
-			refProd.FCPROD = i.Product
-			refProd.FCPRODTYPE = prod.FCTYPE
-			refProd.FNUMQTY = 1
-			refProd.FNQTY = i.Qty
-			refProd.FNPRICE = i.Price
-			refProd.FCUM = i.Unit
-			refProd.FCUMSTD = i.Unit
-			refProd.FCSTUM = i.Unit
-			refProd.FCSTUMSTD = i.Unit
-			refProd.FNSTUMQTY = 1
-			refProd.FNCOSTAMT = i.Price * i.Qty
-			refProd.FNVATAMT = (i.Price * i.Qty) * 0.07
-			refProd.FNPRICEKE = i.Price
-			refProd.FCCREATEBY = empID
-
-			if err := tx.Create(&refProd).Error; err != nil {
-				tx.Rollback()
-				r.Message = err.Error()
-				return c.Status(fiber.StatusInternalServerError).JSON(&r)
-			}
-
-			var stock models.Stock
-			tx.First(&stock, &models.Stock{FCPROD: prod.FCSKID, FCWHOUSE: frm.ToWhs})
-			stock.FCCORP = frm.Corp
-			stock.FCBRANCH = frm.Branch
-			stock.FCWHOUSE = frm.ToWhs
-			stock.FCPROD = prod.FCSKID
-			stock.FDDATE = glref.FDDATE
-			switch frm.Step {
-			case "I":
-				stock.FNQTY = stock.FNQTY + i.Qty
-			default:
-				if stock.FNQTY > 0 {
-					stock.FNQTY = stock.FNQTY - i.Qty
-				}
-			}
-
-			if stock.FCSKID == "" {
-				stock.FTDATETIME = time.Now()
-			}
-			stock.FTLASTUPD = time.Now()
-			stock.FTLASTEDIT = time.Now()
-			if err := tx.Save(&stock).Error; err != nil {
-				tx.Rollback()
-				r.Message = fmt.Sprintf("Failed transection on Stock: %v", err.Error())
-				return c.Status(fiber.StatusInternalServerError).JSON(&r)
-			}
-			seq++
 		}
 	}
 
