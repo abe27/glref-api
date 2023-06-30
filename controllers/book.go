@@ -16,8 +16,13 @@ func BookController(c *fiber.Ctx) error {
 
 	bookType := c.Query("type")
 	if bookType == "" {
-		r.Message = "Required fields type!"
-		return c.Status(fiber.StatusBadRequest).JSON(r)
+		if err := db.Order("FCCODE").Find(&book).Error; err != nil {
+			r.Message = err.Error()
+			return c.Status(fiber.StatusInternalServerError).JSON(&book)
+		}
+		r.Success = true
+		r.Data = &book
+		return c.Status(fiber.StatusOK).JSON(&r)
 	}
 
 	if c.Query("name") != "" {
