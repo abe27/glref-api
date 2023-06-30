@@ -154,7 +154,7 @@ type GlrefHistory struct {
 	FCPONO    string    `json:"fcpono"`
 	FCREMARK  string    `json:"fcremark"`
 	FCSTATUS  int       `json:"fcstatus"`
-	FCTYPE    string    `gorm:"size:5;not null;" json:"fctype"`
+	FCTYPE    string    `gorm:"size:8;not null;" json:"fctype"`
 	CreatedAt time.Time `json:"created_at,omitempty" default:"now"`
 	UpdatedAt time.Time `json:"updated_at,omitempty" default:"now"`
 }
