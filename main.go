@@ -13,7 +13,7 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/gofiber/fiber/v2/middleware/requestid"
 	"github.com/joho/godotenv"
-	"gocloud.dev/postgres" // Sqlite driver based on CGO
+	"gorm.io/driver/postgres" // Sqlite driver based on CGO
 	"gorm.io/driver/sqlserver"
 	"gorm.io/gorm"
 	"gorm.io/gorm/schema"
@@ -44,9 +44,9 @@ func init() {
 
 	// // github.com/mattn/go-sqlite3
 	// configs.Store, err = gorm.Open(sqlite.Open("database/gorm.db"), &gorm.Config{})
-	// if err != nil {
-	// 	panic("Failed to connect to database")
-	// }
+	if err != nil {
+		panic("Failed to connect to database")
+	}
 
 	dsnFormula := fmt.Sprintf("sqlserver://%s:%s@%s:%s?database=%s&encrypt=disable&connection+timeout=30", os.Getenv("DB_FORMULA_MSSQL_USER"), os.Getenv("DB_FORMULA_MSSQL_PASSWORD"), os.Getenv("DB_FORMULA_MSSQL_HOST"), os.Getenv("DB_FORMULA_MSSQL_PORT"), os.Getenv("DB_FORMULA_MSSQL_DATABASE"))
 	// dsnFormula := "sqlserver://sa:ADSads123@localhost:1433?database=FormulaDB"
