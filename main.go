@@ -52,6 +52,7 @@ func init() {
 
 	dsnFormula := fmt.Sprintf("sqlserver://%s:%s@%s:%s?database=%s&encrypt=disable&connection+timeout=30", os.Getenv("DB_FORMULA_MSSQL_USER"), os.Getenv("DB_FORMULA_MSSQL_PASSWORD"), os.Getenv("DB_FORMULA_MSSQL_HOST"), os.Getenv("DB_FORMULA_MSSQL_PORT"), os.Getenv("DB_FORMULA_MSSQL_DATABASE"))
 	// dsnFormula := "sqlserver://sa:ADSads123@localhost:1433?database=FormulaDB"
+	fmt.Println(dsnFormula)
 	configs.StoreFormula, err = gorm.Open(sqlserver.Open(dsnFormula), &gorm.Config{
 		DisableAutomaticPing: true,
 		NowFunc: func() time.Time {
