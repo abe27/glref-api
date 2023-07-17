@@ -27,7 +27,7 @@ func init() {
 
 	//// initial database
 	// github.com/mattn/go-sqlite3
-	configs.Store, err = gorm.Open(sqlite.Open("gorm.db"), &gorm.Config{})
+	configs.Store, err = gorm.Open(sqlite.Open("database/gorm.db"), &gorm.Config{})
 	// dsn := fmt.Sprintf("host=%s user=%s dbname=%s port=%s password=%s sslmode=%s TimeZone=%s", os.Getenv("DBHOST"), os.Getenv("DBUSER"), os.Getenv("DBNAME"), os.Getenv("DBPORT"), os.Getenv("DBPASSWORD"), os.Getenv("SSLMODE"), os.Getenv("TZNAME"))
 	// configs.Store, err = gorm.Open(postgres.Open(dsn), &gorm.Config{
 	// 	DisableAutomaticPing:                     true,
