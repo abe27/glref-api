@@ -295,7 +295,8 @@ func GlrefPostController(c *fiber.Ctx) error {
 
 	// Glref History
 	var glrefHistory models.GlrefHistory
-	glrefHistory.FCTYPE = frm.Booking
+	// glrefHistory.FCTYPE = frm.Booking
+	glrefHistory.FCTYPE = frm.Prefix
 	glrefHistory.FCSKID = glref.FCSKID
 	glrefHistory.FCCODE = glref.FCCODE
 	glrefHistory.FCREFNO = glref.FCREFNO
