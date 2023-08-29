@@ -1,9 +1,11 @@
 module github.com/abe27/vcst/api.v1
 
-go 1.20
+go 1.21
+
+toolchain go1.21.0
 
 require (
-	github.com/gofiber/fiber/v2 v2.48.0
+	github.com/gofiber/fiber/v2 v2.49.0
 	github.com/samber/lo v1.38.1
 	gocloud.dev v0.30.0
 )
@@ -43,7 +45,7 @@ require (
 	github.com/savsgio/gotils v0.0.0-20230208104028-c358bd845dee // indirect
 	github.com/tinylib/msgp v1.1.8 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
-	github.com/valyala/fasthttp v1.48.0 // indirect
+	github.com/valyala/fasthttp v1.49.0 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
 	golang.org/x/sys v0.11.0 // indirect
 	gorm.io/driver/postgres v1.5.2
