@@ -302,6 +302,7 @@ func GlrefPostController(c *fiber.Ctx) error {
 	glrefHistory.FCREFNO = glref.FCREFNO
 	glrefHistory.FCDATE = glref.FDDATE
 	glrefHistory.FCINVOICE = strings.ToUpper(frm.InvoiceNo)
+	glrefHistory.FCPONO = strings.ToUpper(frm.PoNo)
 	if err := configs.Store.Create(&glrefHistory).Error; err != nil {
 		tx.Rollback()
 		r.Message = fmt.Sprintf("Failed create glref history: %v", err.Error())

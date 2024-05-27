@@ -135,6 +135,7 @@ type GlrefForm struct {
 	Coor       string        `json:"coor"`
 	Department string        `json:"department"`
 	InvoiceNo  string        `json:"invoice_no"`
+	PoNo       string        `json:"po_no"`
 	Items      []GlrefDetail `json:"items"`
 }
 
